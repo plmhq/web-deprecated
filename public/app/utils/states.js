@@ -2,27 +2,36 @@ define(['../app'], function(app) {
 	'use strict';
 
 	return app.config([
-		'$locationProvider',
-		'$stateProvider'
-		function($locationProvider, $stateProvider) {
-
-			// HTML5 mode
-			$locationProvider.html5Mode(true);
+		'$stateProvider',
+		function($stateProvider) {
 
 			// Default state
 			var def = {
 				name: 'def',
-				abstract: true
+				abstract: true,
+				templateUrl: 'app/components/abstract/def.html'
 			};
 
+			var home = {
+				name: 'def.home',
+				url: '/',
+				templateUrl: '/app/components/def/index.html'
+			};
+
+			// Dashboard state
 			var mod = {
 				name: 'mod',
-				abstract: true
+				abstract: true,
+				templateUrl: 'app/components/abstract/mod.html'
 			};
 
-			// var 
+			// Default
 			$stateProvider
 				.state(def)
+				.state(home);
+			
+			// Dashboard
+			$stateProvider
 				.state(mod);
 
 		}
