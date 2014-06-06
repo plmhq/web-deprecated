@@ -33,5 +33,13 @@ interface NewsRepositoryInterface {
 	 * @return 	Model
 	 */
 	public function find($id);
+
+	/**
+	 * Delete resource with the specified id
+	 *
+	 * @param 	integer 	$id
+	 * @return 	bool
+	 */
+	public function delete($id);
 	
 }

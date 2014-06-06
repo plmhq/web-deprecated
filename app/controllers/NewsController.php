@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PLM\Validator\Exceptions\ValidationFailedException;
 use PLM\Repository\Interface\NewsRepositoryInterface;
 
 class NewsController extends \BaseController {
@@ -48,9 +50,11 @@ class NewsController extends \BaseController {
 
 		try {
 			$this->news->create( $input );
-		} catch(Exception $e) {
-
+		} catch(ValidationFailedException $e) {
+			//
 		}
+
+		//
 	}
 
 
@@ -62,6 +66,12 @@ class NewsController extends \BaseController {
 	 */
 	public function show($id)
 	{
+		try {
+			$this->news->find($id);
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -86,6 +96,12 @@ class NewsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		try {
+			$this->news->find($id);
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+
 		//
 	}
 

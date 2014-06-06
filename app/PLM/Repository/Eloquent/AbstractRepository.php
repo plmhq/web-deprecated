@@ -1,7 +1,5 @@
 <?php namespace PLM\Repository\Eloquent;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-
 abstract class EloquentRepository {
 
 	/**
@@ -19,7 +17,7 @@ abstract class EloquentRepository {
 	{
 		if( is_null($model) )
 		{
-			throw new ModelNotFoundException;
+			throw new Exception;
 		}
 
 		$this->model = $model;
@@ -68,7 +66,18 @@ abstract class EloquentRepository {
 	 */
 	public function find($id)
 	{
-		return $this->model->find($id);
+		return $this->model->findOrFail($id);
+	}
+
+	/**
+	 * Delete resource with the specified id
+	 *
+	 * @param 	integer 	$id
+	 * @return 	bool
+	 */
+	public function delete($id)
+	{
+		return $this->find($id)->delete();
 	}
 
 }
