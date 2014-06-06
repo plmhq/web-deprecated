@@ -1,6 +1,18 @@
 <?php
 
+use PLM\Repository\Interface\NewsRepositoryInterface;
+
 class NewsController extends \BaseController {
+
+	/**
+	 * @var NewsRepositoryInterface
+	 */
+	protected $news;
+
+	public function __construct(NewsRepository $news)
+	{
+		$this->news = $news;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +21,7 @@ class NewsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return $this->news->all();
 	}
 
 
@@ -31,7 +43,14 @@ class NewsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		// Grab all input
+		$input = Input::all();
+
+		try {
+			$this->news->create( $input );
+		} catch(Exception $e) {
+
+		}
 	}
 
 

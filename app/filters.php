@@ -88,3 +88,14 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+/*
+|--------------------------------------------------------------------------
+| SSL Filter
+|--------------------------------------------------------------------------
+|
+| Responsible in forcing the routes to be ran on SSL
+|
+*/
+
+Route::filter('ssl', 'PLM\Filter\SSLFilter');
