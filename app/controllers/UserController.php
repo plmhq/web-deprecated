@@ -1,6 +1,25 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PLM\Validator\Exceptions\ValidationFailedException;
+use PLM\Repository\Interface\UserRepositoryInterface;
+
 class UserController extends \BaseController {
+
+	/**
+	 * @var UserRepositoryInterface
+	 */
+	protected $user;
+
+	/**
+	 * Class constructor
+	 *
+	 * @param 	UserRepositoryInterface 	$user
+	 */
+	public function __construct(UserRepositoryInterface $user)
+	{
+		$this->user = $user;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +28,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return $this->user->all();
 	}
 
 
@@ -31,6 +50,15 @@ class UserController extends \BaseController {
 	 */
 	public function store()
 	{
+		// Fetch all input
+		$input = Input::all();
+
+		try {
+			$this->user->create($input);
+		} catch(ValidationFailedException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -43,6 +71,12 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
+		try {
+			$this->user->find($id);
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -67,6 +101,17 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		// Fetch all input
+		$input = Input::all();
+
+		try {
+			$this->user->update($id, $input);
+		} catch(ValidationFailedException $e) {
+			//
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -79,6 +124,12 @@ class UserController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
+		try {
+			$this->user->delete($id);
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+
 		//
 	}
 

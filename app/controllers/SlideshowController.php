@@ -1,6 +1,26 @@
 <?php
 
+use PLM\Validator\Exceptions\ValidationFailedException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PLM\Repository\Interface\SlideshowRepositoryInterface;
+
 class SlideshowController extends \BaseController {
+
+	/**
+	 * @var SlideshowRepositoryInterface
+	 */
+	protected $slideshow;
+
+	/**
+	 * Class constructor
+	 *
+	 * @param 	SlideshowRepositoryInterface 	$slideshow
+	 */
+	public function __construct(SlideshowRepositoryInterface $slideshow)
+	{
+		$this->slideshow = $slideshow;
+	}
+
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +29,7 @@ class SlideshowController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return $this->slideshow->all();
 	}
 
 
@@ -31,6 +51,12 @@ class SlideshowController extends \BaseController {
 	 */
 	public function store()
 	{
+		try {
+			$this->slideshow->create($input);
+		} catch(ValidationFailedException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -43,6 +69,12 @@ class SlideshowController extends \BaseController {
 	 */
 	public function show($id)
 	{
+		try {
+			$slideshow = $this->slideshow->find($id);
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -67,6 +99,14 @@ class SlideshowController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		try {
+			$slideshow = $this->slideshow->update($id, $input);
+		} catch(ModelNotFoundException $e) {
+			//
+		} catch(ValidationFailedException $e) {
+			//
+		}
+
 		//
 	}
 
@@ -79,7 +119,13 @@ class SlideshowController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		try {
+			$this->slideshow->delete($id);
+		} catch(ModelNotFoundException $e) {
+			//
+		}
+		
+		return;
 	}
 
 

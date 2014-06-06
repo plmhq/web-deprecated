@@ -15,4 +15,14 @@ class SlideshowRepository extends AbstractRepository implements SlideshowReposit
 		parent::__construct($slideshow);
 	}
 
+	/**
+	 * Take recent slideshows
+	 *
+	 * @return 	Model
+	 */
+	public function getRecent($limit = null)
+	{
+		return $this->model->recent($limit)->get();
+	}
+
 }
