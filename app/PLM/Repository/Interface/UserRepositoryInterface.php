@@ -1,6 +1,6 @@
-<?php namespace PLM\Repository;
+<?php namespace PLM\Repository\Interface;
 
-interface SlideshowRepositoryInterface {
+interface UserRepositoryInterface {
 
 	/**
 	 * Fetch all resources

@@ -12,15 +12,15 @@ class RepositoryServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		// Binds the user repository
-		$this->app->bind('PLM\Repository\UserRepositoryInterface',
+		$this->app->bind('PLM\Repository\Interface\UserRepositoryInterface',
 			'PLM\Repository\Eloquent\UserRepository');
 
 		// Binds the news repository
-		$this->app->bind('PLM\Repository\NewsRepositoryInterface',
+		$this->app->bind('PLM\Repository\Interface\NewsRepositoryInterface',
 			'PLM\Repository\Eloquent\NewsRepository');
 
 		// Binds the slideshow repository
-		$this->app->bind('PLM\Repository\SlideshowRepositoryInterface',
+		$this->app->bind('PLM\Repository\Interface\SlideshowRepositoryInterface',
 			'PLM\Repository\Eloquent\SlideshowRepository');
 	}
 	

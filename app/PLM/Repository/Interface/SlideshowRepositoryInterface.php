@@ -1,6 +1,6 @@
-<?php namespace PLM\Repository;
+<?php namespace PLM\Repository\Interface;
 
-interface NewsRepositoryInterface {
+interface SlideshowRepositoryInterface {
 
 	/**
 	 * Fetch all resources
@@ -33,5 +33,5 @@ interface NewsRepositoryInterface {
 	 * @return 	Model
 	 */
 	public function find($id);
-	
+
 }
