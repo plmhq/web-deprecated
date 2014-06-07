@@ -15,3 +15,6 @@ The official repository of the Pamantasan ng Lungsod ng Maynila website. Current
 	// Optional
 	$ php artisan seed
 
+## Contributions ##
+
+All contributions (small or big) will be granted with its respective credit.
