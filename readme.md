@@ -18,3 +18,7 @@ The official repository of the Pamantasan ng Lungsod ng Maynila website. Current
 ## Contributions ##
 
 All contributions (small or big) will be granted with its respective credit.
+
+## License ##
+
+This software is under the [GPL v3 license] (https://github.com/srph/plm-web/blob/master/LICENSE) | [mirror] (http://choosealicense.com/licenses/gpl-v3/)
