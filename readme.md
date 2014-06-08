@@ -19,6 +19,10 @@ The official repository of the Pamantasan ng Lungsod ng Maynila website. Current
 
 All contributions (small or big) will be granted with its respective credit.
 
+Mr. Garry De Gracia - Project Manager
+Kier Borromeo (SRPH) - Lead Developer
+
+
 ## License ##
 
 This software is under the [GPL v3 license] (https://github.com/srph/plm-web/blob/master/LICENSE) | [mirror] (http://choosealicense.com/licenses/gpl-v3/)
