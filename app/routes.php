@@ -14,10 +14,13 @@
 /**
  * API route group
  * @link api/*
+ * @example api/user/
  */
 Route::group(['prefix' => 'api'], function()
 {
-	//
+	Route::resource('user', 'UserController');
+	Route::resource('slideshow', 'SlideshowController');
+	Route::resource('news', 'NewsController');
 });
 
 /**

@@ -11,7 +11,12 @@ class NewsController extends \BaseController {
 	 */
 	protected $news;
 
-	public function __construct(NewsRepository $news)
+	/**
+	 * Class constructor
+	 *
+	 * @param 	NewsRepositoryInterface 	$news
+	 */
+	public function __construct(NewsRepositoryInterface $news)
 	{
 		$this->news = $news;
 	}
