@@ -4,5 +4,5 @@ define([
 ], function(angular) {
 	'use strict';
 
-	return angular.module('app.ctrl', ['app.services']);
+	return angular.module('app.ctrls', ['app.services']);
 });

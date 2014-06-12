@@ -20,7 +20,7 @@ define(['../module'], function(app) {
 
 		var object = {
 			restrict: 'EA',
-			templateUrl: '',
+			templateUrl: 'app/directives/navigation/partial.html',
 			link: link
 		};
 

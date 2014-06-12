@@ -1,10 +1,11 @@
-require.config({
+requirejs.config({
 	paths: {
-		angular: "/assets/vendor/angular/angular.min",
-		ngResource: "/assets/vendor/angular-resource/angular-resource.min",
-		uiRouter: "/assets/vendor/angular-ui-router/release/angular-ui-router.min",
-		bootstrap: "/assets/vendor/bootstrap/js/bootstrap.min",
-		jquery: "/assets/vendor/jquery/dist/jquery.min"
+		angular: "../assets/vendor/angular/angular.min",
+		ngResource: "../assets/vendor/angular-resource/angular-resource.min",
+		uiRouter: "../assets/vendor/angular-ui-router/release/angular-ui-router.min",
+		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min",
+		bootstrap: "../assets/vendor/bootstrap/js/bootstrap.min",
+		jquery: "../assets/vendor/jquery/dist/jquery.min"
 	},
 
 	shim: {
@@ -18,7 +19,12 @@ require.config({
 		},
 
 		"uiRouter": {
-			exports: "ui-router",
+			exports: "uiRouter",
+			deps: ["angular"]
+		},
+
+		"ngProgress": {
+			exports: "ngProgress",
 			deps: ["angular"]
 		},
 
@@ -30,16 +36,17 @@ require.config({
 			exports: "jquery"
 		}
 	}
-
 });
 
 require([
-	'angular',
 	'jquery',
-	'bootstrap',
+	'angular',
+	'./app',
 	'./index'
-], function(angular, $) {
+], function($, angular, app) {
 	'use strict';
+
+	console.log(app);
 
 	angular.element(document).ready(function() {
 		angular.bootstrap(document, ['app']);

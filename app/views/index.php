@@ -20,6 +20,7 @@
 
 <body>
 	<div class="container">
+		<navigation></navigation>
 		<div ui-view/>
 	</div>
 </body>

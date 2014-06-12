@@ -3,7 +3,11 @@ define(['../app'], function(app) {
 
 	return app.config([
 		'$stateProvider',
-		function($stateProvider) {
+		'$urlRouteProvider',
+		function($stateProvider, $urlRouteProvider) {
+
+			// Missing routes
+			$urlRouteProvider.otherwise('/');
 
 			// Default state
 			var def = {

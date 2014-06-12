@@ -8,7 +8,7 @@ define(['../module'], function(app) {
 
 		var object = {
 			restrict: 'E',
-			templateUrl: '',
+			templateUrl: 'app/directives/news-canopy/partial.html',
 			controller: controller,
 			transclude: true
 		};
