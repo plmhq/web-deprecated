@@ -11,7 +11,17 @@
 |
 */
 
-Route::get('/', function()
+/**
+ * API route group
+ * @link api/*
+ */
+Route::group(['prefix' => 'api'], function()
 {
-	return View::make('hello');
+	//
 });
+
+/**
+ * Index page
+ * @link /
+ */
+Route::get('/', 'HomeController@index');

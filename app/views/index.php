@@ -9,7 +9,7 @@
 	<link href="./assets/vendor/bootstrap/dist/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<link href="./assets/css/stylesheet.css" type="text/css" rel="stylesheet">
 
-	<!-- RequireJS -->
+	<!-- RequireJS | Scripts -->
 	<script type="text/javascript"
 		src="./assets/requirejs/require.js"
 		data-main="./app/app.js">

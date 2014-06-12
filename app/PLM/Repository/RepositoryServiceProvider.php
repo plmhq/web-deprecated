@@ -1,4 +1,4 @@
-<?php
+<?php namespace PLM\Repository;
 
 use Illuminate\Support\ServiceProvider;
 
