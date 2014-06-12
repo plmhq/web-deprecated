@@ -4,7 +4,7 @@ requirejs.config({
 		ngResource: "../assets/vendor/angular-resource/angular-resource.min",
 		uiRouter: "../assets/vendor/angular-ui-router/release/angular-ui-router.min",
 		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min",
-		bootstrap: "../assets/vendor/bootstrap/js/bootstrap.min",
+		bootstrap: "../assets/vendor/bootstrap/dist/js/bootstrap.min",
 		jquery: "../assets/vendor/jquery/dist/jquery.min"
 	},
 
@@ -48,7 +48,11 @@ require([
 
 	console.log(app);
 
-	angular.element(document).ready(function() {
-		angular.bootstrap(document, ['app']);
-	});
+	try {
+		angular.element(document).ready(function() {
+			angular.bootstrap(document, ['app']);
+		});
+	} catch(e) {
+		console.error(e.stack || e.message || e);
+	}
 });

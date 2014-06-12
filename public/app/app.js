@@ -12,13 +12,13 @@ define([
 	console.log('Oyst');
 
 	var deps = [
-		'ui-router',
-		'ngResource',
-		'ngProgress',
-		'app.ctrls',
-		'app.services',
-		'app.directives'
+		// 'ui.router',
+		// 'ngResource',
+		// 'ngProgress',
+		// 'app.ctrls',
+		// 'app.services',
+		// 'app.directives'
 	];
 
-	return angular.module('app', deps);
+	return angular.module('app', []);
 });
