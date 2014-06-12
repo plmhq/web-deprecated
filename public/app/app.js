@@ -3,22 +3,21 @@ define([
 	'uiRouter',
 	'ngResource',
 	'ngProgress',
+	// './ctrls/index',
 	'./services/index',
-	'./ctrls/index',
 	'./directives/index'
 ], function(angular) {
 	'use strict';
 
-	console.log('Oyst');
+	console.log(new Date());
 
 	var deps = [
-		// 'ui.router',
-		// 'ngResource',
-		// 'ngProgress',
+		'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
+		'ngProgress',
 		// 'app.ctrls',
 		// 'app.services',
-		// 'app.directives'
+		'app.directives'
 	];
 
-	return angular.module('app', []);
+	return angular.module('app', deps);
 });

@@ -1,9 +1,11 @@
 define(['../module'], function(app) {
 	'use strict';
 
-	app.directive('navigation', function() {
+	app.directive('navigation', [
+		'$window',
+		function($window) {
 		var link = function(element, scope, attrs) {
-			var top = element.scrollTop();
+			var top = element.scrollTop;
 			var win = angular.element($window);
 
 			win.scroll(function(e) {
@@ -20,10 +22,10 @@ define(['../module'], function(app) {
 
 		var object = {
 			restrict: 'EA',
-			templateUrl: 'app/directives/navigation/partial.html',
-			link: link
+			templateUrl: 'app/directives/navigation/partial.html'
+			// link: link
 		};
 
 		return object;
-	});
+	}]);
 })

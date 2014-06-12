@@ -1,9 +1,11 @@
 define(['../module'], function(app) {
 	'use strict';
 
-	return app.factory('UserService', ['$resource',
+	return app.factory('UserService', [
 		function() {
-			//
+			var service = {};
+			
+			return service;
 		}
 	]);
 });
