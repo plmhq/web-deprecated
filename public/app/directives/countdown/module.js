@@ -18,7 +18,7 @@ define(['../module'], function(app) {
 		// Object containing current and countdown time
 		$scope.time = {};
 		$scope.time.current = new Date();
-		$scope.time.countdown: new Date($scope.time.current, 06, 19);
+		$scope.time.countdown = new Date($scope.time.current, 06, 19);
 
 		// Call the countdown timer
 		$scope.timer();

@@ -12,7 +12,7 @@
 	<!-- RequireJS | Scripts -->
 	<script type="text/javascript"
 		src="/assets/vendor/requirejs/require.js"
-		data-main="/app/app.js">
+		data-main="/app/bootstrap.js">
 	</script>
 
 	<base href="/">

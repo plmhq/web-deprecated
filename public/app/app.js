@@ -1,11 +1,11 @@
 define([
 	'angular',
-	'ui-router',
+	'uiRouter',
 	'ngResource',
 	'./services/index',
-	'./ctrl/index',
+	'./ctrls/index',
 	'./directives/index'
-], function() {
+], function(angular) {
 	'use strict';
 
 	return angular.module('app', [

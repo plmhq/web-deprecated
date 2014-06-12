@@ -9,11 +9,11 @@ define(['../module'], function(app) {
 			win.scroll(function(e) {
 				if( win.scrollTop() > top) {
 					// check if it is possible to get current css values
-					element.css({
-						position: ...
-					});
+					// element.css({
+					// 	position: i
+					// });
 				} else {
-					element.css({});
+					// element.css({});
 				}
 			});
 		};
