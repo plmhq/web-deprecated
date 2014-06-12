@@ -28,7 +28,7 @@ class NewsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return $this->news->all();
+		return $this->news->all()->toJson();
 	}
 
 
@@ -56,10 +56,10 @@ class NewsController extends \BaseController {
 		try {
 			$this->news->create( $input );
 		} catch(ValidationFailedException $e) {
-			//
+			return Response::json(['status' => false]);
 		}
 
-		//
+		return Response::json(['status' => true]);
 	}
 
 
@@ -72,12 +72,15 @@ class NewsController extends \BaseController {
 	public function show($id)
 	{
 		try {
-			$this->news->find($id);
+			$news = $this->news->find($id)->toJson();
 		} catch(ModelNotFoundException $e) {
-			//
+			return Response::json(['status' => false]);
 		}
 
-		//
+		return Response::json([
+			'status' 	=> true,
+			'news'		=> $news
+		]);
 	}
 
 
@@ -102,12 +105,15 @@ class NewsController extends \BaseController {
 	public function update($id)
 	{
 		try {
-			$this->news->find($id);
+			$news = $this->news->find($id)->toJson();
 		} catch(ModelNotFoundException $e) {
-			//
+			return Response::json(['status' => false]);
 		}
 
-		//
+		return Response::json([
+			'status'	=> true,
+			'news'		=> $news
+		]);
 	}
 
 
