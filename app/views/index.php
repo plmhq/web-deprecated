@@ -6,13 +6,13 @@
 	<meta charset="utf-8">
 
 	<!-- Stylesheets -->
-	<link href="./assets/vendor/bootstrap/dist/bootstrap.min.css" type="text/css" rel="stylesheet">
-	<link href="./assets/css/stylesheet.css" type="text/css" rel="stylesheet">
+	<link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="/assets/css/stylesheet.css" type="text/css" rel="stylesheet">
 
 	<!-- RequireJS | Scripts -->
 	<script type="text/javascript"
-		src="./assets/requirejs/require.js"
-		data-main="./app/app.js">
+		src="/assets/vendor/requirejs/require.js"
+		data-main="/app/app.js">
 	</script>
 
 	<base href="/">
