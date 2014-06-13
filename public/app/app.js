@@ -9,17 +9,13 @@ define([
 ], function(angular) {
 	'use strict';
 
-	console.log(new Date());
-
 	var deps = [
 		'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
 		'ngProgress',
+		'app.directives'
 		// 'app.ctrls',
 		// 'app.services',
-		'app.directives'
 	];
-
-	console.log('OY');
 
 	return angular.module('app', deps);
 });

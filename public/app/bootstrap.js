@@ -1,19 +1,23 @@
 requirejs.config({
-	paths: {
-		angular: "../assets/vendor/angular/angular.min",
-
-		ngResource: "../assets/vendor/angular-resource/angular-resource.min",
-
-		uiRouter: "../assets/vendor/angular-ui-router/release/angular-ui-router.min",
-
-		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min",
-
+	paths: {		
+		jquery: "../assets/vendor/jquery/dist/jquery.min",
 		bootstrap: "../assets/vendor/bootstrap/dist/js/bootstrap.min",
-		
-		jquery: "../assets/vendor/jquery/dist/jquery.min"
+		angular: "../assets/vendor/angular/angular.min",
+		ngResource: "../assets/vendor/angular-resource/angular-resource.min",
+		uiRouter: "../assets/vendor/angular-ui-router/release/angular-ui-router.min",
+		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min"
 	},
 
 	shim: {
+
+		"jquery": {
+			exports: "jquery"
+		},
+
+		"bootstrap": {
+			deps: ["jquery"]
+		},
+
 		"angular": {
 			exports: "angular"
 		},
@@ -31,14 +35,6 @@ requirejs.config({
 		"ngProgress": {
 			exports: "ngProgress",
 			deps: ["angular"]
-		},
-
-		"bootstrap": {
-			deps: ["jquery"]
-		},
-
-		"jquery": {
-			exports: "jquery"
 		}
 	}
 });
@@ -46,12 +42,10 @@ requirejs.config({
 require([
 	'jquery',
 	'angular',
+	'./app',
 	'./index'
-], function($, angular, app) {
+], function($, angular) {
 	'use strict';
-
-	console.log(app);
-	console.log('Oyes');
 
 	try {
 		angular.element(document).ready(function() {

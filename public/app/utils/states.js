@@ -3,23 +3,23 @@ define(['../app'], function(app) {
 
 	return app.config([
 		'$stateProvider',
-		'$urlRouteProvider',
-		function($stateProvider, $urlRouteProvider) {
+		'$urlRouterProvider',
+		function($stateProvider, $urlRouterProvider) {
 
 			// Missing routes
-			$urlRouteProvider.otherwise('/');
+			$urlRouterProvider.otherwise('/');
 
 			// Default state
 			var def = {
 				name: 'def',
 				abstract: true,
-				templateUrl: 'app/components/abstract/def.html'
+				templateUrl: '/app/components/abstracts/def.html'
 			};
 
 			var home = {
 				name: 'def.home',
 				url: '/',
-				templateUrl: '/app/components/def/index.html'
+				templateUrl: '/app/components/home/index.html'
 			};
 
 			console.log(home);
@@ -28,7 +28,7 @@ define(['../app'], function(app) {
 			var mod = {
 				name: 'mod',
 				abstract: true,
-				templateUrl: 'app/components/abstract/mod.html'
+				templateUrl: 'app/components/abstracts/db.html'
 			};
 
 			// Default
