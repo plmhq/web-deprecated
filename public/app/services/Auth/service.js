@@ -3,7 +3,7 @@ define(['../module'], function(app) {
 
 	return app.factory('AuthService', [
 		'$q',
-		'$http'
+		'$http',
 		function($q, $http) {
 			var service = {
 				/**

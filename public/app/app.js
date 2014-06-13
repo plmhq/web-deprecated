@@ -4,7 +4,7 @@ define([
 	'ngResource',
 	'ngProgress',
 	// './ctrls/index',
-	// './services/index',
+	'./services/index',
 	'./directives/index'
 ], function(angular) {
 	'use strict';
@@ -12,9 +12,9 @@ define([
 	var deps = [
 		'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
 		'ngProgress',
-		'app.directives'
+		'app.directives',
 		// 'app.ctrls',
-		// 'app.services',
+		'app.services'
 	];
 
 	return angular.module('app', deps);
