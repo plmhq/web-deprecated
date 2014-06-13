@@ -112,6 +112,31 @@
 .content-item {
 	height: 50vh;
 	overflow: hidden;
+	border-top-width: 5px;
+	border-top-style: solid;
+
+	box-sizing: padding-box;
+		-webkit-box-sizing: padding-box;
+		-moz-box-sizing: padding-box;
+		-o-box-sizing: padding-box;
+}
+#admission.content-item {
+	border-top-color: #0033FF;
+}
+#events.content-item {
+	border-top-color: #a40000;
+}
+#spotlight.content-item {
+	border-top-color: #0033FF;
+}
+#gallery.content-item {
+	border-top-color: #a40000;
+}
+#newsletter.content-item {
+	border-top-color: #0033FF;
+}
+#photojournal.content-item {
+	border-top-color: #a40000;
 }
 
 .news-canopy > .news-canopy-header {

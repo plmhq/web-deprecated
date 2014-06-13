@@ -1,25 +1,28 @@
 <div class="content" id="multimedia">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 content-item" content-item>
-				<h2 class="text-center"> Admission </h2>
+			<div class="col-md-4 content-item text-center" id="admission">
+				<ng-include src="'/app/components/home/partials/multimedia/admission.html'"></ng-include>
 			</div>
-			<div class="col-md-4 content-item">
+			<div class="col-md-4 content-item" id="events">
 				<h2 class="text-center"> Current Events </h2>
 			</div>
-			<div class="col-md-4 content-item">
+			<div class="col-md-4 content-item" id="spotlight">
 				<h2 class="text-center"> Spotlight </h2>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-4 content-item">
+			<!-- Gallery -->
+			<div class="col-md-4 content-item" id="gallery">
 				<h2 class="text-center"> Gallery </h2>
 			</div>
-			<div class="col-md-4 content-item">
-				<h2 class="text-center"> Newsletter </h2>
+
+			<!-- Newsletter -->
+			<div class="col-md-4 content-item text-center" id="newsletter">
+				<ng-include src="'/app/components/home/partials/multimedia/newsletter.html'"></ng-include>
 			</div>
-			<div class="col-md-4 content-item">
+			<div class="col-md-4 content-item" id="photojournal">
 				<h2 class="text-center"> Photojournal </h2>
 			</div>
 		</div>
