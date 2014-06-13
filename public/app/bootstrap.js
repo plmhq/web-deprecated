@@ -42,7 +42,7 @@ requirejs.config({
 require([
 	'jquery',
 	'angular',
-	'./app',
+	// './app',
 	'./index'
 ], function($, angular) {
 	'use strict';
