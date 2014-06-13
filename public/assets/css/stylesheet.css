@@ -24,20 +24,25 @@
  */
 
 .navbar-cus {
-	background-color: #fff
+	background-color: #fff;
 	border-radius: 0;
 	height: 60px;
 	color: #000;
+	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', serif, sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
-	box-shadow: 1px 0 1px #b6b6b6;
+	box-shadow: 1px 0 2px #b6b6b6;
 }
 
 .navbar * {
-			-webkit-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-o-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.navbar .navbar-brand {
+	font-weight: 700;
 }
 
 .navbar .collapse.navbar-collapse {
@@ -56,7 +61,7 @@
 	background-color: transparent;
 	font-weight: 700;
 	border-bottom: 5px solid #0033FF;
-	font-size: inherit;
+	font-size: 12px;
 
 	transition: 0.5s all;
 		-webkit-transition: 0.5s all;
@@ -104,6 +109,11 @@
 	padding: 0;
 }
 
+.content-item {
+	height: 50vh;
+	overflow: hidden;
+}
+
 .news-canopy > .news-canopy-header {
 	font-size: 10px;
 	text-transform: uppercase;
@@ -115,4 +125,9 @@
 
 .news-canopy > .news-canopy-item > .news-canopy-body {
 	float: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', serif, sans-serif;
+	font-weight: 700;
 }
