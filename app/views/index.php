@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title> Ey </title>
+	<title> Pamantasan ng Lungsod ng Maynila </title>
 	<meta charset="utf-8">
 
 	<!-- Stylesheets -->

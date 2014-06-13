@@ -16,7 +16,7 @@ define(['../module'], function(app) {
 					var request = $http.post(url);
 
 					return request;
-				};
+				},
 
 				/**
 				 * Check auth (session) status
@@ -33,7 +33,7 @@ define(['../module'], function(app) {
 					});
 
 					return defer.promise;
-				};
+				},
 
 				/**
 				 * Logout the authenticated user

@@ -1,16 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
 * {
 	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', serif, sans-serif;
 }
 
 .container {
 	width: 1150px;
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
 }
 
 /**
  * Color scheme
  * default	#
- * info		#
- * success	#
+ * info		# #0033FF
+ * success	# #a40000
  * warning	#
  * danger	#
  */
@@ -22,21 +30,33 @@
 	color: #000;
 	font-size: 12px;
 	text-transform: uppercase;
+	box-shadow: 1px 0 1px #b6b6b6;
 }
 
+.navbar * {
+			-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.navbar .collapse.navbar-collapse {
+	height: auto !important;
+}
+
+.navbar-cus ul,
+.navbar-cus ul li a,
 .navbar-cus ul li {
-	padding-left: 15px;
-	padding-right: 15px;
-	height: 100%;
-	color: #fff;
+	height: 60px;
 }
 
-.navbar-cus ul li:focus,
-.navbar-cus ul li:hover,
-.navbar-cus ul li.active {
+.navbar-cus ul li a:focus,
+.navbar-cus ul li a:hover,
+.navbar-cus ul li.active a {
+	background-color: transparent;
 	font-weight: 700;
-	border-bottom: 5px solid #000;
-	color :#fff;
+	border-bottom: 5px solid #0033FF;
+	font-size: inherit;
 
 	transition: 0.5s all;
 		-webkit-transition: 0.5s all;
