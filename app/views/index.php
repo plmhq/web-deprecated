@@ -11,18 +11,15 @@
 
 	<!-- RequireJS | Scripts -->
 	<script type="text/javascript"
-		src="/assets/vendor/requirejs/require.js"
-		data-main="/app/bootstrap.js">
+		data-main="app/bootstrap.js"
+		src="assets/vendor/requirejs/require.js">
 	</script>
 
 	<base href="/">
 </head>
 
 <body>
-	<div class="container">
-		<navigation></navigation>
-		<div ui-view/>
-	</div>
+	<div ui-view> </div>
 </body>
 
 </html>

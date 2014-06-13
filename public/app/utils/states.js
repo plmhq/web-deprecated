@@ -22,6 +22,8 @@ define(['../app'], function(app) {
 				templateUrl: '/app/components/def/index.html'
 			};
 
+			console.log(home);
+				
 			// Dashboard state
 			var mod = {
 				name: 'mod',

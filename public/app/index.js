@@ -1,4 +1,7 @@
 define([
-	'./utils/states',
-	'./utils/location'
-], function() {});
+	"../app"
+	// "./utils/states",
+	// "./utils/location"
+], function() {
+	
+});

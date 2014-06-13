@@ -4,7 +4,7 @@ define([
 	'ngResource',
 	'ngProgress',
 	// './ctrls/index',
-	'./services/index',
+	// './services/index',
 	'./directives/index'
 ], function(angular) {
 	'use strict';
@@ -18,6 +18,8 @@ define([
 		// 'app.services',
 		'app.directives'
 	];
+
+	console.log('OY');
 
 	return angular.module('app', deps);
 });
