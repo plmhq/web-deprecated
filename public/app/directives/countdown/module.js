@@ -47,7 +47,7 @@ define(['../module'], function(app) {
 			}
 
 			// Create the remaining scope variable
-			$scope.remaining = new Date();
+			// $scope.remaining = new Date();
 
 			// Object containing current and countdown time
 			var current = new Date(),
@@ -58,6 +58,8 @@ define(['../module'], function(app) {
 			var timer = function() {
 				if(current.getTime() < target.getTime()) {
 					$timeout(count, 1000);
+				} else {
+					//
 				}
 			}
 
