@@ -18,9 +18,16 @@ define(['../module'], function(app) {
 				}
 			}
 
+			// Determine if day is to be shown
+			var detDay = function(d) {
+				return ( d > 0 )
+					? d + ' days and '
+					: '';
+			}
+
 			// Formats the given date
 			var format = function(d, h, m, s) {
-				return d + ' days and ' +
+				return detDay(d) +
 					precedeZero(h) + ':' +
 					precedeZero(m) + ':' +
 					precedeZero(s) + '';

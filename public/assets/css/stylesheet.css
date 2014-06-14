@@ -211,6 +211,8 @@ ul.no-bullets li {
 
 footer {
 	display: block;
+	position: relative;
+	bottom: 0;
 	background-color: #181818;
 	color: #fff;
 	padding-top: 15px;
@@ -224,6 +226,10 @@ footer {
 footer .copyright {
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+}
+
+footer .clearfix {
+	margin-bottom: 0;
 }
 
 footer p {
