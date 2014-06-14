@@ -4,9 +4,12 @@ define(['../module'], function(app) {
 	app.directive('navigation', [
 		'$window',
 		function($window) {
-		var link = function(element, scope, attrs) {
-			var top = element.scrollTop;
+		var pre = function() {
+			var elm = angular.element('.navbar-cus');
+			var top = elm.offset().top;
 			var win = angular.element($window);
+
+			console.log(elm);
 
 			win.scroll(function(e) {
 				if( win.scrollTop() > top) {
@@ -14,18 +17,29 @@ define(['../module'], function(app) {
 					// element.css({
 					// 	position: i
 					// });
+					// elm.appendTo('html, body');
+					// var newElm = angular.element('.navbar-cus')[1];
+					// // newElm.hide();
+					// newElm.slideDown();
+					// newElm.css({
+					// 	width: '100%',
+					// 	position: 'fixed',
+					// 	zIndex: '100',
+					// 	top: '0'
+					// });
+					// console.log('Oy');
 				} else {
 					// element.css({});
 				}
 			});
 		};
 
-		var object = {
+		return {
 			restrict: 'EA',
-			templateUrl: 'app/directives/navigation/partial.html'
-			// link: link
+			templateUrl: 'app/directives/navigation/partial.html',
+			compile: function() {
+				return { pre: pre };
+			}
 		};
-
-		return object;
 	}]);
 })

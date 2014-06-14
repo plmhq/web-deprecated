@@ -7,12 +7,23 @@ define(['../module'], function(app) {
 			'$timeout',
 			function($scope, $timeout) {
 
+			// Check if the day has preceding zero
+			var precedeZero = function(n) {
+				if(n - 10 == 0) {
+					return '00';
+				} else if(n - 10 < 0) {
+					return '0' + n;
+				} else {
+					return n;
+				}
+			}
+
 			// Formats the given date
 			var format = function(d, h, m, s) {
 				return d + ' days and ' +
-					h + ':' +
-					m + ':' +
-					s + '';
+					precedeZero(h) + ':' +
+					precedeZero(m) + ':' +
+					precedeZero(s) + '';
 			}
 
 			var getSeconds = function(a, b) {
@@ -27,8 +38,6 @@ define(['../module'], function(app) {
 				// Days
 				var d = parseInt(seconds / 86400);
 				seconds = seconds % 86400;
-
-				console.log(d);
 
 				// Hours
 				var h = parseInt(seconds / 3600);
