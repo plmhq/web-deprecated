@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 
 	<!-- Stylesheets -->
+	<link href="/assets/vendor/font-awesome/css/font-awesome.min.css" type="text/css" rel="styleheet">
 	<link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<link href="/assets/css/stylesheet.css" type="text/css" rel="stylesheet">
 	<link href="/assets/css/progress.css" type="text/css" rel="stylesheet">
