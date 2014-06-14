@@ -157,9 +157,26 @@
 .countdown-timer-big {
 	height: 400px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
-	background-image: url();
+	background: linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
+	background: -webkitlinear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
+	background: -moz-linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
+	background: -o-linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
+		background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
 }
+/*.countdown-timer-big::before {
+	display: block;
+	content: " ";
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url('/assets/images/countdown-bg.jpg');
+	z-index: -1
+}*/
 .countdown-timer-big-container {
 	position: relative;
 	bottom: 0;
