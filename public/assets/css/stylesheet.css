@@ -32,6 +32,8 @@
 	font-size: 12px;
 	text-transform: uppercase;
 	box-shadow: 1px 0 2px #b6b6b6;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .navbar * {
@@ -150,6 +152,28 @@
 
 .news-canopy > .news-canopy-item > .news-canopy-body {
 	float: right;
+}
+
+.countdown-timer-big {
+	height: 400px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	background-image: url();
+}
+.countdown-timer-big-container {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.countdown-timer-big .countdown-timer-big-remaining {
+	font-size: 120px;
+}
+.countdown-timer-big .countdown-timer-big-opt {
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 h1, h2, h3, h4, h5, h6 {

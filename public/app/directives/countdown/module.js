@@ -1,36 +1,74 @@
 define(['../module'], function(app) {
 	'use strict';
 
-	var controller = [
-		'$scope',
-		'$timeout',
-		function($scope) {
+	return app.directive('countdown', [function() {
+		var controller = [
+			'$scope',
+			'$timeout',
+			function($scope, $timeout) {
 
-		// Countdown timer
-		$scope.timer = function() {
-			while(current < countdown) {
-				$timeout(function() {
-					time.current++;
-				}, 1000);
+			// Formats the given date
+			var format = function(d, h, m, s) {
+				return d + ' days and ' +
+					h + ':' +
+					m + ':' +
+					s + '';
 			}
-		}
 
-		// Object containing current and countdown time
-		$scope.time = {};
-		$scope.time.current = new Date();
-		$scope.time.countdown = new Date(2014, 6, 19);
+			var getSeconds = function(a, b) {
+				return (a - b) / 1000;
+			}
 
-		console.log($scope.time.current);
+			// Keeps the counter going
+			var count = function() {
+				current = new Date();
+				seconds = getSeconds(target.getTime(), current.getTime());
+				
+				// Days
+				var d = parseInt(seconds / 86400);
+				seconds = seconds % 86400;
 
-		// Call the countdown timer
-		$scope.timer();
-	}];
+				console.log(d);
 
-	var object = {
-		restrict: 'EA',
-		templateUrl: 'app/directives/countdown/partial.html',
-		controller: controller 
-	};
+				// Hours
+				var h = parseInt(seconds / 3600);
+				seconds = seconds % 3600;
 
-	return object;
+				// Minutes andseconds
+				var m = parseInt(seconds / 60);
+				var s = parseInt(seconds % 60);
+
+				// Format
+				$scope.remaining = format(d, h, m, s);
+
+				// Recursion
+				// $timeout(count, 1000);
+				timer();
+			}
+
+			// Create the remaining scope variable
+			$scope.remaining = new Date();
+
+			// Object containing current and countdown time
+			var current = new Date(),
+				target = new Date("June 19, 2014"),
+				seconds = getSeconds(target.getTime(), current.getTime());
+
+			// Countdown timer
+			var timer = function() {
+				if(current.getTime() < target.getTime()) {
+					$timeout(count, 1000);
+				}
+			}
+
+			// Call the countdown timer
+			timer();
+		}];
+
+		return {
+			restrict: 'EA',
+			templateUrl: 'app/directives/countdown/partial.html',
+			controller: controller
+		};
+	}]);
 });
