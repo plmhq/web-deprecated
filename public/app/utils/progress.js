@@ -18,7 +18,7 @@ define(['../app'], function(app) {
 
 			$rootScope.$on('$app.start', function() { compl() });
 
-			appStart();
+			// appStart();
 
 			$rootScope.$on('$stateChangeStart', function() { start(); });
 			$rootScope.$on('$stateChangeSuccess', function() { compl(); });
