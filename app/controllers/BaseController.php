@@ -1,9 +1,5 @@
 <?php
 
-use Input;
-use Redirect;
-use Validator;
-
 class BaseController extends Controller {
 
 	/**
