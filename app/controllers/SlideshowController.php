@@ -29,7 +29,7 @@ class SlideshowController extends \BaseController {
 	 */
 	public function index()
 	{
-		return $this->slideshow->all();
+		return $this->slideshow->all()->toJson();
 	}
 
 
@@ -54,10 +54,13 @@ class SlideshowController extends \BaseController {
 		try {
 			$this->slideshow->create($input);
 		} catch(ValidationFailedException $e) {
-			//
+			return Response::json([
+				'status' => false,
+				'errors' => $e->getMessage()
+			]);
 		}
 
-		//
+		return Response::json(['status' => true]);
 	}
 
 
@@ -70,12 +73,15 @@ class SlideshowController extends \BaseController {
 	public function show($id)
 	{
 		try {
-			$slideshow = $this->slideshow->find($id);
+			$slideshow = $this->slideshow->find($id)->toJson();
 		} catch(ModelNotFoundException $e) {
-			//
+			return Response::json(['status'	=> false]);
 		}
 
-		//
+		return Response::json([
+			'status'	=> true,
+			'slideshow'	=>	$slideshow
+		]);
 	}
 
 
@@ -99,12 +105,17 @@ class SlideshowController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		$input = $this->input->all();
+
 		try {
 			$slideshow = $this->slideshow->update($id, $input);
 		} catch(ModelNotFoundException $e) {
-			//
+			return Response::json(['status' => false]);
 		} catch(ValidationFailedException $e) {
-			//
+			return Response::json([
+				'status' => false,
+				'errors' => $e->getMessage()
+			]);
 		}
 
 		//
