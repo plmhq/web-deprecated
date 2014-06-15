@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'PLM\Handler\AppServiceProvider',
 		'PLM\Repository\RepositoryServiceProvider',
+		'PLM\Filter\FilterServiceProvider',
 
 	),
 

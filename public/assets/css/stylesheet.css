@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
 * {
 	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', serif, sans-serif;
@@ -232,29 +232,32 @@ footer .clearfix {
 	margin-bottom: 0;
 }
 
-footer .social-media .fa {
+footer .social-media a .fa {
 	margin-left: 10px;
 	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
 }
 
 footer .social-media a:hover .fa {
-	animation: social-media-icon 1s infinite;
-	-webkit-animation: social-media-icon 1s infinite;
+	animation: iconimate 1s infinite;
+	-webkit-animation: iconimate 1s infinite;
+	-moz-animation: iconimate 1s infinite;
+	-o-animation: iconimate 1s infinite;
 }
 
-@-webkit-keyframes social-media-icon {
-	0%, 20%, 60%, 100% {
+@-webkit-keyframes iconimate {
+	20%, 80% {
 		font-size: 15px;
 		color: rgba(255, 255, 255, 1);
 	}
 
-	40%, 80% {
+	40%, 100% {
 		font-size: 12px;
 		color: rgba(255, 255, 255, 0.5);
 	}
 }
 
-@keyframes social-media-icon {
+@keyframes iconimate {
 	0%, 80% {
 		font-size: 15px;
 		color: rgba(255, 255, 255, 1);
