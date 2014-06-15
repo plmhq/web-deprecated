@@ -160,18 +160,50 @@
 }
 */
 
-.news-canopy-item {
+.news-canopy {
+	/*box-shadow: 0 5px 1px #000;*/
+	padding-bottom: 5px;
+	/*z-index: 90;*/
+}
+
+.news-canopy a {
+	text-decoration: none;
+}
+
+.col-md-4.news-canopy-item {
 	position: relative;
 	top: 0;
+	overflow: hidden;
+	height: 200px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.news-canopy-item .news-canopy-cover {
+	top: -100px;
+	background: linear-gradient(rgba(164, 55, 236, 0.5), rgba(164, 0, 92, 0.5));
+}
+
+.news-canopy-item .news-canopy-cover img {
+	position: relative;
+	opacity: 0.5;
+	width: 100%;
+	filter: blur(5px);
 }
 
 .news-canopy-item .news-canopy-item-heading {
 	position: relative;
-	top: -150px;
+	top: -275px;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	font-size: 15px;
 	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
 }
 .countdown-timer-big {
+	box-shadow: -1px 0px 1px #000;
 	height: 400px;
 	width: 100%;
 	background: linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
