@@ -105,6 +105,7 @@ class NewsController extends \BaseController {
 	public function update($id)
 	{
 		$input = $this->input->all();
+		
 		try {
 			$news = $this->news->update($id, $input)->toJson();
 		} catch(ModelNotFoundException $e) {
