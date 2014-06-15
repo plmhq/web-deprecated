@@ -355,13 +355,17 @@ footer .copyright {
 	text-transform: uppercase;
 }
 
+footer a {
+	color: rgba(255, 255, 255, 1);
+	font-weight: bold;
+}
+
 footer .clearfix {
 	margin-bottom: 0;
 }
 
 footer .social-media a .fa {
 	margin-left: 10px;
-	color: rgba(255, 255, 255, 1);
 	text-decoration: none;
 }
 
