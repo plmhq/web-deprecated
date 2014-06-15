@@ -1,6 +1,6 @@
 <?php namespace PLM\Repository\Eloquent;
 
-abstract class EloquentRepository {
+abstract class AbstractRepository {
 
 	/**
 	 * @Inject
