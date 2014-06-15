@@ -46,4 +46,24 @@ class AuthController extends BaseController {
 		return Response::json(['status' => false]);
 	}
 
+	/**
+	 * Returns whether session is auth or guest
+	 *
+	 * @return 	bool
+	 */
+	public function getCheck()
+	{
+		return $this->auth->check();
+	}
+
+	/**
+	 * Returns whether session is guest or auth
+	 *
+	 * @return 	bool
+	 */
+	public function getGuest()
+	{
+		return $this->auth->guest();
+	}
+
 }

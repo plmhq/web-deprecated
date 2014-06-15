@@ -45,6 +45,23 @@ define(['../module'], function(app) {
 					var request = $http.get(url);
 
 					return request;
+				},
+
+				/**
+				 * Check auth (session) status
+				 *
+				 * @return $q
+				 */
+				guest: function() {
+					var defer = $q.defer();
+					var url = ' ';
+					var request = $http.get(url);
+
+					request.success(function(r) {
+						return (r) ? defer.resolve() : defer.reject();
+					});
+
+					return defer.promise;
 				}
 			};
 
