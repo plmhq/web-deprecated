@@ -162,17 +162,22 @@
 
 .news-canopy {
 	/*box-shadow: 0 5px 1px #000;*/
-	padding-bottom: 5px;
+	/*padding-bottom: 5px;*/
 	/*z-index: 90;*/
+	/*width: 100%;*/
+	/*overflow-x: scroll;*/
+}
+
+.news-canopy .row {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .news-canopy a {
 	text-decoration: none;
 }
 
-.col-md-4.news-canopy-item {
-	position: relative;
-	top: 0;
+.news-canopy-item {
 	overflow: hidden;
 	height: 200px;
 	padding-left: 0;
@@ -180,12 +185,12 @@
 }
 
 .news-canopy-item .news-canopy-cover {
-	top: -100px;
-	background: linear-gradient(rgba(164, 55, 236, 0.5), rgba(164, 0, 92, 0.5));
+	/*top: 100%;*/
+	background: linear-gradient(rgba(164, 55, 236, 0.8), rgba(164, 0, 92, 0.8));
 }
 
 .news-canopy-item .news-canopy-cover img {
-	position: relative;
+	margin-top: -15%;
 	opacity: 0.5;
 	width: 100%;
 	filter: blur(5px);
@@ -195,8 +200,25 @@
 	-ms-filter: blur(5px);
 }
 
-.news-canopy-item .news-canopy-cover:not(:last-child) {
+.news-canopy-item .news-canopy-cover:hover img {
+	filter: blur(0);
+	-webkit-filter: blur(0);
+	-o-filter: blur(0);
+	-moz-filter: blur(0);
+	-ms-filter: blur(0);
+
+	transition: all ease-in-out 0.25s;
+	-webkit-transition: all ease-in-out 0.25s;
+	-moz-transition: all ease-in-out 0.25s;
+	-o-transition: all ease-in-out 0.25s;
+}
+
+.news-canopy-item:not(:last-child) .news-canopy-cover {
 	border-right: 1px solid #ddd;
+}
+
+.row:nth-child(2) .news-canopy-item .news-canopy-cover {
+	border-top: 1px solid #ddd;
 }
 
 .news-canopy-item .news-canopy-item-heading {
@@ -209,15 +231,15 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #fff;
+	z-index: 100;
 }
 .countdown-timer-big {
-	box-shadow: -1px 0px 1px #000;
 	height: 400px;
 	width: 100%;
-	background: linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
-	background: -webkitlinear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
-	background: -moz-linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
-	background: -o-linear-gradient(rgba(164, 0, 0, 0.5), rgba(164, 0, 0, 0.5)), url('/assets/images/countdown-bg.jpg');
+	background: linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
+	background: -webkitlinear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
+	background: -moz-linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
+	background: -o-linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;

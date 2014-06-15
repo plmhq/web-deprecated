@@ -31,6 +31,17 @@ define(['../app'], function(app) {
 				templateUrl: 'app/components/abstracts/db.html'
 			};
 
+			var dbauth = {
+				name: 'dbauth',
+				abstract: true,
+				templateUrl: 'app/components/abstracts/dbauth.html',
+				resolve: {
+					auth: [function(AuthService) {
+						return AuthService.guest();
+					}]
+				}
+			}
+
 			// Default
 			$stateProvider
 				.state(def)
