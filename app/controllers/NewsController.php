@@ -50,13 +50,13 @@ class NewsController extends \BaseController {
 	 */
 	public function store()
 	{
-		// Grab all input
-		$input = Input::all();
-
 		try {
-			$this->news->create( $input );
+			$this->news->create( $this->input->all() );
 		} catch(ValidationFailedException $e) {
-			return Response::json(['status' => false]);
+			return Response::json([
+				'status' => false,
+				'errors' => $e->getMessage()
+			]);
 		}
 
 		return Response::json(['status' => true]);
@@ -104,10 +104,16 @@ class NewsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		$input = $this->input->all();
 		try {
-			$news = $this->news->find($id)->toJson();
+			$news = $this->news->update($id, $input)->toJson();
 		} catch(ModelNotFoundException $e) {
 			return Response::json(['status' => false]);
+		} catch(ValidationFailedException $e) {
+			return Response::json([
+				'status' => false,
+				'errors' => $e->getMessage()
+			]);
 		}
 
 		return Response::json([
