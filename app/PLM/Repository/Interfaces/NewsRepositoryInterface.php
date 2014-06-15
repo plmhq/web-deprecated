@@ -1,4 +1,4 @@
-<?php namespace PLM\Repository\Interface;
+<?php namespace PLM\Repository\Interfaces;
 
 interface NewsRepositoryInterface {
 
@@ -41,5 +41,21 @@ interface NewsRepositoryInterface {
 	 * @return 	bool
 	 */
 	public function delete($id);
+
+	/**
+	 * Take the first $count
+	 *
+	 * @param 	int 	$count
+	 * @return 	Model
+	 */
+	public function get($count = 5);
+
+	/**
+	 * Take recent slideshows
+	 *
+	 * @param 	int 	$limit
+	 * @return 	Model
+	 */
+	public function getRecent($limit = null);
 	
 }

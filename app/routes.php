@@ -18,9 +18,26 @@
  */
 Route::group(['prefix' => 'api'], function()
 {
+	/**
+	 * @link /api/auth/*
+	 */
+	Route::controller('auth', 'AuthController');
+
+	/**
+	 * @link /api/user/*
+	 */
 	Route::resource('user', 'UserController');
+
+	/**
+	 * @link /api/slideshow/*
+	 */
 	Route::resource('slideshow', 'SlideshowController');
-	Route::resource('news', 'NewsController');
+
+	/**
+	 * @link /api/news/*
+	 */
+	Route::resource('rest/news', 'NewsController');
+	Route::controller('x/news', 'NewsAPIController');
 });
 
 /**

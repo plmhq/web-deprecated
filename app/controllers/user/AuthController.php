@@ -3,13 +3,23 @@
 class AuthController extends BaseController {
 
 	/**
+	 * Class constructor
+	 *
+	 * @param 	Auth 	$auth
+	 */
+	public function __construct(\Auth $auth)
+	{
+		$this->auth = $auth;
+	}
+
+	/**
 	 * Logout
 	 *
 	 * @return 	Response
 	 */
 	public function getLogout()
 	{
-		$this->user->logout();
+		$this->auth->logout();
 	}
 
 	/**
@@ -21,19 +31,19 @@ class AuthController extends BaseController {
 	{
 		// Account credentials
 		$data = array(
-			'username' => Input::get('username'),
-			'password' => Input::get('password')
+			'username' => $this->input->get('username'),
+			'password' => $this->input->get('password')
 		);
 
 		// Remember user session
-		$remember = Input::get('remember');
+		$remember = $this->input->get('remember');
 
-		if( $this->user->login($data, $remember) )
+		if( $this->auth->attempt($data, $remember) )
 		{
-			//
+			return Response::json(['status' => true]);
 		}
 
-		//
+		return Response::json(['status' => false]);
 	}
 
 }

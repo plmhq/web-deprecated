@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Validator\Exceptions\ValidationFailedException;
-use PLM\Repository\Interface\UserRepositoryInterface;
+use PLM\Repository\Interfaces\UserRepositoryInterface;
 
 class UserController extends \BaseController {
 

@@ -1,6 +1,6 @@
-<?php namespace PLM\Repository\Interface;
+<?php namespace PLM\Repository\Interfaces;
 
-interface SlideshowRepositoryInterface {
+interface UserRepositoryInterface {
 
 	/**
 	 * Fetch all resources
@@ -41,5 +41,21 @@ interface SlideshowRepositoryInterface {
 	 * @return 	bool
 	 */
 	public function delete($id);
+
+	/**
+	 * Take the first $count
+	 *
+	 * @param 	int 	$count
+	 * @return 	Model
+	 */
+	public function get($count = 5);
+
+	/**
+	 * Take recent slideshows
+	 *
+	 * @param 	int 	$limit
+	 * @return 	Model
+	 */
+	public function getRecent($limit = null);
 
 }

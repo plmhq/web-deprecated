@@ -1,7 +1,7 @@
 <?php namespace PLM\Repository\Eloquent;
 
 use Slideshow;
-use PLM\Repository\Interface\SlideshowRepositoryInterface;
+use PLM\Repository\Interfaces\SlideshowRepositoryInterface;
 
 class SlideshowRepository extends AbstractRepository implements SlideshowRepositoryInterface {
 
@@ -18,6 +18,7 @@ class SlideshowRepository extends AbstractRepository implements SlideshowReposit
 	/**
 	 * Take recent slideshows
 	 *
+	 * @param 	int 	$limit
 	 * @return 	Model
 	 */
 	public function getRecent($limit = null)

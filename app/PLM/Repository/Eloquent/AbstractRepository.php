@@ -80,4 +80,26 @@ abstract class EloquentRepository {
 		return $this->find($id)->delete();
 	}
 
+	/**
+	 * Take the first $count
+	 *
+	 * @param 	int 	$count
+	 * @return 	Model
+	 */
+	public function get($count = 5)
+	{
+		return $this->model->take($count)->get();
+	}
+
+	/**
+	 * Take recent slideshows
+	 *
+	 * @param 	int 	$limit
+	 * @return 	Model
+	 */
+	public function getRecent($limit = null)
+	{
+		return $this->model->recent($limit)->get();
+	}
+
 }

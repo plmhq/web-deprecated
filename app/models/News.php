@@ -30,4 +30,16 @@ class News extends Eloquent {
 	 */
 	public $timestamps = true;
 
+	/**
+	 * Take last five from the table
+	 *
+	 * @param 	$query 	Builder
+	 * @param 	int 	$limit
+	 * @return 	$query
+	 */
+	public function scopeRecent($query, $limit = 5)
+	{
+		return $query->orderBy('id', 'desc')->take($limit);
+	}
+
 }

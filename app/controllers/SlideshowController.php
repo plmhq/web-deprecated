@@ -2,7 +2,7 @@
 
 use PLM\Validator\Exceptions\ValidationFailedException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use PLM\Repository\Interface\SlideshowRepositoryInterface;
+use PLM\Repository\Interfaces\SlideshowRepositoryInterface;
 
 class SlideshowController extends \BaseController {
 
