@@ -37,8 +37,6 @@ define(['../module'], function(app) {
 						defer.reject();
 					});
 
-					console.log('Aye');
-
 					return defer.promise
 				},
 

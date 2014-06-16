@@ -10,8 +10,6 @@ define(['../module'], function(app) {
 			$scope.getImageLink = function(image) {
 				return NewsService.getImageLink(image);
 			}
-
-			console.log($scope.bundle);
 		}
 	]);
 });

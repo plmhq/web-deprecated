@@ -9,8 +9,6 @@ define(['../module'], function(app) {
 			var top = elm.offset().top;
 			var win = angular.element($window);
 
-			console.log(elm);
-
 			win.scroll(function(e) {
 				if( win.scrollTop() > top) {
 					// check if it is possible to get current css values
