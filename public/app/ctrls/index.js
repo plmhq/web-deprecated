@@ -1,3 +1,5 @@
-define([], function() {
+define([
+	'./NewsCanopyCtrl/ctrl'
+], function() {
 	'use strict';
 });

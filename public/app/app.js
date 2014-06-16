@@ -3,7 +3,7 @@ define([
 	'uiRouter',
 	'ngResource',
 	'ngProgress',
-	// './ctrls/index',
+	'./ctrls/index',
 	'./services/index',
 	'./directives/index'
 ], function(angular) {
@@ -13,7 +13,7 @@ define([
 		'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
 		'ngProgress',
 		'app.directives',
-		// 'app.ctrls',
+		'app.ctrls',
 		'app.services'
 	];
 

@@ -26,7 +26,7 @@ define(['../module'], function(app) {
 				 */
 				getBundle: function(count) {
 					var defer = $q.defer();
-					var url = 'api/x/news/get-recent/' + count;
+					var url = 'api/x/news/recent-news/' + count;
 					var request = $http.get(url);
 					var obj = this;
 
@@ -40,6 +40,13 @@ define(['../module'], function(app) {
 					console.log('Aye');
 
 					return defer.promise
+				},
+
+				/**
+				 *
+				 */
+				getImageLink: function(image) {
+					return '/assets/images/upload/news/' + image;
 				}
 			};
 

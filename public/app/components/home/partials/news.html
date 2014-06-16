@@ -1,38 +1,35 @@
-<div class="news-canopy">
+<div class="news-canopy" ng-controller="NewsCanopyCtrl">
 	<div class="row text-center">
 		<a href="#" class="col-md-4 news-canopy-item">
-			<div class="news-canopy-cover"><img src="/assets/images/upload/news/GGGGG.jpg"></div>
+			<div class="news-canopy-cover"><img ng-src="{{ getImageLink(bundle[0].image) }}"></div>
 			<span class="news-canopy-item-type"> News </span>
 			<span class="news-canopy-item-date"> June 14, 2014 </span>
-			<span class="news-canopy-item-heading"> PLM Celebrates 150th Anniversary </span>
-
+			<span class="news-canopy-item-heading" ng-bind="bundle[0].title"></span>
 		</a>
 
 		<a href="#" class="col-md-4 news-canopy-item">
-			<div class="news-canopy-cover"><img src="/assets/images/upload/news/jK62Z.jpg"></div>
+			<div class="news-canopy-cover"><img ng-src="{{ getImageLink(bundle[1].image) }}"></div>
 			<span class="news-canopy-item-type"> News </span>
 			<span class="news-canopy-item-date"> May 6, 2014 </span>
-			<span class="news-canopy-item-heading">
+			<span class="news-canopy-item-heading" ng-bind="bundle[1].title">
 				PLM opens new School Year!
-			</span
+			</span>
 		</a>
 
 		<a href="#" class="col-md-4 news-canopy-item">
-			<div class="news-canopy-cover"><img src="/assets/images/upload/news/jX4JK.jpg"></div>
+			<div class="news-canopy-cover"><img ng-src="{{ getImageLink(bundle[2].image) }}"></div>
 			<span class="news-canopy-item-type"> News </span>
 			<span class="news-canopy-item-date"> March 4, 2014 </span>
-			<span class="news-canopy-item-heading">
-				Official PLM Seal institutionalized
-			</span>
+			<span class="news-canopy-item-heading" ng-bind="bundle[2].title"></span>
 		</a>
 	</div>
 
 	<div class="row text-center">
 		<a href="#" class="col-md-4 news-canopy-item">
-			<div class="news-canopy-cover"><img src="/assets/images/upload/news/x325JK.jpg"></div>
+			<div class="news-canopy-cover"><img ng-src="{{ getImageLink(bundle[3].image) }}"></div>
 			<span class="news-canopy-item-type"> News </span>
 			<span class="news-canopy-item-date"> June 5, 2013 </span>
-			<span class="news-canopy-item-heading"> PLM is 4th top Law school in Metro </span>
+			<span class="news-canopy-item-heading" ng-bind="bundle[3].title"> </span>
 		</a>
 
 		<a href="#" class="col-md-4 news-canopy-item">
@@ -41,10 +38,10 @@
 		</a>
 
 		<a href="#" class="col-md-4 news-canopy-item">
-			<div class="news-canopy-cover"><img src="/assets/images/upload/news/sDgJK5.jpg"></div>
+			<div class="news-canopy-cover"><img ng-src="{{ getImageLink(bundle[4].image) }}"></div>
 			<span class="news-canopy-item-type"> News </span>
 			<span class="news-canopy-item-date"> August 23, 2013 </span>
-			<span class="news-canopy-item-heading"> PLM dominated the LET: Top 1 & Top 10 </span>
+			<span class="news-canopy-item-heading" ng-bind="bundle[4].title"> </span>
 		</a>
 	</div>
 </div>
