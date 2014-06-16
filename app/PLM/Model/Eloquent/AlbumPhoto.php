@@ -1,6 +1,6 @@
 <?php namespace PLM\Model\Eloquent;
 
-class AlbumPhotos extends \Eloquent {
+class AlbumPhoto extends \Eloquent {
 
 	/**
 	 * Table used by the model
