@@ -29,7 +29,7 @@ class NewsAPIController extends \BaseController {
 	 */
 	public function getRecentNews($count = 5)
 	{
-		$this->news->getRecent($count);
+		return $this->news->getRecent($count)->toJson();
 	}
 
 }
