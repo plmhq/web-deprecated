@@ -20,9 +20,16 @@ define(['../module'], function(app) {
 
 			// Determine if day is to be shown
 			var detDay = function(d) {
-				return ( d > 0 )
-					? d + ' days and '
-					: '';
+
+				if(d > 0) {
+					var phrase = ( d == 1 )
+						? 'day'
+						: 'days';
+
+					return d + ' ' + phrase + ' and ';
+				}
+
+				return '';
 			}
 
 			// Formats the given date
