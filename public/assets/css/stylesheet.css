@@ -139,13 +139,13 @@
 		-o-box-sizing: padding-box;
 }
 #admission.content-item {
-	border-top-color: #0033FF;
+	border: none;
 }
 #events.content-item {
-	border-top-color: #a40000;
+	border: none;
 }
 #spotlight.content-item {
-	border-top-color: #0033FF;
+	border: none;
 }
 #gallery.content-item {
 	border-top-color: #a40000;
