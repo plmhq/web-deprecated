@@ -138,11 +138,30 @@
 		-moz-box-sizing: padding-box;
 		-o-box-sizing: padding-box;
 }
+.content-item h2 {
+	margin-top: 7px;
+}
 #admission.content-item {
 	border: none;
 }
 #events.content-item {
 	border: none;
+}
+#events.content-item .event-cover {
+	height: 100px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+#events.content-item .event-cover img {
+	position: relative;
+	top: -50%;
+	left: 0;
+	right: 0;
+	bottom :0;
+}
+#events.content-item .event-head {
+	margin-bottom: 5px;
+	margin-top: 5px;
 }
 #spotlight.content-item {
 	border: none;
