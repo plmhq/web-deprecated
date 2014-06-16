@@ -16,6 +16,7 @@ define(['../app'], function(app) {
 				templateUrl: '/app/components/abstracts/def.html'
 			};
 
+			// Homepage
 			var home = {
 				name: 'def.home',
 				url: '/',
@@ -27,11 +28,14 @@ define(['../app'], function(app) {
 				}
 			};
 
-			console.log(home);
+			// Default
+			$stateProvider
+				.state(def)
+				.state(home);
 				
 			// Dashboard state
-			var mod = {
-				name: 'mod',
+			var db = {
+				name: 'db',
 				abstract: true,
 				templateUrl: 'app/components/abstracts/db.html'
 			};
@@ -47,14 +51,17 @@ define(['../app'], function(app) {
 				}
 			}
 
-			// Default
-			$stateProvider
-				.state(def)
-				.state(home);
+			var dbin {
+				home: {
+					name: 'dbauth.home'
+				}
+			};
 			
 			// Dashboard
 			$stateProvider
-				.state(mod);
+				.state(db);
+				.state(dbauth);
+				.state
 
 		}
 	]);
