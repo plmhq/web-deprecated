@@ -1,7 +1,5 @@
 <?php
 
-use Faker\Factory as Faker;
-
 class UserSeeder extends Seeder {
 
 	/**
@@ -14,25 +12,25 @@ class UserSeeder extends Seeder {
 		$db = DB::table('users');
 		$db->delete();
 
-		$faker = Faker::create();
+		$password = Hash::make('test');
 
 		$data = [
 			[
 				'id'			=> 1,
 				'username'		=> 'test',
-				'password'		=> Hash::make('test'),
-				'email'			=> 'test@test.com'
-				'created_at'	=> date(),
-				'updated_at'	=> date(),
+				'password'		=> $password,
+				'email'			=> 'test@test.com',
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d'),
 			],
 
 			[
 				'id'			=> 2,
 				'username'		=> 'test',
-				'password'		=> Hash::make('test'),
-				'email'			=> 'test@test.com'
-				'created_at'	=> date(),
-				'updated_at'	=> date(),
+				'password'		=> $password,
+				'email'			=> 'test2@test.com',
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d'),
 			]
 		];
 
