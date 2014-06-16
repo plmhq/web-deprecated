@@ -37,7 +37,7 @@ define(['../app'], function(app) {
 			var db = {
 				name: 'db',
 				abstract: true,
-				templateUrl: 'app/components/abstracts/db.html'
+				templateUrl: 'app/components/abstracts/db.html',
 				resolve: {
 					guest: ['AuthService', function(AuthService) {
 						return AuthService.guest();
