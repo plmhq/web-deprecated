@@ -22,6 +22,7 @@ class NewsSeeder extends Seeder {
 				'user_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
+				'image'			=> 'GGGGG.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -31,6 +32,7 @@ class NewsSeeder extends Seeder {
 				'user_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
+				'image'			=> 'jK62Z.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -40,6 +42,7 @@ class NewsSeeder extends Seeder {
 				'user_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
+				'image'			=> 'jX4JK.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -49,6 +52,7 @@ class NewsSeeder extends Seeder {
 				'user_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
+				'image'			=> 'x325JK.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -58,18 +62,10 @@ class NewsSeeder extends Seeder {
 				'user_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
+				'image'			=> 'sDgJK5.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
-			],
-
-			[
-				'id'			=> 6,
-				'user_id'		=> 1,
-				'title'			=> $faker->sentence(),
-				'content'		=> $faker->paragraph(),
-				'created_at'	=> date('Y-m-d'),
-				'updated_at'	=> date('Y-m-d')
-			],
+			]
 		];
 
 		$db->insert($data);

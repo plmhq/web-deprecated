@@ -261,7 +261,7 @@
 	border-right: 1px solid #ddd;
 }
 
-.row:nth-child(2) .news-canopy-item .news-canopy-cover {
+.news-canopy-item .news-canopy-cover {
 	border-top: 1px solid #ddd;
 }
 
