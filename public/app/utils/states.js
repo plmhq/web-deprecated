@@ -48,7 +48,7 @@ define(['../app'], function(app) {
 			db.auth.main = {
 				name: 'db.auth',
 				abstract: true,
-				templateUrl: 'app/components/abstracts/dbauth.html',
+				templateUrl: 'app/components/abstracts/db-auth.html',
 				resolve: {
 					auth: ['AuthService', function(AuthService) {
 						return AuthService.check();
