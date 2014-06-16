@@ -19,7 +19,12 @@ define(['../app'], function(app) {
 			var home = {
 				name: 'def.home',
 				url: '/',
-				templateUrl: '/app/components/home/index.html'
+				templateUrl: '/app/components/home/index.html',
+				resolve: {
+					news: ['NewsService', function(NewsService) {
+						return NewsService.getBundle(5);
+					}]
+				}
 			};
 
 			console.log(home);

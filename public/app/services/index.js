@@ -1,7 +1,8 @@
 define([
 	'./Auth/service',
 	'./User/service',
-	'./Util/service'
+	'./Util/service',
+	'./News/service'
 ], function() {
 	'use strict';
 });
