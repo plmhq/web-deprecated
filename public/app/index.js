@@ -1,7 +1,7 @@
 define([
 	// "./app"
 	"./utils/location",
-	"./utils/states",
+	"./utils/states/index",
 	'./utils/progress'
 ], function() {
 	

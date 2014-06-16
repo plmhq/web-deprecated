@@ -1,10 +1,9 @@
-define(['../app'], function(app) {
+define(['../../app'], function(app) {
 	'use strict';
 
 	return app.config([
-		'$stateProvider',
 		'$urlRouterProvider',
-		function($stateProvider, $urlRouterProvider) {
+		function($urlRouterProvider) {
 
 			// Missing routes
 			$urlRouterProvider.otherwise('/');
