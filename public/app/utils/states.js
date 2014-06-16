@@ -34,19 +34,19 @@ define(['../app'], function(app) {
 				.state(home);
 				
 			// Dashboard state
-			var db = {
+			var db = {};
+			
+			// Main dashboard state
+			db.main = {
 				name: 'db',
 				abstract: true,
-				templateUrl: 'app/components/abstracts/db.html',
-				resolve: {
-					guest: ['AuthService', function(AuthService) {
-						return AuthService.guest();
-					}]
-				}				
+				url: '/dashboard'
 			};
 
-			var dbauth = {
-				name: 'dbauth',
+			// Dashboard Auth
+			db.auth = {};
+			db.auth.main = {
+				name: 'db.auth',
 				abstract: true,
 				templateUrl: 'app/components/abstracts/dbauth.html',
 				resolve: {
@@ -56,22 +56,32 @@ define(['../app'], function(app) {
 				}
 			};
 
-			var login = {
-				name: 'db.login',
-				templateUrl: 'app/components/db/login.html'
+			// Dashboard Auth
+			$stateProvider
+				.state(db.main)
+				.state(db.auth.main);
+
+			// Dashboard guest
+			db.guest = {};
+			db.guest.main = {
+				name: 'db.guest',
+				templateUrl: 'app/components/abstracts/db-guest.html',
+				resolve: {
+					guest: ['AuthService', function(AuthService) {
+						return AuthService.guest();
+					}]
+				}	
+			}
+			db.guest.login = {
+				name: 'db.guest.login',
+				templateUrl: 'app/components/db/login.html',
+				url: '/login'
 			};
 
-			var dbin = {
-				home: {
-					name: 'dbauth.home'
-				}
-			};
-			
-			// Dashboard
+			// Dashboard Guest
 			$stateProvider
-				.state(db)
-				.state(dbauth)
-				.state(login);
+				.state(db.guest.main)
+				.state(db.guest.login);
 		}
 	]);
 });
