@@ -45,13 +45,23 @@ define(['../app'], function(app) {
 				abstract: true,
 				templateUrl: 'app/components/abstracts/dbauth.html',
 				resolve: {
-					auth: [function(AuthService) {
+					auth: ['AuthService', function(AuthService) {
+						return AuthService.check();
+					}]
+				}
+			}
+
+			var login = {
+				name 'db.login',
+				templateUrl: 'app/components/db/login.html',
+				resolve: {
+					guest: ['AuthService', function(AuthService) {
 						return AuthService.guest();
 					}]
 				}
 			}
 
-			var dbin {
+			var dbin = {
 				home: {
 					name: 'dbauth.home'
 				}
