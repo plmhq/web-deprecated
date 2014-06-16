@@ -38,6 +38,11 @@ define(['../app'], function(app) {
 				name: 'db',
 				abstract: true,
 				templateUrl: 'app/components/abstracts/db.html'
+				resolve: {
+					guest: ['AuthService', function(AuthService) {
+						return AuthService.guest();
+					}]
+				}				
 			};
 
 			var dbauth = {
@@ -49,17 +54,12 @@ define(['../app'], function(app) {
 						return AuthService.check();
 					}]
 				}
-			}
+			};
 
 			var login = {
-				name 'db.login',
-				templateUrl: 'app/components/db/login.html',
-				resolve: {
-					guest: ['AuthService', function(AuthService) {
-						return AuthService.guest();
-					}]
-				}
-			}
+				name: 'db.login',
+				templateUrl: 'app/components/db/login.html'
+			};
 
 			var dbin = {
 				home: {
@@ -69,10 +69,9 @@ define(['../app'], function(app) {
 			
 			// Dashboard
 			$stateProvider
-				.state(db);
-				.state(dbauth);
-				.state
-
+				.state(db)
+				.state(dbauth)
+				.state(login);
 		}
 	]);
 });
