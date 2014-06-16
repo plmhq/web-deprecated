@@ -7,7 +7,7 @@ class AuthController extends BaseController {
 	 *
 	 * @param 	Auth 	$auth
 	 */
-	public function __construct(\Auth $auth)
+	public function __construct(Illuminate\Auth\AuthManager $auth)
 	{
 		$this->auth = $auth;
 	}
@@ -53,7 +53,7 @@ class AuthController extends BaseController {
 	 */
 	public function getCheck()
 	{
-		return $this->auth->check();
+		return Response::json($this->auth->check());
 	}
 
 	/**
@@ -63,7 +63,7 @@ class AuthController extends BaseController {
 	 */
 	public function getGuest()
 	{
-		return $this->auth->guest();
+		return Response::json($this->auth->guest());
 	}
 
 }
