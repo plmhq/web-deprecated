@@ -74,7 +74,7 @@ define(['../module'], function(app) {
 
 			// Object containing current and countdown time
 			var current = new Date(),
-				target = new Date("June 19, 2014"),
+				target = new Date("June 19, 2015"),
 				seconds = getSeconds(target.getTime(), current.getTime());
 
 			// Countdown timer
