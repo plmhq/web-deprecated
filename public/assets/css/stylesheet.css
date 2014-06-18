@@ -50,12 +50,15 @@ html, body {
 		-o-box-sizing: padding-box;
 }
 .content-item p {
-	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', serif, sans-serif;;
+	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', serif, sans-serif;
 }
 .content-item .content-heading {
-	margin-top: 7px;
-	text-transform: uppercase;
-	font-weight: 300;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	/*text-transform: uppercase;*/
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0.05em;
 }
 #admission.content-item {
 	border: none;
@@ -96,6 +99,33 @@ html, body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+#gallery.content-item a {
+	text-decoration: none;
+}
+#gallery.content-item .gallery-cover {
+	height: 200px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	background: #000;
+}
+#gallery.content-item .gallery-cover img {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.5;
+}
+#gallery.content-item .gallery-cover:hover img {
+	opacity: 1.0;
+	transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+}
+#gallery.content-item .gallery-btn {
+	margin-top: 10px;
 }
 #gallery.content-item {
 	border-top-color: #a40000;

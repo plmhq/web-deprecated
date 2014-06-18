@@ -11,8 +11,8 @@ define(['../module'], function(app) {
 				return NewsService.getImageLink(image);
 			}
 
-			$scope.formatDate = function(format, date) {
-				return NewsService.formatDate(format, date);
+			$scope.formatDate = function(date) {
+				return NewsService.formatDate('MMM dd, yyyy', date);
 			}
 		}
 	]);
