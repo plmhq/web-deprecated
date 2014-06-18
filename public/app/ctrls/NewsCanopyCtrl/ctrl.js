@@ -12,7 +12,7 @@ define(['../module'], function(app) {
 			}
 
 			$scope.formatDate = function(date) {
-				return NewsService.formatDate('MMM dd, yyyy', date);
+				return NewsService.formatDate('MMMM dd, yyyy', date);
 			}
 		}
 	]);

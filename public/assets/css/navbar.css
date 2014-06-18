@@ -55,3 +55,14 @@
 		-moz-transition: 0.5s ease border;
 		-o-transition: 0.5s ease border;
 }
+
+.navbar .navbar-logo {
+	/*display: inline;*/
+	height: 35px;
+	width: 35px;
+}
+
+.navbar .navbar-brand {
+	position: relative;
+	top: -5px;
+}

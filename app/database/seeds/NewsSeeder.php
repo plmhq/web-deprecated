@@ -22,7 +22,7 @@ class NewsSeeder extends Seeder {
 				'user_id'		=> 1,
 				'title'			=> 'New official PLM website diesng launchs',
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'GGGGG.jpg',
+				'image'			=> 'wIqe3.png',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
