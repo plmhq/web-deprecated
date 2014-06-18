@@ -192,6 +192,8 @@
 }
 
 .news-canopy-item .news-canopy-item-heading {
+	margin-left: 25px;
+	margin-right: 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
