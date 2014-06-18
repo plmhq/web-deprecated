@@ -1,4 +1,4 @@
-define(['../module'], function(app) {
+define(['../module', 'datejs'], function(app, datejs) {
 	'use strict';
 
 	return app.factory('NewsService', [
@@ -45,6 +45,15 @@ define(['../module'], function(app) {
 				 */
 				getImageLink: function(image) {
 					return '/assets/images/upload/news/' + image;
+				},
+
+				/**
+				 *
+				 */
+				formatDate: function(format, date) {
+					var parsed = Date.parse(date);
+
+					return parsed.toString(format);
 				}
 			};
 

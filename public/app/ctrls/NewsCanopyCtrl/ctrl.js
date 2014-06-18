@@ -10,6 +10,10 @@ define(['../module'], function(app) {
 			$scope.getImageLink = function(image) {
 				return NewsService.getImageLink(image);
 			}
+
+			$scope.formatDate = function(format, date) {
+				return NewsService.formatDate(format, date);
+			}
 		}
 	]);
 });

@@ -5,7 +5,8 @@ requirejs.config({
 		angular: "../assets/vendor/angular/angular.min",
 		ngResource: "../assets/vendor/angular-resource/angular-resource.min",
 		uiRouter: "../assets/vendor/angular-ui-router/release/angular-ui-router.min",
-		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min"
+		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min",
+		datejs: "../assets/vendor/datejs/build/date"
 	},
 
 	shim: {
@@ -35,6 +36,10 @@ requirejs.config({
 		"ngProgress": {
 			exports: "ngProgress",
 			deps: ["angular"]
+		},
+
+		"datejs": {
+			exports: "datejs"
 		}
 	}
 });
