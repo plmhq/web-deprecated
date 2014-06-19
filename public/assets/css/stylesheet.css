@@ -310,13 +310,13 @@ html, body {
 .countdown-timer-big {
 	height: 400px;
 	width: 100%;
-	background: linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
-	background: -webkitlinear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
-	background: -moz-linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
-	background: -o-linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/countdown-bg.jpg');
+	background: linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/facade.jpg');
+	background: -webkitlinear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/facade.jpg');
+	background: -moz-linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/facade.jpg');
+	background: -o-linear-gradient(rgba(164, 0, 0, 0.7), rgba(164, 0, 0, 0.7)), url('/assets/images/facade.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: bottom center;
 	background-attachment: fixed;
 	color: #fff;
 	overflow: hidden;

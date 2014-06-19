@@ -6,7 +6,9 @@ requirejs.config({
 		ngResource: "../assets/vendor/angular-resource/angular-resource.min",
 		uiRouter: "../assets/vendor/angular-ui-router/release/angular-ui-router.min",
 		ngProgress: "../assets/vendor/ngprogress/build/ngProgress.min",
-		datejs: "../assets/vendor/datejs/build/date"
+		ngTimer: "../assets/vendor/angular-timer/dist/angular-timer.min",
+		ngSlick: "../assets/vendor/angular-slick/dist/slick.min",
+		datejs: "../assets/vendor/datejs/build/date",
 	},
 
 	shim: {
@@ -35,6 +37,16 @@ requirejs.config({
 
 		"ngProgress": {
 			exports: "ngProgress",
+			deps: ["angular"]
+		},
+
+		"ngTimer": {
+			exports: "ngTimer",
+			deps: ["angular"]
+		},
+
+		"ngSlick": {
+			exports: "ngSlick",
 			deps: ["angular"]
 		},
 

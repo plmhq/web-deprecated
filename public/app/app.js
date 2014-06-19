@@ -3,6 +3,8 @@ define([
 	'uiRouter',
 	'ngResource',
 	'ngProgress',
+	'ngTimer',
+	'ngSlick',
 	'./ctrls/index',
 	'./services/index',
 	'./directives/index'
@@ -12,6 +14,8 @@ define([
 	var deps = [
 		'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
 		'ngProgress',
+		'timer',
+		'slick',
 		'app.directives',
 		'app.ctrls',
 		'app.services'

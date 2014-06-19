@@ -20,9 +20,9 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 1,
 				'user_id'		=> 1,
-				'title'			=> 'New official PLM website diesng launchs',
+				'title'			=> 'PLM community: United through hand-praise',
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'wIqe3.png',
+				'image'			=> 'jX4JK.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -40,9 +40,9 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 3,
 				'user_id'		=> 1,
-				'title'			=> 'PLM community: United through hand-praise',
+				'title'			=> 'New official PLM website design launches',
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'jX4JK.jpg',
+				'image'			=> 'wIqe3.png',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],

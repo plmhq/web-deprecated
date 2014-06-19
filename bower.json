@@ -23,6 +23,7 @@
     "ngprogress": "~1.0.4",
     "font-awesome": "~4.1.0",
     "angular-timer": "~1.1.5",
-    "datejs": "~1.0.0-rc1"
+    "datejs": "~1.0.0-rc1",
+    "angular-slick": "~0.1.9"
   }
 }
