@@ -3,6 +3,8 @@ plm-web
 
 The official repository of the Pamantasan ng Lungsod ng Maynila website. Currently built with AngularJS, Laravel, and MySQL. Uses redis for its session, caches, and hits.
 
+Soon, adding gulp.js, replacing RequireJS with Browserify, and SaSS + Compass
+
 ## Installation ##
 
 	Requires PHP >= 5.5, Composer, MySQL >= 5.6, Redis => 2.6, and Bower.
@@ -19,9 +21,8 @@ The official repository of the Pamantasan ng Lungsod ng Maynila website. Current
 
 All contributions (small or big) will be granted with its respective credit.
 
-Mr. Garry De Gracia - Project Manager
-
-Kier Borromeo (SRPH) - Lead Developer
+- Mr. Garry De Gracia - Project Manager
+- Kier Borromeo (SRPH) - Lead Developer
 
 
 ## License ##
