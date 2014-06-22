@@ -1,7 +1,7 @@
 // Directory
 var stylesheets = './public/sass/'
 var assets = './public/assets/'
-var prod = './public/production/'
+var build = './public/build/'
 
 /**
  * Node modules
@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 11', 'ios 6', 'android 4'))
 		.pipe(rename({ suffix: 'min' }))
 		.pipe(minifycss())
-		.pipe(gulp.dest(prod + 'css'))
+		.pipe(gulp.dest(build + 'css'))
 		.pipe(livereload())
 		.pipe(notify({ message: 'Styles task complete.' }));
 });
@@ -45,7 +45,7 @@ gulp.task('scripts', function() {
 		}))
 		//.pipe(uglify({ mangle: false }))
 		.pipe(rename('main.min.js'))
-		.pipe(gulp.dest(prod + 'js'))
+		.pipe(gulp.dest(build + 'js'))
 		.pipe(livereload())
 		.pipe(notify({ message: 'Script tasks complete. '}));
 });
@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
 	gulp.src('assets' + 'img/*.{ png, gif, jpg, jpeg}')
 		.pipe(imagemin())
-		.pipe(gulp.dest(prod + 'images'))
+		.pipe(gulp.dest(build + 'images'))
 		.pipe(notify({ message: 'Images task complete. '}));
 });
 
