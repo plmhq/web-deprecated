@@ -7,7 +7,7 @@ Soon, adding gulp.js, replacing RequireJS with Browserify, and SaSS + Compass
 
 ## Installation ##
 
-	Requires PHP >= 5.5, Composer, MySQL >= 5.6, Redis >= 2.6, NodeJS, gulp.js, npm, Bower, SaSS.
+Requires PHP >= 5.5, Composer, MySQL >= 5.6, Redis >= 2.6, NodeJS, gulp.js, npm, Bower, SaSS.
 
 	$ git clone https://github.com/srph/plm-web.git
 	# At the root of our application
