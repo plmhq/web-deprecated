@@ -16,6 +16,10 @@ Soon, adding gulp.js, replacing RequireJS with Browserify, and SaSS + Compass
 	
 	// Optional
 	$ php artisan seed
+	
+## Trello ##
+
+[Trello] (https://trello.com/b/k1vqoXPB/plm-web) helps *me* break down tasks.
 
 ## Contributions ##
 
