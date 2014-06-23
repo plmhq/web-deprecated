@@ -1,5 +1,4 @@
-define(['../app'], function(app) {
-	'use strict';
+var app = require("../app");
 
 	return app.config([
 		'$locationProvider',
