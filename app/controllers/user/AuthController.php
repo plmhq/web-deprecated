@@ -40,10 +40,10 @@ class AuthController extends BaseController {
 
 		if( $this->auth->attempt($data, $remember) )
 		{
-			return Response::json(['status' => true]);
+			return $this->response->json(['status' => true]);
 		}
 
-		return Response::json(['status' => false]);
+		return $this->response->json(['status' => false]);
 	}
 
 	/**
@@ -53,7 +53,7 @@ class AuthController extends BaseController {
 	 */
 	public function getCheck()
 	{
-		return Response::json($this->auth->check());
+		return $this->response->json($this->auth->check());
 	}
 
 	/**
@@ -63,7 +63,7 @@ class AuthController extends BaseController {
 	 */
 	public function getGuest()
 	{
-		return Response::json($this->auth->guest());
+		return $this->response->json($this->auth->guest());
 	}
 
 }

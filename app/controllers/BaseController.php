@@ -13,6 +13,11 @@ class BaseController extends Controller {
 	protected $redirect;
 
 	/**
+	 * @var Response
+	 */
+	protected $response;
+
+	/**
 	 * @var Validator
 	 */
 	protected $validator;
@@ -22,12 +27,14 @@ class BaseController extends Controller {
 	 *
 	 * @param 	Input 	$input
 	 * @param 	Redirect$redirect
+	 * @param 	Response$response
 	 * @param 	Validator$validator
 	 */
-	public function __construct(Input $input, Redirect $redirect, Validator $validator)
+	public function __construct(Input $input, Redirect $redirect, Response $response, Validator $validator)
 	{
 		$this->input = $input;
 		$this->redirect = $redirect;
+		$this->response = $response;
 		$this->validator = $validator;
 	}
 

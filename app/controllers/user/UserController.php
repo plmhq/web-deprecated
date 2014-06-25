@@ -28,7 +28,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		return $this->user->all();
+		return $this->user->all()->toJson();
 	}
 
 
@@ -56,10 +56,13 @@ class UserController extends \BaseController {
 		try {
 			$this->user->create($input);
 		} catch(ValidationFailedException $e) {
-			//
+			return $this->response->json([
+				'status' 	=> false,
+				'error'		=> $e->getMessage();
+			]);
 		}
 
-		//
+		return $this->response->json(['status' => true]);
 	}
 
 
@@ -72,12 +75,15 @@ class UserController extends \BaseController {
 	public function show($id)
 	{
 		try {
-			$this->user->find($id);
+			$user = $this->user->find($id);
 		} catch(ModelNotFoundException $e) {
-			//
+			return $this->response->json(['status' => false]);
 		}
 
-		//
+		return $this->response->json([
+			'status'	=> true
+			'user'		=> $user->toJson()
+		]);
 	}
 
 
@@ -107,12 +113,15 @@ class UserController extends \BaseController {
 		try {
 			$this->user->update($id, $input);
 		} catch(ValidationFailedException $e) {
-			//
+			return $this->response->json([
+				'status'	=> false,
+				'error'		=> $e->getMessage()
+			]);
 		} catch(ModelNotFoundException $e) {
-			//
+			return $this->response->json(['status' => false]);
 		}
 
-		//
+		return $this->response->json(['status' => true]);
 	}
 
 
@@ -127,10 +136,10 @@ class UserController extends \BaseController {
 		try {
 			$this->user->delete($id);
 		} catch(ModelNotFoundException $e) {
-			//
+			return $this->response->json(['status' => false]);
 		}
 
-		//
+		return $this->response->json(['status' => true]);
 	}
 
 
