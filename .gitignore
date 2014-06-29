@@ -7,3 +7,6 @@ composer.lock
 .DS_Store
 Thumbs.db
 /public/assets/vendor/
+/public/build/
+/public/assets/sass/default/.sass-cache
+/node_modules/
