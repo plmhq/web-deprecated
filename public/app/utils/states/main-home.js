@@ -8,7 +8,7 @@ app.config([
 		var home = {
 			name: 'main.home',
 			url: '/',
-			templateUrl: '/app/components/home/index.html',
+			templateUrl: '/app/views/_main/desc/home/index.html',
 			resolve: {
 				news: ['NewsService', function(NewsService) {
 					return NewsService.getBundle(5);

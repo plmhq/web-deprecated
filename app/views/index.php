@@ -14,18 +14,15 @@
 	<link href="/assets/css/sidebar.css" type="text/css" rel="stylesheet">
 	<link href="/assets/css/progress.css" type="text/css" rel="stylesheet">
 
+	<!-- Scripts -->
+	<script type="text/javascript" src="/build/js/main.min.js">
+	</script>
+
 	<base href="/">
 </head>
 
 <body>
 	<div ui-view> </div>
-
-	<!-- RequireJS | Scripts -->
-	<script type="text/javascript"
-		src="assets/vendor/requirejs/require.js"
-		data-main="/app/bootstrap.js">
-	</script>
-
 </body>
 
 </html>

@@ -1,7 +1,7 @@
-var path = './states/',
-_missing = '_missing',
-_db = '_db',
-_auth ='_db-auth',
-_guest ='_db-guest'
-_main = '_main',
-home = 'main-home';
+var
+	_missing 		= require("./states/_missing"),
+	_db 			= require("./states/_db"),
+	_auth 			= require("./states/_db-auth"),
+	_guest 			= require("./states/_db-guest"),
+	_main 			= require("./states/_main"),
+	home 			= require("./states/main-home");

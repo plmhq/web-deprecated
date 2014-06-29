@@ -1,21 +1,22 @@
-var path = '../assets/vendor/',
+// var
+// jQuery				= require("../assets/vendor/jquery/dist/jquery.min"),
+// tbs	 				= require("../assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap");
 
-// Dependencies
-jquery = require(path + "jquery/dist/jquery.min"),
-bootstrap = require(path + "bootstrap/dist/js/bootstrap.min"),
-angular = require(path + "angular/angular.min"),
-ngResource = require(path + "angular-resource/angular-resource.min"),
-uiRouter = require(path + "angular-ui-router/release/angular-ui-router.min"),
-ngProgress = require(path + "ngprogress/build/ngProgress.min"),
-ngTimer = require(path + "angular-timer/dist/angular-timer.min"),
-ngSlick = require(path + "angular-slick/dist/slick.min"),
-datejs = require(path + "datejs/build/date"),
 
-// App
-app = require("./app"),
-components = require("./components/_index");
+// $(document).ready(function() {
+	var
+	angular			= require("../assets/vendor/angular/angular"),
+	ngResource 		= require("../assets/vendor/angular-resource/angular-resource"),
+	uiRouter 		= require("../assets/vendor/angular-ui-router/release/angular-ui-router"),
+	ngProgress 		= require("../assets/vendor/ngprogress/build/ngProgress"),
+	ngTimer 		= require("../assets/vendor/angular-timer/dist/angular-timer"),
+	ngSlick 		= require("../assets/vendor/angular-slick/dist/slick"),
+	datejs 			= require("../assets/vendor/datejs/build/date"),
 
-// Bootstrap
-angular.element(document).ready(function() {
-	angular.bootstrap(document, ['app']);
-});
+	// App
+	start 			= require("./start"),
+	app 			= require("./app"),
+	components 		= require("./components/_index");
+
+	start();
+// });

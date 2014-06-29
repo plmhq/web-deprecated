@@ -1,5 +1,4 @@
-var path = "../services/",
-auth = require(path + "Auth/service"),
-user = require(path + "User/service'"),
-util = require(path + "Util/service'"),
-news = require(path + "News/service");
+var auth 	= require("../services/auth"),
+user 		= require("../services/user"),
+util 		= require("../services/util"),
+news 		= require("../services/news");

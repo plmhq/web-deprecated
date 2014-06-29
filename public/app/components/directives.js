@@ -1,2 +1,1 @@
-var path = "../directives/",
-news = require(path + "news");
+var path = "../directives/";

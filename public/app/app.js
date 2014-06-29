@@ -1,25 +1,8 @@
-define([
-	'angular',
-	'uiRouter',
-	'ngResource',
+var app = angular.module('app', [
+	'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
 	'ngProgress',
-	'ngTimer',
-	'ngSlick',
-	'./ctrls/index',
-	'./services/index',
-	'./directives/index'
-], function(angular) {
-	'use strict';
+	'timer',
+	'slick'
+]);
 
-	var deps = [
-		'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
-		'ngProgress',
-		'timer',
-		'slick',
-		'app.directives',
-		'app.ctrls',
-		'app.services'
-	];
-
-	return angular.module('app', deps);
-});
+module.exports = app;

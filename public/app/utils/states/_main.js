@@ -4,10 +4,10 @@ app.config([
 	'$stateProvider',
 	function($stateProvider) {
 		// Default state
-		var def = {
+		var main = {
 			name: 'main',
 			abstract: true,
-			templateUrl: '/app/view/main/template.html'
+			templateUrl: '/app/views/_main/_template.html'
 		};
 
 		// Default
