@@ -1,34 +1,39 @@
 <?php
 
+use Illuminate\Support\Facades\Response;
+use Illuminate\Http\Request as Input;
+use Illuminate\View\Factory as View;
+
 class BaseController extends Controller {
 
 	/**
 	 * @var Input
 	 */
-	protected $input;
+	protected $request;
 
 	/**
-	 * @var Redirector
+	 * @var Response
 	 */
-	protected $redirect;
+	protected $response;
 
 	/**
 	 * @var Validator
 	 */
-	protected $validator;
+	protected $view;
 
 	/**
 	 * Class constructor
 	 *
 	 * @param 	Input 	$input
 	 * @param 	Redirect$redirect
-	 * @param 	Validator$validator
+	 * @param 	Response$response
+	 * @param 	View 	$view
 	 */
-	public function __construct(Input $input, Redirect $redirect, Validator $validator)
+	public function __construct(Input $input, Response $response, View $view)
 	{
 		$this->input = $input;
-		$this->redirect = $redirect;
-		$this->validator = $validator;
+		$this->response = $response;
+		$this->view = $view;
 	}
 
 	/**
