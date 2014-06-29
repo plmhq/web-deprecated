@@ -16,6 +16,7 @@
   "dependencies": {
     "angularjs": "*",
     "requirejs": "~2.1.14",
+    "bootstrap": "~3.1.1",
     "jquery": "~2.1.1",
     "angular-ui-router": "~0.2.10",
     "angular-resource": "~1.2.16",
@@ -23,7 +24,6 @@
     "font-awesome": "~4.1.0",
     "angular-timer": "~1.1.5",
     "datejs": "~1.0.0-rc1",
-    "angular-slick": "~0.1.9",
-    "bootstrap-sass-official": "~3.1.1",
+    "angular-slick": "~0.1.9"
   }
 }
