@@ -1,13 +1,13 @@
-<?php namespace PLM\Model\Eloquent;
+<?php namespace PLM\Models\Eloquent;
 
-class Slideshow extends \Eloquent {
+class Event extends \Eloquent {
 
 	/**
 	 * Table used by the model
 	 *
 	 * @var string
 	 */
-	protected $table = 'slideshows';
+	protected $table = 'events';
 
 	/**
 	 * Columns guarded by the array
@@ -22,9 +22,9 @@ class Slideshow extends \Eloquent {
 	 * @var array
 	 */
 	protected $fillable = array(
-		'user_id',
-		'image',
-		'caption'
+		'title',
+		'date',
+		'venue'
 	);
 
 	/**
@@ -35,25 +35,13 @@ class Slideshow extends \Eloquent {
 	public $timestamps = true;
 
 	/**
-	 * Take last five from the table
-	 *
-	 * @param 	$query 	Builder
-	 * @param 	int 	$limit
-	 * @return 	$query
-	 */
-	public function scopeRecent($query, $limit = 5)
-	{
-		return $query->orderBy('id', 'desc')->take($limit);
-	}
-
-	/**
 	 * ORM with the User model
 	 *
-	 * @return 	User
+	 * @return 	Model
 	 */
 	public function user()
 	{
 		return $this->belongsTo('User');
 	}
-	
+
 }

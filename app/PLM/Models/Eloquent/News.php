@@ -1,4 +1,4 @@
-<?php namespace PLM\Model\Eloquent;
+<?php namespace PLM\Models\Eloquent;
 
 class News extends \Eloquent {
 

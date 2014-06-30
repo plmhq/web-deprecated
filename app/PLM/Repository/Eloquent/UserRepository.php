@@ -1,6 +1,6 @@
 <?php namespace PLM\Repository\Eloquent;
 
-use User;
+use PLM\Models\Eloquent\User;
 use PLM\Repository\Interfaces\UserRepositoryInterface;
 
 class UserRepository extends AbstractRepository implements UserRepositoryInterface {

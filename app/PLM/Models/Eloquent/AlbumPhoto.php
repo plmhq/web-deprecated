@@ -1,13 +1,13 @@
-<?php namespace PLM\Model\Eloquent;
+<?php namespace PLM\Models\Eloquent;
 
-class Event extends \Eloquent {
+class AlbumPhoto extends \Eloquent {
 
 	/**
 	 * Table used by the model
 	 *
 	 * @var string
 	 */
-	protected $table = 'events';
+	protected $table = 'album_photos';
 
 	/**
 	 * Columns guarded by the array
@@ -22,9 +22,8 @@ class Event extends \Eloquent {
 	 * @var array
 	 */
 	protected $fillable = array(
-		'title',
-		'date',
-		'venue'
+		'user_id',
+		'description'
 	);
 
 	/**
@@ -41,7 +40,17 @@ class Event extends \Eloquent {
 	 */
 	public function user()
 	{
-		return $this->belongsTo('User');
+
+	}
+
+	/**
+	 * ORM with the Album model
+	 *
+	 * @return 	Album
+	 */
+	public function album()
+	{
+		return $this->belongsTo('Album');
 	}
 
 }

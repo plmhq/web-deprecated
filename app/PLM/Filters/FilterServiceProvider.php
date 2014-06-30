@@ -1,4 +1,4 @@
-<?php namespace PLM\Filter;
+<?php namespace PLM\Filters;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,7 @@ class FilterServiceProvider extends ServiceProvider {
 	{
 		$app = $this->app['router'];
 
-		$app->filter('ssl', 'PLM\Filter\SSLFilter');
+		$app->filter('ssl', 'PLM\Filters\SSLFilter');
 	}
 
 }

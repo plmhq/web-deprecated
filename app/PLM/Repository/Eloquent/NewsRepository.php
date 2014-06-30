@@ -1,6 +1,6 @@
 <?php namespace PLM\Repository\Eloquent;
 
-use News;
+use PLM\Models\Eloquent\News;
 use PLM\Repository\Interfaces\NewsRepositoryInterface;
 
 class NewsRepository extends AbstractRepository implements NewsRepositoryInterface {

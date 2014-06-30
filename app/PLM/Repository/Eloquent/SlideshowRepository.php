@@ -1,6 +1,6 @@
 <?php namespace PLM\Repository\Eloquent;
 
-use Slideshow;
+use PLM\Models\Eloquent\Slideshow;
 use PLM\Repository\Interfaces\SlideshowRepositoryInterface;
 
 class SlideshowRepository extends AbstractRepository implements SlideshowRepositoryInterface {

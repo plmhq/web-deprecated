@@ -1,4 +1,4 @@
-<?php namespace PLM\Validator\Exceptions;
+<?php namespace PLM\Validators\Exceptions;
 
 class ValidationFailedException extends \Exception {
 

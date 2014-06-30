@@ -1,13 +1,13 @@
-<?php namespace PLM\Model\Eloquent;
+<?php namespace PLM\Models\Eloquent;
 
-class AlbumPhoto extends \Eloquent {
+class Album extends \Eloquent {
 
 	/**
 	 * Table used by the model
 	 *
 	 * @var string
 	 */
-	protected $table = 'album_photos';
+	protected $table = 'albums';
 
 	/**
 	 * Columns guarded by the array
@@ -22,7 +22,7 @@ class AlbumPhoto extends \Eloquent {
 	 * @var array
 	 */
 	protected $fillable = array(
-		'user_id',
+		'title',
 		'description'
 	);
 
@@ -34,23 +34,23 @@ class AlbumPhoto extends \Eloquent {
 	public $timestamps = true;
 
 	/**
-	 * ORM with the User model
+	 * ORM with the User model 
 	 *
 	 * @return 	Model
 	 */
 	public function user()
 	{
-
+		return $this->belongsTo('User');
 	}
 
 	/**
-	 * ORM with the Album model
+	 * ORM with the AlbumPhoto modek
 	 *
-	 * @return 	Album
+	 * @return 	AlbumPhoto
 	 */
-	public function album()
+	public function photos()
 	{
-		return $this->belongsTo('Album');
+		return $this->hasMany('AlbumPhoto');
 	}
 
 }

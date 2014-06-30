@@ -1,4 +1,4 @@
-<?php namespace PLM\Filter;
+<?php namespace PLM\Filters;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;

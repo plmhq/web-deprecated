@@ -1,4 +1,4 @@
-<?php namespace PLM\Validator;
+<?php namespace PLM\Validators;
 
 use Illuminate\Validation\Factory as Validator;
 
