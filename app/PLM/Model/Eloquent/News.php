@@ -21,7 +21,13 @@ class News extends \Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('title', 'content');
+	protected $fillable = array(
+		'user_id',
+		'type_id',
+		'title',
+		'content'
+		'image'
+	);
 
 	/**
 	 * Table timestamps
@@ -40,6 +46,26 @@ class News extends \Eloquent {
 	public function scopeRecent($query, $limit = 5)
 	{
 		return $query->orderBy('id', 'desc')->take($limit);
+	}
+
+	/**
+	 * ORM with the User model
+	 *
+	 * @return 	User
+	 */
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
+
+	/**
+	 * ORM with the NewsType model
+	 *
+	 * @return 	NewsType
+	 */
+	public function type()
+	{
+		return $this->belongsTo('NewsType', 'type_id');
 	}
 
 }

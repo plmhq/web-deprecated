@@ -21,7 +21,11 @@ class Slideshow extends \Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('image', 'caption');
+	protected $fillable = array(
+		'user_id',
+		'image',
+		'caption'
+	);
 
 	/**
 	 * Table timestamps
@@ -40,6 +44,16 @@ class Slideshow extends \Eloquent {
 	public function scopeRecent($query, $limit = 5)
 	{
 		return $query->orderBy('id', 'desc')->take($limit);
+	}
+
+	/**
+	 * ORM with the User model
+	 *
+	 * @return 	User
+	 */
+	public function user()
+	{
+		return $this->belongsTo('User');
 	}
 	
 }

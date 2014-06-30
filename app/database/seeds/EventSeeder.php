@@ -2,7 +2,7 @@
 
 use Faker\Factory as Faker;
 
-class SlideshowSeeder extends Seeder {
+class EventSeeder extends Seeder {
 
 	/**
 	 * Run the database seeds.

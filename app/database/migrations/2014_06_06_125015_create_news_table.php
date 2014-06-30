@@ -16,6 +16,7 @@ class CreateNewsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('user_id');
+			$table->integer('type_id');
 			$table->string('title');
 			$table->text('content');
 			$table->string('image');

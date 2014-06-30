@@ -2,7 +2,7 @@
 
 use Faker\Factory as Faker;
 
-class AlbumSeeder extends Seeder {
+class AlbumPhotoSeeder extends Seeder {
 
 	/**
 	 * Run the database seeds.

@@ -21,7 +21,11 @@ class Event extends \Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('title');
+	protected $fillable = array(
+		'title',
+		'date',
+		'venue'
+	);
 
 	/**
 	 * Table timestamps
@@ -29,5 +33,15 @@ class Event extends \Eloquent {
 	 * @var bool
 	 */
 	public $timestamps = true;
+
+	/**
+	 * ORM with the User model
+	 *
+	 * @return 	Model
+	 */
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
 
 }

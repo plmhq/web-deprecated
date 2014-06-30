@@ -21,7 +21,10 @@ class Album extends \Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('title');
+	protected $fillable = array(
+		'title',
+		'description'
+	);
 
 	/**
 	 * Table timestamps
@@ -29,5 +32,25 @@ class Album extends \Eloquent {
 	 * @var bool
 	 */
 	public $timestamps = true;
+
+	/**
+	 * ORM with the User model 
+	 *
+	 * @return 	Model
+	 */
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
+
+	/**
+	 * ORM with the AlbumPhoto modek
+	 *
+	 * @return 	AlbumPhoto
+	 */
+	public function photos()
+	{
+		return $this->hasMany('AlbumPhoto');
+	}
 
 }

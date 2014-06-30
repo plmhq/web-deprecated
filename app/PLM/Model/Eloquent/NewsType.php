@@ -1,13 +1,13 @@
 <?php namespace PLM\Model\Eloquent;
 
-class Entry extends \Eloquent {
+class NewsTypes extends \Eloquent {
 
 	/**
 	 * Table used by the model
 	 *
 	 * @var string
 	 */
-	protected $table = 'events';
+	protected $table = 'news_types';
 
 	/**
 	 * Columns guarded by the array
@@ -28,6 +28,16 @@ class Entry extends \Eloquent {
 	 *
 	 * @var bool
 	 */
-	public $timestamps = true;
+	public $timestamps = false;
+
+	/**
+	 * ORM with the News model
+	 *
+	 * @return 	News
+	 */
+	public function entries()
+	{
+		return $this->hasMany('News', 'type_id');
+	}
 
 }
