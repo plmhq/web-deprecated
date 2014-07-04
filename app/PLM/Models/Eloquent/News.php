@@ -25,7 +25,7 @@ class News extends \Eloquent {
 		'user_id',
 		'type_id',
 		'title',
-		'content'
+		'content',
 		'image'
 	);
 

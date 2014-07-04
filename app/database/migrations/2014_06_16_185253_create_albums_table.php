@@ -19,7 +19,7 @@ class CreateAlbumsTable extends Migration {
 			$table->string('title');
 			$table->text('description');
 			$table->timestamps();
-		})
+		});
 	}
 
 	/**
