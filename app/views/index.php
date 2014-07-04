@@ -15,7 +15,7 @@
 	<link href="/assets/css/progress.css" type="text/css" rel="stylesheet">
 
 	<!-- Scripts -->
-	<script type="text/javascript" src="/build/js/main.min.js">
+	<script type="text/javascript" src="/assets/js/main.min.js">
 	</script>
 
 	<base href="/">

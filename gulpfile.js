@@ -1,23 +1,23 @@
 // Directory
-var stylesheets 	= './public/sass/';
-var assets 			= './public/assets/';
-var build 			= './public/build/';
-var app 			= './public/app/';
-/**
- * Node modules
- */
-var gulp 			= require('gulp');
-var sass 			= require('gulp-ruby-sass');
-var browserify 		= require('gulp-browserify');
-var autoprefixer 	= require('gulp-autoprefixer');
-var minifycss 		= require('gulp-minify-css');
-var uglify 			= require('gulp-uglify');
-var imagemin 		= require('gulp-imagemin');
-var rename 			= require('gulp-rename');
-var concat 			= require('gulp-concat');
-var notify 			= require('gulp-notify');
-var livereload 		= require('gulp-livereload');
-var install 		= require('gulp-install');
+var stylesheets 	= './public/sass/',
+	assets 			= './public/assets/',
+	app 			= './public/app/',
+	vendor 			= assets + 'vendor/';
+
+
+// Node modules
+var gulp 			= require('gulp'),
+	sass 			= require('gulp-ruby-sass'),
+	browserify 		= require('gulp-browserify'),
+	autoprefixer 	= require('gulp-autoprefixer'),
+	minifycss 		= require('gulp-minify-css'),
+	uglify 			= require('gulp-uglify'),
+	imagemin 		= require('gulp-imagemin'),
+	rename 			= require('gulp-rename'),
+	concat 			= require('gulp-concat'),
+	notify 			= require('gulp-notify'),
+	livereload 		= require('gulp-livereload'),
+	install 		= require('gulp-install');
 
 // Install modules
 gulp.task('install', function() {
@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 11', 'ios 6', 'android 4'))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifycss())
-		.pipe(gulp.dest(build + 'css'))
+		.pipe(gulp.dest(assets + 'css'))
 		.pipe(livereload())
 		.pipe(notify({ message: 'Styles task complete.' }));
 });
@@ -41,11 +41,13 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src(app + 'bootstrap.js', { read: false })
 		.pipe(browserify({
-			extensions: ['.js']
+			extensions: ['.js'],
+			insertGlobals : true,
+        	debug : !gulp.env.production
 		}))
 		//.pipe(uglify({ mangle: false }))
 		.pipe(rename('main.min.js'))
-		.pipe(gulp.dest(build + 'js'))
+		.pipe(gulp.dest(assets + 'js'))
 		.pipe(livereload())
 		.pipe(notify({ message: 'Script tasks complete. '}));
 });
@@ -54,7 +56,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
 	return gulp.src(assets + 'images/*.{ png, gif, jpg, jpeg}')
 		.pipe(imagemin())
-		.pipe(gulp.dest(build + 'images'))
+		.pipe(gulp.dest(assets + 'images'))
 		.pipe(notify({ message: 'Images task complete. '}));
 });
 
