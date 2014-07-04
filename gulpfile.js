@@ -1,5 +1,5 @@
 // Directory
-var stylesheets 	= './public/sass/',
+var stylesheets		= './public/sass/',
 	assets 			= './public/assets/',
 	app 			= './public/app/',
 	vendor 			= assets + 'vendor/';
@@ -8,6 +8,7 @@ var stylesheets 	= './public/sass/',
 // Node modules
 var gulp 			= require('gulp'),
 	sass 			= require('gulp-ruby-sass'),
+	// compass			= require('gulp-compass'),
 	browserify 		= require('gulp-browserify'),
 	autoprefixer 	= require('gulp-autoprefixer'),
 	minifycss 		= require('gulp-minify-css'),
@@ -27,14 +28,14 @@ gulp.task('install', function() {
 
 // Stylesheet task
 gulp.task('styles', function() {
-	return gulp.src(stylesheets + 'default/main.scss')
-		.pipe(sass({ style: 'expanded' }))
-		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 11', 'ios 6', 'android 4'))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(minifycss())
+	return gulp.src(stylesheets + 'default/_main.scss')
+		.pipe(sass())
+		// .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 11', 'ios 6', 'android 4'))
+		// .pipe(minifycss())
+		.pipe(rename('main.min.css'))
 		.pipe(gulp.dest(assets + 'css'))
 		.pipe(livereload())
-		.pipe(notify({ message: 'Styles task complete.' }));
+		.pipe(notify({ message: 'Styles tasks complete! ' }));
 });
 
 // Script task
@@ -43,13 +44,12 @@ gulp.task('scripts', function() {
 		.pipe(browserify({
 			extensions: ['.js'],
 			insertGlobals : true,
-        	debug : !gulp.env.production
 		}))
 		//.pipe(uglify({ mangle: false }))
 		.pipe(rename('main.min.js'))
 		.pipe(gulp.dest(assets + 'js'))
 		.pipe(livereload())
-		.pipe(notify({ message: 'Script tasks complete. '}));
+		.pipe(notify({ message: 'Script tasks complete! '}));
 });
 
 // Minify images
@@ -65,7 +65,7 @@ gulp.task('watch', function() {
 	var server = livereload();
 
 	gulp.run('styles');
-	gulp.run('scripts');
+	// gulp.run('scripts');
 	gulp.run('images');
 
 	gulp.watch(stylesheets + 'default/**/*.scss', ['styles']);

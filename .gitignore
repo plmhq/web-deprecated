@@ -10,6 +10,6 @@ Thumbs.db
 /public/assets/css/
 /public/assets/vendor/
 /public/build/
-/public/assets/sass/default/.sass-cache
+/public/assets/sass/default/.sass-cache/
 /node_modules/
 npm-debug.log
