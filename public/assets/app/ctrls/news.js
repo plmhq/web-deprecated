@@ -1,6 +1,6 @@
 app = require("../app");
 
-app.directive('NewsCtrl', [
+app.controller('NewsCtrl', [
 	'$scope',
 	'NewsService',
 	function($scope, NewsService) {

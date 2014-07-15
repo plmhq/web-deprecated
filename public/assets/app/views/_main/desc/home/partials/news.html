@@ -1,4 +1,4 @@
-<div class="content content-gray" id="news">
+<div class="content content-gray" id="news" ng-controller="NewsCtrl">
 	<div class="container">
 
 		<!-- heading -->
@@ -9,7 +9,7 @@
 		<div class="row">
 		
 			<!-- item -->
-			<div class="col-md-4 news-first-row">
+			<div class="col-md-4 news-first-row" ng-repeat="article in bundle">
 				<div class="recent-news">
 					<div class="news-cover">
 						<img src="assets/img/n.jpg">
@@ -18,11 +18,11 @@
 					<div class="news-title">
 						<div class="row">
 							<div class="col-md-3 col-xs-3 text-center news-icon-container">
-								<span class="fa fa-photo news-icon"></span>
+								<span class="fa fa-pencil news-icon"></span>
 							</div>
 
 							<div class="col-md-9 col-xs-9 news-head">
-								Vivamus rutrum nunc non nenque rutrum nunc rutrum nunc
+								{{ article.title }}
 							</div>
 						</div>
 					</div>

@@ -8,7 +8,9 @@ var
 	_js				= _build + 'js/',
 	_vendor			= _assets + 'vendor/',
 	_img 			= _assets + 'img/',
-	_bimg			= _build + 'img/';
+	_bimg			= _build + 'img/',
+
+	_views			= app + 'views/';
 
 
 // Node modules
@@ -78,7 +80,7 @@ gulp.task('default', function() {
 	gulp.watch(_sass + 'default/**/*.scss', ['styles']);
 	gulp.watch(_app + '**/*.js', ['scripts']);
 	gulp.watch(_img + 'images/**', ['images']);
-	gulp.watch('./app/views/**/*.php')
+	gulp.watch(['./app/views/**/*.php', './')
 		.on('change', function(file) {
 			server.changed(file.path);
 		});
