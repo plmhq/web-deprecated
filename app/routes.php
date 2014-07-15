@@ -38,6 +38,12 @@ Route::group(['prefix' => 'api'], function()
 	 */
 	Route::resource('rest/news', 'NewsController');
 	Route::controller('x/news', 'NewsAPIController');
+
+	/**
+	 * @link /api/event/*
+	 */
+	Route::resource('rest/event', 'EventController');
+	Route::controller('x/event', 'EventAPIController');
 });
 
 /**
