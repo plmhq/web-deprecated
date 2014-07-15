@@ -11,7 +11,7 @@ app.config([
 			templateUrl: '/assets/app/views/_main/desc/home/_template.html',
 			resolve: {
 				news: ['NewsService', function(NewsService) {
-					return NewsService.getBundle(5);
+					return NewsService.getBundle(6);
 				}]
 			}
 		};
