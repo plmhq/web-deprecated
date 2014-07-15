@@ -1,0 +1,1 @@
+var news = require("../ctrls/news");

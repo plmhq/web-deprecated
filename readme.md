@@ -1,23 +1,31 @@
-plm-web
+PLM Web
 ======
 
 The official repository of the Pamantasan ng Lungsod ng Maynila website. Currently built with AngularJS, Laravel, and MySQL. Uses redis for its session, caches, and hits.
 
 ## Installation ##
 
-Requires PHP >= 5.5, Composer, MySQL >= 5.6, Redis >= 2.6, node.js, npm.
+Requires:
+
+- PHP >= 5.5
+- Composer
+- MySQL >= 5.6
+- Redis >= 2.6
+- node.js
+- npm
+- Ruby
 
 	$ git clone https://github.com/srph/plm-web.git
+	$ npm install -g bower gulp
 	# At the root of our application
 	$ composer update
 	$ php artisan migrate
 	$ php artisan seed
-	$ npm install -g bower
-	$ npm install -g gulp
-	$ npm install
+	# Installs all vendor scripts/stylesheets
+	$ gulp install
 
 	# Important to run while modifying scripts, images, or sass
-	$ gulp watch
+	$ gulp
 	
 ## Project Management ##
 

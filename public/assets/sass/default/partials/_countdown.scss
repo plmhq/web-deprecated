@@ -1,0 +1,27 @@
+@import "../util/_variables";
+
+.countdown-timer {
+	background: $countdown-bg;
+	height: $countdown-height;
+	color: $countdown-text-color;
+	text-align: center;
+	box-sizing: padding-box;
+	padding-top: $countdown-padding;
+	padding-bottom: $countdown-padding;
+
+	.countdown-text {
+		& {
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: $countdown-text-size;
+
+			@media (max-width: 768px) {
+				font-size: floor($countdown-text-size * 0.75);
+			}
+		}
+		> .extra {
+			font-size: $countdown-text-extra-size;
+			font-weight: 600;
+		}
+	}
+}

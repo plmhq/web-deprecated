@@ -1,0 +1,343 @@
+// Import TWBS SaSS variables
+@import "../../../assets/vendor/bootstrap-sass/lib/_variables";
+// --
+// Essential colors
+// --
+
+// info (bluish)
+$info: #2AADC7;
+$info-light: #2AE7EA;
+$info-dark: #2A92EA;
+	
+// success (greenish)
+$success: #4EEA8F;
+$success-light: #4EFF9C;
+$success-dark: #4EC98F;
+
+// warning (yellowish)
+$warning: #FAEA47;
+$warning-light: #FAEA77;
+$warning-dark: #E5D64B;
+
+// danger (reddish)
+$danger: #E33147;
+$danger-light: #600000;
+$danger-dark: #F7504D;
+
+// dark tints (blackish)
+$dt: #1F1C1B;
+$dt-light: #36312F;
+$dt-dark: #121010;
+
+// light tints (light)
+$lt: #FFFFFF;
+$lt-light: #F2F2F2;
+$lt-dark: #E0E0E0;
+
+// gray tints (gray)
+$gr: #E6E6E6;
+$gr-light: #FCFCFC;
+$gr-dark: #C8C8C8;
+
+// defaults
+$default: $danger;
+$default-light: $danger-light;
+$default-dark: $danger-dark;
+
+$shadow: #ddd;
+
+
+
+
+
+// --
+// typography
+// --
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$montserrat-font-family: "Montserrat", $base-font-family;
+$montserrat-font-family-normal: 500;
+$montserrat-font-family-bold: 700;
+$source-sans-font-family: "Source Sans Pro", $base-font-family;
+
+$font-size-base:			14px !default;
+$font-size-large:			ceil($font-size-base * 1.25) !default; // ~18px
+$font-size-small:			ceil($font-size-base * 0.85) !default; // ~12px
+
+$font-size-h1:				floor($font-size-base * 2.6) !default; // ~36px
+$font-size-h2:				floor($font-size-base * 2.15) !default; // ~30px
+$font-size-h3:				ceil($font-size-base * 1.7) !default; // ~24px
+$font-size-h4:				ceil($font-size-base * 1.25) !default; // ~18px
+$font-size-h5:				$font-size-base !default;
+$font-size-h6:				ceil($font-size-base * 0.85) !default; // ~12px
+
+$line-height-base:			1.428571429 !default; // 20/14
+$line-height-computed:		floor($font-size-base * $line-height-base) !default; // ~
+
+
+
+
+
+// Components
+// -------------------------
+// Based on 14px font-size and 1.428 line-height (~20px to start)
+
+$padding-base-vertical:				6px !default;
+$padding-base-horizontal:			12px !default;
+
+$padding-large-vertical:		 	10px !default;
+$padding-large-horizontal:			16px !default;
+
+$padding-small-vertical:		 	5px !default;
+$padding-small-horizontal:	  	 	10px !default;
+
+$line-height-large:			  		1.33 !default;
+$line-height-small:			  		1.5 !default;
+
+$border-radius-base:			 	4px !default;
+$border-radius-large:				6px !default;
+$border-radius-small:				3px !default;
+
+$component-active-color:		 	#fff !default;
+$component-active-bg:				$brand-primary !default;
+
+$caret-width-base:					4px !default;
+$caret-width-large:					5px !default;
+
+$default-radius:					3px;
+$default-box-shadow:				0 2px 3px $shadow;
+$default-spacing:					50px;
+
+$default-transition-duration:		0.35s;
+$default-sm-transition-duration:	floor($default-transition-duration / 1.5);
+$default-lg-transition-duration:	ceil($default-transition-duration * 1.5);
+
+
+
+
+
+// --
+// btn
+// --
+$btn-padding: $default-spacing / 5;
+$btn-padding-horizontal: $btn-padding * 2;
+$btn-padding-vertical: $btn-padding;
+
+$btn-border-size: 2px;
+$btn-border-color: transparent;
+$btn-border: $btn-border-size solid $btn-border-color;
+$btn-border-hover-bg: $btn-border-color;
+
+$btn-font-family: $montserrat-font-family;
+$btn-font-size: $font-size-h5;
+
+$btn-transition-duration: $default-sm-transition-duration;
+
+// Button color schemes
+$btn-default-color: $lt-dark;
+$btn-default-bg: $btn-default-color;
+
+// $btn-primary-color:
+// $btn-primary-bg:
+
+$btn-info-color: $info;
+$btn-info-bg: $btn-info-color;
+
+$btn-success-color: $success;
+$btn-success-bg: $btn-success-color;
+
+$btn-warning-color: $warning;
+$btn-warning-bg: $btn-warning-color;
+
+$btn-danger-color: $danger;
+$btn-danger-bg: $btn-danger-color;
+
+$btn-inverse-color: $dt-light;
+$btn-inverse-bg: $btn-inverse-color;
+
+
+
+
+
+// -- 
+// navbar
+// --
+
+// basics
+$navbar-height:					75px;
+$navbar-margin-bottom:			 $line-height-computed;
+$navbar-border:					none;
+$navbar-border-radius:			$border-radius-base;
+$navbar-padding-horizontal:		floor($grid-gutter-width / 2);
+$navbar-padding-vertical:		(($navbar-height - $line-height-computed) / 2);
+
+$navbar-plm-color:			$default !default;
+$navbar-plm-bg:				$lt !default;
+$navbar-plm-border:			none;
+
+// Navbar links
+$navbar-plm-link-color:					$default;
+$navbar-plm-link-border-width:			2px;
+$navbar-plm-link-border:				$navbar-plm-link-border-width solid transparent;
+$navbar-plm-link-hover-color:			$default-light;
+$navbar-plm-link-hover-bg:			 	transparent;
+$navbar-plm-link-hover-border:		 	$navbar-plm-link-border-width solid $default;
+$navbar-plm-link-hover-border-transition: all 0.15s ease-in-out;
+$navbar-plm-link-active-color:			#555;
+$navbar-plm-link-active-bg:				darken($navbar-plm-bg, 6.5%);
+$navbar-plm-link-active-hover-bg:		$default;
+$navbar-plm-link-disabled-color:		#ccc;
+$navbar-plm-link-disabled-bg:			transparent;
+
+$navbar-plm-link-padding:				floor($navbar-height / 3);
+$navbar-plm-link-padding-top:			$navbar-plm-link-padding - 5px;
+$navbar-plm-link-padding-bottom:		$navbar-plm-link-padding + 5px;
+
+// Navbar brand label
+$navbar-plm-brand-color:				$navbar-plm-link-color !default;
+$navbar-plm-brand-hover-color:			darken($navbar-plm-brand-color, 10%) !default;
+$navbar-plm-brand-hover-bg:				transparent !default;
+
+// Navbar toggle
+$navbar-plm-toggle-hover-bg:			#ddd !default;
+$navbar-plm-toggle-icon-bar-bg:			#ccc !default;
+$navbar-plm-toggle-border-color:		#ddd !default;
+
+
+
+
+// --
+// countdown
+// --
+$countdown-bg: $default;
+$countdown-height: 45px;
+$countdown-text-color: $lt;
+$countdown-text-size: 16px;
+$countdown-text-extra-size: 14px;
+$countdown-padding: floor($countdown-height / 4);
+
+
+
+
+// --
+// content
+// --
+$content-gray-bg: $gr;
+$content-lt-bg: $lt;
+$content-padding: $default-spacing;
+
+$content-heading-weight: 700;
+$content-heading-color: $default;
+$content-heading-margin-top: 0;
+$content-heading-margin-bottom: $default-spacing;
+$content-border: 1px solid $default;
+
+
+
+
+
+// -- 
+// recent news (home)
+// --
+$recent-news-cover-height: 300px;
+$recent-news-title-bg: $lt;
+$recent-news-title-height: $default-spacing;
+$recent-news-title-separator: 1px solid $shadow;
+$recent-news-title-vertical-padding: floor($recent-news-title-height / 4);
+$recent-news-border-radius: $default-radius;
+
+$recent-news-title-icon-size: 24px;
+$recent-news-title-icon-height: $recent-news-title-icon-size;
+
+$recent-news-title-horizontal-padding: 0;
+$recent-news-title-icon-padding: $recent-news-title-horizontal-padding;
+$recent-news-title-text-padding: $recent-news-title-horizontal-padding;
+
+$recent-news-first-row-margin: $recent-news-title-height;
+$mq-768-recent-news-first-row-margin: 0; // max-width: 768
+$mq-768-recent-news-margin: $default-spacing;
+
+
+
+
+
+// --
+// recent x (home)
+// --
+
+// Default
+$recent-x-height: 400px;
+$recent-x-title-height: $default-spacing;
+$recent-x-title-bg: rgba(0, 0, 0, 0.3);
+$recent-x-title-padding: floor($recent-x-title-height / 4);
+$recent-x-title-font-size: $font-size-h5;
+$recent-x-title-position-top: $recent-x-height - $recent-x-title-height;
+
+$recent-x-border-radius: $default-radius;
+$recent-x-cover-border-radius: $recent-x-border-radius;
+$recent-x-title-border-radius: 0 0 $recent-x-border-radius $recent-x-border-radius;
+
+$recent-x-date-bg: rgba(0, 0, 0, 0.5);
+$recent-x-date-position: 15px;
+$recent-x-date-position-left: $recent-x-date-position;
+$recent-x-date-position-top: $recent-x-date-position;
+$recent-x-date-size: 75px;
+$recent-x-date-width: $recent-x-date-size;
+$recent-x-date-height: $recent-x-date-size;
+$recent-x-date-padding: 5px;
+$recent-x-date-padding-top: $recent-x-date-padding + floor($recent-x-date-padding / 1.5);
+$recent-x-date-padding-bottom: $recent-x-date-padding;
+$recent-x-date-font-size: ceil($font-size-h2 * 2) - 4px;
+$recent-x-date-day-font-size: $font-size-h6 + 1px;
+$recent-x-date-day-margin: -17px;
+
+// Smalle
+$recent-x-sm-margin: floor($default-spacing / 4);
+$recent-x-sm-height: floor($recent-x-height / 2) - $recent-x-sm-margin;
+
+$recent-x-sm-title-height: $recent-x-title-height / 2;
+$recent-x-sm-title-bg: $recent-x-title-bg;
+$recent-x-sm-title-padding: floor($recent-x-sm-title-height / 8);
+$recent-x-sm-title-font-size: $font-size-h6;
+$recent-x-sm-title-position-top: $recent-x-sm-height - $recent-x-sm-title-height;
+
+$recent-x-sm-border-radius: $default-radius;
+$recent-x-sm-cover-border-radius: $recent-x-sm-border-radius;
+$recent-x-sm-title-border-radius: 0 0 $recent-x-sm-border-radius $recent-x-border-radius;
+
+$recent-x-sm-date-bg: $recent-x-title-bg;
+$recent-x-sm-date-position: 10px;
+$recent-x-sm-date-position-left: $recent-x-sm-date-position;
+$recent-x-sm-date-position-top: $recent-x-sm-date-position;
+$recent-x-sm-date-size: 60px;
+$recent-x-sm-date-width: $recent-x-sm-date-size;
+$recent-x-sm-date-height: $recent-x-sm-date-size;
+$recent-x-sm-date-padding: 5px;
+$recent-x-sm-date-padding-horizontal: 1px;
+// $recent-x-sm-date-padding-top: $recent-x-sm-date-padding + floor($recent-x-sm-date-padding / 1.5);
+$recent-x-sm-date-padding-top: floor($recent-x-sm-date-padding / 2);
+$recent-x-sm-date-padding-bottom: floor($recent-x-sm-date-padding / 2);
+$recent-x-sm-date-font-size: ceil($font-size-h3 * 2) - 4px;
+$recent-x-sm-date-day-font-size: ceil($font-size-h6) - 2px;
+$recent-x-sm-date-day-margin: -10px;
+
+
+
+
+
+// Footer
+// --
+//
+$footer-font-color: $lt;
+$footer-bg: $dt-dark;
+$footer-height: 75px;
+$footer-padding: floor($footer-height / 3);
+$footer-padding-top: $footer-padding;
+$footer-padding-bottom: $footer-padding;
+
+$footer-social-media-transition-duration: 0.25s;
+$footer-social-media-transition: $footer-social-media-transition-duration all;
+
+$footer-social-media-hover-color: $default;
+$footer-social-media-margin: 5px;
+$footer-social-media-margin-left: floor($footer-social-media-margin / 2);
+$footer-social-media-margin-right: floor($footer-social-media-margin / 2);
