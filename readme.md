@@ -15,6 +15,7 @@ Requires:
 - npm
 - Ruby
 
+```
 	$ git clone https://github.com/srph/plm-web.git
 	$ npm install -g bower gulp
 	# At the root of our application
@@ -26,6 +27,7 @@ Requires:
 
 	# Important to run while modifying scripts, images, or sass
 	$ gulp
+```
 	
 ## Project Management ##
 
