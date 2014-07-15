@@ -10,7 +10,7 @@ var
 	_img 			= _assets + 'img/',
 	_bimg			= _build + 'img/',
 
-	_views			= app + 'views/';
+	_views			= _app + 'views/';
 
 
 // Node modules
@@ -80,7 +80,7 @@ gulp.task('default', function() {
 	gulp.watch(_sass + 'default/**/*.scss', ['styles']);
 	gulp.watch(_app + '**/*.js', ['scripts']);
 	gulp.watch(_img + 'images/**', ['images']);
-	gulp.watch(['./app/views/**/*.php', './')
+	gulp.watch(['./app/views/**/*.php', _views + '**/*.html'])
 		.on('change', function(file) {
 			server.changed(file.path);
 		});
