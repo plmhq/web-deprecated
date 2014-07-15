@@ -23,5 +23,8 @@ app.run([
 		$rootScope.$on('$stateChangeSuccess', function() { compl(); });
 		$rootScope.$on('$stateChangeError', function() { compl(); });
 		$rootScope.$on('$stateNotFound', function() { compl() });
+
+		// Change default color
+		ngProgress.color('#E33147');
 	}
 ]);
