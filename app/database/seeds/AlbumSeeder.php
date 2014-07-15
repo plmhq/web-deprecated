@@ -11,7 +11,7 @@ class AlbumSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		$db = DB::table('users');
+		$db = DB::table('albums');
 		$db->delete();
 
 		$faker = Faker::create();

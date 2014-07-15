@@ -11,7 +11,7 @@ class SlideshowSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		$db = DB::table('users');
+		$db = DB::table('slideshows');
 		$db->delete();
 
 		$faker = Faker::create();

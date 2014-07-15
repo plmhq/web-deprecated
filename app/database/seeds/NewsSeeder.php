@@ -20,6 +20,7 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 1,
 				'user_id'		=> 1,
+				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
 				'image'			=> 'jX4JK.jpg',
@@ -30,6 +31,7 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 2,
 				'user_id'		=> 1,
+				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
 				'image'			=> 'jK62Z.jpg',
@@ -40,6 +42,7 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 3,
 				'user_id'		=> 1,
+				'type_id'		=> 2,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
 				'image'			=> 'wIqe3.png',
@@ -50,6 +53,7 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 4,
 				'user_id'		=> 1,
+				'type_id'		=> 3,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
 				'image'			=> 'x325JK.jpg',
@@ -60,6 +64,7 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 5,
 				'user_id'		=> 1,
+				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
 				'image'			=> 'sDgJK5.jpg',
@@ -70,6 +75,7 @@ class NewsSeeder extends Seeder {
 			[
 				'id'			=> 6,
 				'user_id'		=> 1,
+				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
 				'image'			=> 'sDgJK5.jpg',

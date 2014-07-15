@@ -11,7 +11,7 @@ class EventSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		$db = DB::table('users');
+		$db = DB::table('events');
 		$db->delete();
 
 		$faker = Faker::create();
