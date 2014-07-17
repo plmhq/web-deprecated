@@ -1,5 +1,5 @@
 window.jQuery = require("../vendor/jquery/dist/jquery");
-global.jQeury = require("../vendor/jquery/dist/jquery");
+global.jQuery = require("../vendor/jquery/dist/jquery");
 
 var
 	tbs	 			= require("../vendor/bootstrap/dist/js/bootstrap.min"),
