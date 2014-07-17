@@ -28,7 +28,7 @@ class AlbumPhotoSeeder extends Seeder {
 			],
 
 			[
-				'id'			=> 1,
+				'id'			=> 2,
 				'user_id'		=> 1,
 				'album_id'		=> 1,
 				'image'			=> '..jpg',
@@ -38,7 +38,7 @@ class AlbumPhotoSeeder extends Seeder {
 			],
 
 			[
-				'id'			=> 1,
+				'id'			=> 3,
 				'user_id'		=> 1,
 				'album_id'		=> 1,
 				'image'			=> '..jpg',
@@ -48,7 +48,7 @@ class AlbumPhotoSeeder extends Seeder {
 			],
 
 			[
-				'id'			=> 1,
+				'id'			=> 4,
 				'user_id'		=> 1,
 				'album_id'		=> 1,
 				'image'			=> '..jpg',
