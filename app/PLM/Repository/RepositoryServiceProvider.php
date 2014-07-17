@@ -22,6 +22,10 @@ class RepositoryServiceProvider extends ServiceProvider {
 		// Binds the slideshow repository
 		$this->app->bind('PLM\Repository\Interfaces\SlideshowRepositoryInterface',
 			'PLM\Repository\Eloquent\SlideshowRepository');
+
+		// Binds the event repository
+		$this->app->bind('PLM\Repository\Interfaces\EventRepositoryInterface',
+			'PLM\Repository\Eloquent\EventRepository');
 	}
 	
 }
