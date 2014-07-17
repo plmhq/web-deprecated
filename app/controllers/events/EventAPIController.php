@@ -7,7 +7,7 @@ use PLM\Repository\Interfaces\EventRepositoryInterface;
 class EventAPIController extends \BaseController {
 
 	/**
-	 * @var NewsRepositoryInterface
+	 * @var EventRepositoryInterface
 	 */
 	protected $event;
 

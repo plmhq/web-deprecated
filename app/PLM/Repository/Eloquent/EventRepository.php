@@ -15,15 +15,4 @@ class EventRepository extends AbstractRepository implements EventRepositoryInter
 		parent::__construct($event);
 	}
 
-	/**
-	 * Take recent events
-	 *
-	 * @param 	int 	$limit
-	 * @return 	Model
-	 */
-	public function getRecent($limit = null)
-	{
-		return $this->model->recent($limit)->get();
-	}
-
 }

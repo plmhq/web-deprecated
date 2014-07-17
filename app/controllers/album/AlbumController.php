@@ -1,11 +1,24 @@
 <?php
 
-
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Validators\Exceptions\ValidationFailedException;
 use PLM\Repository\Interfaces\AlbumRepositoryInterface;
 
-class EventController extends \BaseController {
+class AlbumController extends \BaseController {
+
+	/**
+	 * @var AlbumRepositoryInterface
+	 */
+	protected $album;
+
+	/**
+	 * Class constructor
+	 *
+	 */
+	public function __construct(AlbumRepositoryInterface $album)
+	{
+		$this->album = $album;
+	}
 
 	/**
 	 * Display a listing of the resource.

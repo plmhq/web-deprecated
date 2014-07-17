@@ -44,6 +44,12 @@ Route::group(['prefix' => 'api'], function()
 	 */
 	Route::resource('rest/event', 'EventController');
 	Route::controller('x/event', 'EventAPIController');
+
+	/**
+	 * @link /api/album/*
+	 */
+	Route::resource('rest/album', 'AlbumController');
+	Route::controller('x/album', 'AlbumAPIController');
 });
 
 /**

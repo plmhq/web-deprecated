@@ -1,6 +1,6 @@
 <?php namespace PLM\Models\Eloquent;
 
-class AlbumPhoto extends \Eloquent {
+class AlbumPhoto extends Base {
 
 	/**
 	 * Table used by the model
@@ -8,13 +8,6 @@ class AlbumPhoto extends \Eloquent {
 	 * @var string
 	 */
 	protected $table = 'album_photos';
-
-	/**
-	 * Columns guarded by the array
-	 *
-	 * @var array
-	 */
-	protected $guarded = array('*');
 
 	/**
 	 * Columns fillable by the model
@@ -40,7 +33,7 @@ class AlbumPhoto extends \Eloquent {
 	 */
 	public function user()
 	{
-
+		return $this->belongsTo('User');
 	}
 
 	/**

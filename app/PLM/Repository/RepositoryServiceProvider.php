@@ -26,6 +26,14 @@ class RepositoryServiceProvider extends ServiceProvider {
 		// Binds the event repository
 		$this->app->bind('PLM\Repository\Interfaces\EventRepositoryInterface',
 			'PLM\Repository\Eloquent\EventRepository');
+
+		// Binds the album repository
+		$this->app->bind('PLM\Repository\Interfaces\AlbumRepositoryInterface',
+			'PLM\Repository\Eloquent\AlbumRepository');
+
+		// Binds the photo repository
+		$this->app->bind('PLM\Repository\Interfaces\AlbumPhotoRepositoryInterface',
+			'PLM\Repository\Eloquent\AlbumPhotoRepository');
 	}
 	
 }

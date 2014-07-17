@@ -43,6 +43,24 @@ class AlbumSeeder extends Seeder {
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d'),
 			],
+
+			[
+				'id'			=> 4,
+				'user_id'		=> 1,
+				'title'			=> $faker->sentence(2),
+				'description'	=> $faker->paragraph(1),
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d'),
+			],
+
+			[
+				'id'			=> 5,
+				'user_id'		=> 1,
+				'title'			=> $faker->sentence(2),
+				'description'	=> $faker->paragraph(1),
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d'),
+			],
 		];
 
 		$db->insert($data);

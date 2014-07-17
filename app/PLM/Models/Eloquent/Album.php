@@ -1,6 +1,6 @@
 <?php namespace PLM\Models\Eloquent;
 
-class Album extends \Eloquent {
+class Album extends AbstractModel {
 
 	/**
 	 * Table used by the model
@@ -8,13 +8,6 @@ class Album extends \Eloquent {
 	 * @var string
 	 */
 	protected $table = 'albums';
-
-	/**
-	 * Columns guarded by the array
-	 *
-	 * @var array
-	 */
-	protected $guarded = array('*');
 
 	/**
 	 * Columns fillable by the model

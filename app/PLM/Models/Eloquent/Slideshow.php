@@ -1,6 +1,6 @@
 <?php namespace PLM\Models\Eloquent;
 
-class Slideshow extends \Eloquent {
+class Slideshow extends AbstractModel {
 
 	/**
 	 * Table used by the model
@@ -8,13 +8,6 @@ class Slideshow extends \Eloquent {
 	 * @var string
 	 */
 	protected $table = 'slideshows';
-
-	/**
-	 * Columns guarded by the array
-	 *
-	 * @var array
-	 */
-	protected $guarded = array('*');
 
 	/**
 	 * Columns fillable by the model
@@ -33,18 +26,6 @@ class Slideshow extends \Eloquent {
 	 * @var bool
 	 */
 	public $timestamps = true;
-
-	/**
-	 * Take last five from the table
-	 *
-	 * @param 	$query 	Builder
-	 * @param 	int 	$limit
-	 * @return 	$query
-	 */
-	public function scopeRecent($query, $limit = 5)
-	{
-		return $query->orderBy('id', 'desc')->take($limit);
-	}
 
 	/**
 	 * ORM with the User model

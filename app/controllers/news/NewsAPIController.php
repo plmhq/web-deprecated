@@ -27,7 +27,7 @@ class NewsAPIController extends \BaseController {
 	 * @param 	int 	$count
 	 * @return 	Model
 	 */
-	public function getRecentNews($count = 5)
+	public function getRecent($count = 5)
 	{
 		return $this->news->getRecent($count)->toJson();
 	}

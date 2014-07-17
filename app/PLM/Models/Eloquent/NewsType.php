@@ -1,6 +1,6 @@
 <?php namespace PLM\Models\Eloquent;
 
-class NewsTypes extends \Eloquent {
+class NewsTypes extends AbstractModel {
 
 	/**
 	 * Table used by the model
@@ -8,13 +8,6 @@ class NewsTypes extends \Eloquent {
 	 * @var string
 	 */
 	protected $table = 'news_types';
-
-	/**
-	 * Columns guarded by the array
-	 *
-	 * @var array
-	 */
-	protected $guarded = array('*');
 
 	/**
 	 * Columns fillable by the model

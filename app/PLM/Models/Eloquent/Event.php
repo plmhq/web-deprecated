@@ -1,6 +1,6 @@
 <?php namespace PLM\Models\Eloquent;
 
-class Event extends \Eloquent {
+class Event extends AbstractModel {
 
 	/**
 	 * Table used by the model
@@ -8,13 +8,6 @@ class Event extends \Eloquent {
 	 * @var string
 	 */
 	protected $table = 'events';
-
-	/**
-	 * Columns guarded by the array
-	 *
-	 * @var array
-	 */
-	protected $guarded = array('*');
 
 	/**
 	 * Columns fillable by the model
@@ -35,15 +28,24 @@ class Event extends \Eloquent {
 	public $timestamps = true;
 
 	/**
-	 * Take last five from the table
+	 * Date mutator
 	 *
-	 * @param 	$query 	Builder
-	 * @param 	int 	$limit
-	 * @return 	$query
+	 * @return 	array
 	 */
-	public function scopeRecent($query, $limit = 5)
+	public function getDates()
 	{
-		return $query->orderBy('id', 'desc')->take($limit);
+		return array('created_at', 'updated_at', 'date');
+	}
+
+	/**
+	 * Mutate the date property to a timestamp
+	 *
+	 * @param 	str 		$value
+	 * @return 	void
+	 */
+	public function getDateAttribute($value)
+	{
+		return time($value);
 	}
 
 	/**
