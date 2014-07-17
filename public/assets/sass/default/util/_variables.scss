@@ -108,8 +108,8 @@ $default-box-shadow:				0 2px 3px $shadow;
 $default-spacing:					50px;
 
 $default-transition-duration:		0.35s;
-$default-sm-transition-duration:	floor($default-transition-duration / 1.5);
-$default-lg-transition-duration:	ceil($default-transition-duration * 1.5);
+$default-transition-duration-sm:	floor($default-transition-duration / 1.5);
+$default-transition-duration-lg:	ceil($default-transition-duration * 1.5);
 
 
 
@@ -130,7 +130,7 @@ $btn-border-hover-bg: $btn-border-color;
 $btn-font-family: $montserrat-font-family;
 $btn-font-size: $font-size-h5;
 
-$btn-transition-duration: $default-sm-transition-duration;
+$btn-transition-duration: $default-transition-duration-sm;
 
 // Button color schemes
 $btn-default-color: $lt-dark;
@@ -175,7 +175,7 @@ $nav-canopy-logo-size: floor($nav-canopy-height / 1.5);
 $nav-canopy-margin: floor($nav-canopy-logo-size / 6) * -1;
 
 // Transition
-$nav-canopy-heading-transition: $default-sm-transition-duration all;
+$nav-canopy-heading-transition: $default-transition-duration-sm all;
 
 
 
@@ -356,11 +356,20 @@ $footer-height: 75px;
 $footer-padding: floor($footer-height / 3);
 $footer-padding-top: $footer-padding;
 $footer-padding-bottom: $footer-padding;
+$footer-link-color: $lt;
 
-$footer-social-media-transition-duration: 0.25s;
+$footer-special-remarks-link-soft: 2px;
+$footer-special-remarks-link-shadow-color: $lt;
+$footer-special-remarks-link-shadow: 0 0 2px darken($footer-special-remarks-link-shadow-color, 60%);
+$footer-special-remarks-link-hover-shadow: 0 0 2px $footer-special-remarks-link-shadow-color;
+$footer-special-remarks-link-transition: $default-transition-duration;
+
+$footer-social-media-transition-duration: $default-transition-duration;
 $footer-social-media-transition: $footer-social-media-transition-duration all;
 
+$footer-social-media-space-size: 5px;
 $footer-social-media-hover-color: $default;
-$footer-social-media-margin: 5px;
+$footer-social-media-padding: $footer-social-media-space-size;
+$footer-social-media-margin: $footer-social-media-space-size;
 $footer-social-media-margin-left: floor($footer-social-media-margin / 2);
 $footer-social-media-margin-right: floor($footer-social-media-margin / 2);

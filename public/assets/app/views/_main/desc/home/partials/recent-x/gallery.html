@@ -2,12 +2,12 @@
 	<h4> Recents Galleries </h4>
 </div>
 
-<div class="row">
+<div class="row" ng-controller="AlbumCtrl">
 	<div class="col-md-6 col-xs-12">
 		<div class="recent-x">
 			<div class="x-date">
-				<span class="date-day"> 23 </span>
-				<span class="date"> JUN, 2013 </span>
+				<span class="date-day" ng-bind="bundle[0].created_at | date: 'd'"> 00 </span>
+				<span class="date"  ng-bind="bundle[0].created_at | date: 'MMM, yyyy'"> MMM, yyyy </span>
 			</div>
 
 			<div class="x-cover">
@@ -15,16 +15,16 @@
 			</div>
 
 			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
+				<span ng-bind="bundle[0].title"> Title </span>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-3 col-xs-6 recent-x-sm-first-two">
+	<div class="col-md-3 col-xs-6" ng-repeat="album in bundleSM" ng-class="{ 'recent-x-sm-first-two': $index <= 1, 'recent-x-sm-last-two': $index >= 2 }">
 		<div class="recent-x-sm">
 			<div class="x-date">
-				<span class="date-day"> 23 </span>
-				<span class="date"> JUN, 2013 </span>
+				<span class="date-day" ng-bind="album.created_at | date: 'd'"> 23 </span>
+				<span class="date" ng-bind="album.created_at | date: 'MMM, yyyy'"> JUN, 2013 </span>
 			</div>
 
 			<div class="x-cover">
@@ -32,57 +32,7 @@
 			</div>
 
 			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 col-xs-6 recent-x-sm-first-two">
-		<div class="recent-x-sm">
-			<div class="x-date">
-				<span class="date-day"> 24 </span>
-				<span class="date"> MAY, 2013 </span>
-			</div>
-
-			<div class="x-cover">
-				<img src="assets/img/n.jpg">
-			</div>
-
-			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 col-xs-6 recent-x-sm-last-two">
-		<div class="recent-x-sm">
-			<div class="x-date">
-				<span class="date-day"> 14 </span>
-				<span class="date"> AUG, 2013 </span>
-			</div>
-
-			<div class="x-cover">
-				<img src="assets/img/n.jpg">
-			</div>
-
-			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 recent-x-sm-last-two">
-		<div class="recent-x-sm">
-			<div class="x-date">
-				<span class="date-day"> 69 </span>
-				<span class="date"> APR, 2013 </span>
-			</div>
-			<div class="x-cover">
-				<img src="assets/img/n.jpg">
-			</div>
-
-			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
+				<span ng-bind="album.title"> Title </span>
 			</div>
 		</div>
 	</div>

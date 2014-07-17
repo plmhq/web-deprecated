@@ -4,11 +4,11 @@ app.factory('NewsService', [
 	'$q',
 	'$http',
 	function($q, $http) {
-		var object = {
+		var service = {
 			/**
 			 *
 			 */
-			instance: '',
+			instance: {},
 
 			/**
 			 *
@@ -23,20 +23,27 @@ app.factory('NewsService', [
 			/**
 			 *
 			 */
-			getBundle: function(count) {
-				var defer = $q.defer();
-				var url = 'api/x/news/recent-news/' + count;
-				var request = $http.get(url);
-				var obj = this;
+			getRecent: function(limit) {
+				// $q instance
+				var
+					q	 	= $q.defer(),
+					url 	= 'api/x/news/recent/' + limit,
+					request = $http.get(url);
 
-				request.success(function(r) {
-					obj.bundle = r;
-					defer.resolve();
-				}).error(function(r) {
-					defer.reject();
-				});
+				// Run the request with a self-invoking function
+				// to pass the this (the service) object
+				request
+					.success( (function(_this) {
+						return function(r) {
+							_this.bundle = r;
+							q.resolve();
+						};
+					})(this) )
+					.error(function() {
+						q.reject();
+					});
 
-				return defer.promise
+				return q.promise;
 			},
 
 			/**
@@ -56,6 +63,6 @@ app.factory('NewsService', [
 			}
 		};
 
-		return object;
+		return service;
 	}
 ]);

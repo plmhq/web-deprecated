@@ -2,13 +2,13 @@
 	<h4> Recents Events </h4>
 </div>
 
-<div class="row">
+<div class="row" ng-controller="EventCtrl">
 
-	<div class="col-md-6">
+	<div class="col-md-6" ng-repeat="event in bundle">
 		<div class="recent-x">
 			<div class="x-date">
-				<span class="date-day"> 23 </span>
-				<span class="date"> JUN, 2013 </span>
+				<span class="date-day" ng-bind="event.date | date: 'd'"> 00 </span>
+				<span class="date" ng-bind="event.date | date: 'MMM, yyyy'"> MMM, YYYY </span>
 			</div>
 
 			<div class="x-cover">
@@ -16,24 +16,7 @@
 			</div>
 
 			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="recent-x">
-			<div class="x-date">
-				<span class="date-day"> 23 </span>
-				<span class="date"> JUN, 2013 </span>
-			</div>
-
-			<div class="x-cover">
-				<img src="assets/img/n.jpg">
-			</div>
-
-			<div class="x-title">
-				<span> 50th Golden Anniversary </span>
+				<span ng-bind="event.title"> Title </span>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,11 @@
+@import "../util/_variables";
+
+// Adds a special white glow to the text
+@mixin special-glow($soft, $color, $transition-duration) {
+	text-shadow: 0 0 $soft darken($color, 50%);
+
+	&:hover {
+		text-shadow: 0 0 $soft $color;
+		transition: $transition-duration all;
+	}	
+}
