@@ -1,5 +1,8 @@
-window.jQuery = require("../vendor/jquery/dist/jquery");
-global.jQuery = require("../vendor/jquery/dist/jquery");
+window.jQuery 	= require("../vendor/jquery/dist/jquery");
+global.jQuery 	= require("../vendor/jquery/dist/jquery");
+window.$ 		= require("../vendor/jquery/dist/jquery");
+global.$ 		= require("../vendor/jquery/dist/jquery");
+$				= require("../vendor/jquery/dist/jquery");
 
 var
 	tbs	 			= require("../vendor/bootstrap/dist/js/bootstrap.min"),
@@ -8,6 +11,7 @@ var
 	uiRouter 		= require("../vendor/angular-ui-router/release/angular-ui-router"),
 	ngProgress 		= require("../vendor/ngprogress/build/ngProgress"),
 	ngTimer 		= require("../vendor/angular-timer/dist/angular-timer"),
+	jqSlick 		= require("../vendor/slick-carousel/slick/slick.min"),
 	ngSlick 		= require("../vendor/angular-slick/dist/slick"),
 	datejs 			= require("../vendor/datejs/build/date"),
 

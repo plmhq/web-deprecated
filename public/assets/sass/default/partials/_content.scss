@@ -4,8 +4,13 @@
 	background: $content-lt-bg;
 	padding-top: $content-padding;
 	padding-bottom: $content-padding;
+
 	&.content-gray {
 		background: $content-gray-bg;
+	}
+
+	&.content-no-padding {
+		padding: 0;
 	}
 
 	.content-heading {

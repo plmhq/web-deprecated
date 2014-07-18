@@ -8,6 +8,7 @@
 	<!-- Stylesheets -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="/assets/vendor/slick-carousel/slick/slick.css" type="text/css" rel="stylesheet">
 	<link href="/build/css/main.min.css" type="text/css" rel="stylesheet">
 
 	<!-- Scripts -->
