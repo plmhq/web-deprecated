@@ -9,6 +9,9 @@ app.config([
 			name: 'main.home',
 			url: '/',
 			templateUrl: '/assets/app/views/_main/desc/home/_template.html',
+			data: {
+				title: 'Home'
+			},
 			resolve: {
 				// Fetches 6 revent news
 				news: ['NewsService', function(NewsService) {

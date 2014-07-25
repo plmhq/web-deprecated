@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title ng-bind="'Pamantasan ng Lungsod ng Maynila -' + $state.current.name"> Pamantasan ng Lungsod ng Maynila </title>
+	<title ng-bind="'Pamantasan ng Lungsod ng Maynila - ' + $state.current.data.title"> Pamantasan ng Lungsod ng Maynila </title>
 	<meta charset="utf-8">
 	<base href="/">
 
