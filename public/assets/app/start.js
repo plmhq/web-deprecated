@@ -1,5 +1,8 @@
 var start = function() {
-	angular.element(document).ready(function() {
+	// Removing this init-ready function
+	// since it is unnecessary; the main script
+	// is placed in the html body
+	// angular.element(document).ready(function() {
 		var modules = ['app'],
 			config = { strictDi: true };
 
@@ -13,7 +16,7 @@ var start = function() {
 		}
 
 		console.info('Starting PLM app...');
-	});
+	// });
 };
 
 module.exports = start;

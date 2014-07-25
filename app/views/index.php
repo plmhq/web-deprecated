@@ -11,14 +11,14 @@
 	<link href="/assets/vendor/slick-carousel/slick/slick.css" type="text/css" rel="stylesheet">
 	<link href="/build/css/main.min.css" type="text/css" rel="stylesheet">
 
-	<!-- Scripts -->
-	<script type="text/javascript" src="/build/js/main.min.js"></script>
-
 	<!-- Favicon -->
 	<link type="image/png" rel="shortcut icon" href="/assets/img/favicon.png">
 </head>
 
 <body>
 	<div ui-view> </div>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="/build/js/main.min.js"></script>
 </body>
 </html>
