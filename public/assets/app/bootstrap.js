@@ -16,8 +16,6 @@ var
 	datejs 			= require("../vendor/datejs/build/date"),
 
 	// App
-	start 			= require("./start"),
 	app 			= require("./app"),
-	components 		= require("./components/_index");
-
-start();
+	components 		= require("./components/_index"),
+	start 			= require("./start")();

@@ -4,4 +4,5 @@ var
 	_auth 			= require("./states/_db-auth"),
 	_guest 			= require("./states/_db-guest"),
 	_main 			= require("./states/_main"),
-	home 			= require("./states/main-home");
+	home 			= require("./states/main-home"),
+	pages			= require("./states/main-pages");
