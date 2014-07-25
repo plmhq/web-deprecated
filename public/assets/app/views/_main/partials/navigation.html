@@ -12,11 +12,11 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="main-navigation">
 			<ul class="nav navbar-nav">
-				<li class="active"> <a href="#">Home </a> </li>
-				<li> <a ui-sref="main.university-profile"> University Profile </a> </li>
-				<li> <a ui-sref="main.media"> Media </a> </li>
-				<li> <a ui-sref="main.admission"> Admission </a> </li>
-				<li> <a ui-sref="main.career"> Careers </a> </li>
+				<li ng-class="{ active: $state.includes('main.home') }"> <a href="#"> Home </a> </li>
+				<li ng-class="{ active: $state.includes('main.university-profile') }"> <a ui-sref="main.university-profile"> University Profile </a> </li>
+				<li ng-class="{ active: $state.includes('main.media') }"> <a ui-sref="main.media"> Media </a> </li>
+				<li ng-class="{ active: $state.includes('main.admission') }"> <a ui-sref="main.admission"> Admission </a> </li>
+				<li ng-class="{ active: $state.includes('main.career') }"> <a ui-sref="main.career"> Careers </a> </li>
 			</ul>
 				
 			<ul class="nav navbar-nav navbar-right">
