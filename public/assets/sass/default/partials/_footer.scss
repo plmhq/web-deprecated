@@ -2,14 +2,24 @@
 
 footer {
 
-	& {
-		background-color: $footer-bg;
-		height: $footer-height;
-		padding-top: $footer-padding-top;
-		padding-bottom: $footer-padding-bottom;
-		color: $footer-font-color;
-		overflow: hidden;
-		@include clearfix();
+	background-color: $footer-bg;
+	height: $footer-height;
+	padding-top: $footer-padding-top;
+	padding-bottom: $footer-padding-bottom;
+	color: $footer-font-color;
+	font-size: $footer-font-size;
+	overflow: hidden;
+	@include clearfix();
+
+	@media (max-width: 720px) {
+		padding-top: $footer-padding-top + 5px;
+		font-size: $footer-font-size-sm;
+	}
+
+	p {
+		@media (max-width: 720px) {
+			margin: 0;
+		}
 	}
 
 	a {
@@ -51,6 +61,10 @@ footer {
 	}
 
 	.special-remarks {
+		@media (max-width: 720px) {
+			display: none;
+		}
+
 		a {
 			color: $footer-link-color;
 			font-weight: 700;

@@ -352,6 +352,8 @@ $recent-x-sm-date-day-margin: -10px;
 // --
 //
 $footer-font-color: $lt;
+$footer-font-size: $font-size-base;
+$footer-font-size-sm: floor($footer-font-size * 0.75);
 $footer-bg: $dt-dark;
 $footer-height: 75px;
 $footer-padding: floor($footer-height / 3);

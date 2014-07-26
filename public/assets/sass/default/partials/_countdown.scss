@@ -9,19 +9,41 @@
 	padding-top: $countdown-padding;
 	padding-bottom: $countdown-padding;
 
-	.countdown-text {
-		& {
-			text-transform: uppercase;
-			font-weight: 700;
-			font-size: $countdown-text-size;
+	@media (max-width: 640px) {
+		padding-top: $countdown-padding - floor($countdown-text-size * 0.50);
+		padding-bottom: $countdown-padding - floor($countdown-text-size * 0.50);
+	}
 
-			@media (max-width: 768px) {
-				font-size: floor($countdown-text-size * 0.75);
-			}
-		}
+	.countdown-text {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $countdown-text-size;
+
+		@include ellipsis-overflow();
+
+		// @media (max-width: 720px) {
+		// 	font-size: floor($countdown-text-size * 0.75);
+		// 	line-height: floor($countdown-text-size * 0.75);
+		// }
+
 		> .extra {
 			font-size: $countdown-text-extra-size;
 			font-weight: 600;
+
+			/* Convert this to a global utility */
+			.screen-only {
+				@media(max-width: 640px) {
+					display: none;
+				}
+			}
+
+			@media (max-width: 720px) {
+				font-size: floor($countdown-text-extra-size * 0.75);
+			}
+
+			@media (max-width: 640px) {
+				display: block;
+			}
 		}
 	}
 }
