@@ -26,6 +26,10 @@ app.config([
 				// Fetches 5 recent albums
 				album: ['AlbumSrvc', function(AlbumSrvc) {
 					return AlbumSrvc.getRecent();
+				}],
+
+				slideshow: ['SlideshowSrvc', function(SlideshowSrvc) {
+					return SlideshowSrvc.getRecent();
 				}]
 			}
 		};

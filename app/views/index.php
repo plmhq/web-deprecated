@@ -3,7 +3,6 @@
 <head>
 	<title ng-bind="'Pamantasan ng Lungsod ng Maynila - ' + $state.current.data.title"> Pamantasan ng Lungsod ng Maynila </title>
 	<meta charset="utf-8">
-	<base href="/">
 
 	<!-- Stylesheets -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -13,6 +12,8 @@
 
 	<!-- Favicon -->
 	<link type="image/png" rel="shortcut icon" href="/assets/img/favicon.png">
+
+	<base href="/">
 </head>
 
 <body>

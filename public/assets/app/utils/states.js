@@ -1,5 +1,4 @@
 var
-	_missing 		= require("./states/_missing"),
 	_db 			= require("./states/_db"),
 	_auth 			= require("./states/_db-auth"),
 	_guest 			= require("./states/_db-guest"),
@@ -29,4 +28,6 @@ var
 
 	media			= require("./states/main/media"),
 	admission		= require("./states/main/admission"),
-	career			= require("./states/main/career");
+	career			= require("./states/main/career"),
+
+	_missing 		= require("./states/_missing");

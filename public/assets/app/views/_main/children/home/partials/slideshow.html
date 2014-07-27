@@ -1,10 +1,5 @@
-<div class="content content-no-padding" id="slideshow">
+<div class="content content-no-padding" id="slideshow" ng-controller="SlideshowCtrl">
 	<slick fade="true" autoplay="true" autoplay-speed="5000" dots="true">
-		<div> <img src="/assets/img/uploads/slides/sample.jpg"> </div>
-		<div> <img src="/assets/img/n.jpg"> </div>
-		<div> <img src="/assets/img/uploads/slides/sample.jpg"> </div>
-		<div> <img src="/assets/img/n.jpg"> </div>
-		<div> <img src="/assets/img/uploads/slides/sample.jpg"> </div>
-		<div> <img src="/assets/img/uploads/slides/sample.jpg"> </div>
+		<div ng-repeat="slide in slides"> <img ng-src="{{ getImageURL(slide.image) }}"> </div>
 	</slick>
 </div>

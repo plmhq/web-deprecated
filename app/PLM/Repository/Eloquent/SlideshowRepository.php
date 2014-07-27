@@ -10,7 +10,7 @@ class SlideshowRepository extends AbstractRepository implements SlideshowReposit
 	 *
 	 * @param 	User 	$user
 	 */
-	public function __construct(Slideshow $Slideshow)
+	public function __construct(Slideshow $slideshow)
 	{
 		parent::__construct($slideshow);
 	}

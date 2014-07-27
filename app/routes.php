@@ -31,7 +31,8 @@ Route::group(['prefix' => 'api'], function()
 	/**
 	 * @link /api/slideshow/*
 	 */
-	Route::resource('slideshow', 'SlideshowController');
+	Route::resource('rest/slideshow', 'SlideshowController');
+	Route::controller('x/slideshow', 'SlideshowAPIController');
 
 	/**
 	 * @link /api/news/*

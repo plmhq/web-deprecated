@@ -4,4 +4,5 @@ var
 	util 	= require("../services/util"),
 	news 	= require("../services/news"),
 	e		= require("../services/event"),
-	album	= require("../services/album");
+	album	= require("../services/album"),
+	slides	= require("../services/slideshow");

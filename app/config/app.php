@@ -121,7 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'PLM\Handler\AppServiceProvider',
+		'PLM\Handler\MissingServiceProvider',
 		'PLM\Repository\RepositoryServiceProvider',
 		'PLM\Filters\FilterServiceProvider',
 
