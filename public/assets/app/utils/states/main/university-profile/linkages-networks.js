@@ -8,7 +8,8 @@ app.config([
 			url: '/linkages-networks',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/linkages-networks/_template.html',
 			data: {
-				title: 'University Profile: Linkages and Networks'
+				title: 'University Profile: Linkages and Networks',
+				rawTitle: 'Linkages and Networks'
 			}
 		};
 

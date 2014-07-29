@@ -1,7 +1,6 @@
 @import "../util/_variables";
 
 footer {
-
 	background-color: $footer-bg;
 	height: $footer-height;
 	padding-top: $footer-padding-top;
@@ -69,7 +68,7 @@ footer {
 			color: $footer-link-color;
 			font-weight: 700;
 
-			@include special-glow($footer-special-remarks-link-soft, $footer-special-remarks-link-shadow-color, $footer-special-remarks-link-transition);
+			@include special-glow-custom($footer-special-remarks-link-soft, $footer-special-remarks-link-shadow-color, $footer-special-remarks-link-transition);
 		}
 	}
 }

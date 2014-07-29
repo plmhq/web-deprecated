@@ -9,7 +9,5 @@ app.controller('SlideshowCtrl', [
 		$scope.getImageURL = function(filename) {
 			return SlideshowSrvc.getImageURL(filename);
 		}
-		
-		console.log($scope.slides);
 	}
 ]);

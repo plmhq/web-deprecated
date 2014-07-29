@@ -10,6 +10,7 @@ var
 	ngResource 		= require("../vendor/angular-resource/angular-resource"),
 	uiRouter 		= require("../vendor/angular-ui-router/release/angular-ui-router"),
 	ngProgress 		= require("../vendor/ngprogress/build/ngProgress"),
+	ngProgressLite	= require("../vendor/ngprogress-lite/ngprogress-lite"),
 	ngTimer 		= require("../vendor/angular-timer/dist/angular-timer"),
 	jqSlick 		= require("../vendor/slick-carousel/slick/slick.min"),
 	ngSlick 		= require("../vendor/angular-slick/dist/slick"),

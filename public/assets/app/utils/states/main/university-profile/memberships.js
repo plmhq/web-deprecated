@@ -8,7 +8,8 @@ app.config([
 			url: '/memberships',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/memberships/_template.html',
 			data: {
-				title: 'University Profile: Memberships'
+				title: 'University Profile: Memberships',
+				rawTitle: 'Memberships'
 			}
 		};
 

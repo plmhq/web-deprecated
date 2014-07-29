@@ -17,11 +17,7 @@ app.controller('AlbumCtrl', [
 				newBundle[_i - 1] = bundle[_i];
 			}
 
-			console.log(bundle);
-
 			return newBundle;
 		})($scope.bundle);
-
-		console.log($scope.bundleSM);
 	}
 ]);

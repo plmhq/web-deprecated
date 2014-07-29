@@ -8,7 +8,8 @@ app.config([
 			url: '/hymn',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/hymn/_template.html',
 			data: {
-				title: 'University Profile: Hymn'
+				title: 'University Profile: Hymn',
+				rawTitle: 'Hymn'
 			}
 		};
 

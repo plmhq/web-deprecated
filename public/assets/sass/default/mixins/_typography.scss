@@ -1,13 +1,18 @@
 @import "../util/_variables";
 
 // Adds a special white glow to the text
-@mixin special-glow($soft, $color, $transition-duration) {
+@mixin special-glow-custom($soft, $color, $transition-duration) {
 	text-shadow: 0 0 $soft darken($color, 50%);
 
 	&:hover {
 		text-shadow: 0 0 $soft $color;
 		transition: $transition-duration all;
-	}	
+	}
+}
+
+@mixin special-glow() {
+	/* Organize */
+	@include special-glow-custom(2px, #fff, 0.35);
 }
 
 @mixin ellipsis-overflow() {

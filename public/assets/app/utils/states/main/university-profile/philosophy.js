@@ -8,7 +8,8 @@ app.config([
 			url: '/philosophy',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/philosophy/_template.html',
 			data: {
-				title: 'University Profile: Philosophy'
+				title: 'University Profile: Philosophy',
+				rawTitle: 'Philosophy'
 			}
 		};
 

@@ -2,7 +2,8 @@ var app = angular.module('app', [
 	'ui.router',																																																																																																																																																																																																																																																																																									'ngResource',
 	'ngProgress',
 	'timer',
-	'slick'
+	'slick',
+	'ngProgressLite'
 ]);
 
 module.exports = app;

@@ -8,7 +8,8 @@ app.config([
 			url: '',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/mission-vision/_template.html',
 			data: {
-				title: 'University Profile: Mission and Vision'
+				title: 'University Profile: Mission and Vision',
+				rawTitle: 'Mission and Vision'
 			}
 		};
 

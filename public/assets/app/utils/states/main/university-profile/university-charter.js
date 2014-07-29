@@ -8,7 +8,8 @@ app.config([
 			url: '/university-charter',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/university-charter/_template.html',
 			data: {
-				title: 'University Profile: University Charter'
+				title: 'University Profile: University Charter',
+				rawTitle: 'University Charter'
 			}
 		};
 

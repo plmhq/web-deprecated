@@ -106,14 +106,16 @@ $caret-width-large:					5px !default;
 
 $default-radius:					3px;
 $default-box-shadow:				0 2px 3px $shadow;
-$default-spacing:					50px;
+$default-height:					50px;
+$default-height-3x:					75px;
+$default-spacing:					$default-height;
 
 $default-transition-duration:		0.35s;
 $default-transition-duration-sm:	floor($default-transition-duration / 1.5);
 $default-transition-duration-lg:	ceil($default-transition-duration * 1.5);
 
 
-
+$default-bold:						700;
 
 
 // --
@@ -162,7 +164,7 @@ $btn-inverse-bg: $btn-inverse-color;
 // --
 // nav-canopy
 // --
-$nav-canopy-height: 50px;
+$nav-canopy-height: $default-height;
 $nav-canopy-bg: $gr;
 $nav-canopy-color: $default;
 $nav-canopy-hover-color: darken($nav-canopy-color, 12.5%);
@@ -187,7 +189,7 @@ $nav-canopy-heading-transition: $default-transition-duration-sm all;
 // --
 
 // basics
-$navbar-height:					75px;
+$navbar-height:					$default-height-3x;
 $navbar-margin-bottom:			 $line-height-computed;
 $navbar-border:					none;
 $navbar-border-radius:			$border-radius-base;
@@ -233,7 +235,7 @@ $navbar-plm-toggle-border-color:		#ddd !default;
 // countdown
 // --
 $countdown-bg: $default;
-$countdown-height: 45px;
+$countdown-height: $default-height;
 $countdown-text-color: $lt;
 $countdown-text-size: 16px;
 $countdown-text-extra-size: 14px;
@@ -304,7 +306,7 @@ $recent-x-date-bg: rgba(0, 0, 0, 0.5);
 $recent-x-date-position: 15px;
 $recent-x-date-position-left: $recent-x-date-position;
 $recent-x-date-position-top: $recent-x-date-position;
-$recent-x-date-size: 75px;
+$recent-x-date-size: $default-height-3x;
 $recent-x-date-width: $recent-x-date-size;
 $recent-x-date-height: $recent-x-date-size;
 $recent-x-date-padding: 5px;
@@ -355,7 +357,7 @@ $footer-font-color: $lt;
 $footer-font-size: $font-size-base;
 $footer-font-size-sm: floor($footer-font-size * 0.75);
 $footer-bg: $dt-dark;
-$footer-height: 75px;
+$footer-height: $default-height-3x;
 $footer-padding: floor($footer-height / 3);
 $footer-padding-top: $footer-padding;
 $footer-padding-bottom: $footer-padding;
@@ -376,3 +378,7 @@ $footer-social-media-padding: $footer-social-media-space-size;
 $footer-social-media-margin: $footer-social-media-space-size;
 $footer-social-media-margin-left: floor($footer-social-media-margin / 2);
 $footer-social-media-margin-right: floor($footer-social-media-margin / 2);
+
+
+
+

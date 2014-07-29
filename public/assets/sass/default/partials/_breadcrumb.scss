@@ -1,0 +1,36 @@
+@import "../util/_variables";
+
+$breadcrumb-height: $default-height;
+$breadcrumb-padding: floor($default-height / 2);
+$breadcrumb-padding-vertical: floor($breadcrumb-padding / 2);
+
+.breadcrumb-container {
+	height: $breadcrumb-height;
+	background: $default;
+	width: 100%;
+	padding-top: $breadcrumb-padding-vertical;
+	padding-bottom: $breadcrumb-padding-vertical;
+
+	.breadcrumb {
+		/* Removes the provided breadcrumb body by Bootstrap */
+		background: none;
+		padding: 0;
+
+		li {
+			&, a, .active {
+				color: white;
+			}
+
+			&+li:before {
+				color: white;
+				/* Removes the special-glow on active breadcrumb item */
+				text-shadow: none;
+			}
+
+			&.active {
+				@include special-glow();
+				font-weight: $default-bold;
+			}
+		}
+	}
+}

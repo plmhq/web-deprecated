@@ -8,7 +8,8 @@ app.config([
 			url: '/milestone-events',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/milestone-events/_template.html',
 			data: {
-				title: 'University Profile: Milestone Events'
+				title: 'University Profile: Milestone Events',
+				rawTitle: 'Milestone Events'
 			}
 		};
 

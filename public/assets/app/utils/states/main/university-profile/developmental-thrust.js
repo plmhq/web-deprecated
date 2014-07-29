@@ -8,7 +8,8 @@ app.config([
 			url: '/developmental-thrust',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/developmental-thrust/_template.html',
 			data: {
-				title: 'University Profile: Developmental Thrust'
+				title: 'University Profile: Developmental Thrust',
+				rawTitle: 'Developmental Thrust'
 			}
 		};
 

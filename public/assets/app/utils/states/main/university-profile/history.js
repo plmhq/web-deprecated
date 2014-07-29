@@ -8,7 +8,8 @@ app.config([
 			url: '/history',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/history/_template.html',
 			data: {
-				title: 'University Profile: History'
+				title: 'University Profile: History',
+				rawTitle: 'History'
 			}
 		};
 

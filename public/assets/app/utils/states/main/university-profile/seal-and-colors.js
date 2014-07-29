@@ -8,7 +8,8 @@ app.config([
 			url: '/seal-and-colors',
 			templateUrl: '/assets/app/views/_main/children/university-profile/children/seal-and-colors/_template.html',
 			data: {
-				title: 'University Profile: Sean and Colors'
+				title: 'University Profile: Sean and Colors',
+				rawTitle: 'Seal and Colors'
 			}
 		};
 
