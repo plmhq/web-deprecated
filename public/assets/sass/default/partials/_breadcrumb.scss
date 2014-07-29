@@ -19,6 +19,7 @@ $breadcrumb-padding-vertical: floor($breadcrumb-padding / 2);
 		li {
 			&, a, .active {
 				color: white;
+				vertical-align: middle;
 			}
 
 			&+li:before {
