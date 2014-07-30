@@ -25,8 +25,15 @@ var
 	seal_colors 	= require("./states/main/university-profile/seal-and-colors"),
 	univ_charter 	= require("./states/main/university-profile/university-charter"),
 
-
+	/**
+	 *
+	 */
 	media			= require("./states/main/media"),
+	news 			= require("./states/main/media/news"),
+	event 			= require("./states/main/media/event"),
+	album 			= require("./states/main/media/album"),
+
+
 	admission		= require("./states/main/admission"),
 	career			= require("./states/main/career"),
 

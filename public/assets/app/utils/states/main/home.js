@@ -14,8 +14,8 @@ app.config([
 			},
 			resolve: {
 				// Fetches 6 revent news
-				news: ['NewsService', function(NewsService) {
-					return NewsService.getRecent(6);
+				news: ['NewsSrvc', function(NewsSrvc) {
+					return NewsSrvc.getRecent(6);
 				}],
 
 				// Fetches 2 recent events

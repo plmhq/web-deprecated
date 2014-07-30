@@ -1,6 +1,6 @@
 var app = require('../app');
 
-app.factory('UserService', [
+app.factory('UserSrvc', [
 	function() {
 		var service = {};
 			

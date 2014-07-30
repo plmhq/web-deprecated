@@ -92,6 +92,16 @@ abstract class AbstractRepository {
 	}
 
 	/**
+	 * Returns the paginated instance of the model
+	 *
+	 * @return 	Paginator
+	 */
+	public function paginate($count = 5)
+	{
+		return $this->model->paginate( $count );
+	}
+
+	/**
 	 * Take recent slideshows
 	 *
 	 * @param 	int 	$limit

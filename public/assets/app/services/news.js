@@ -1,6 +1,6 @@
 var app = require('../app');
 
-app.factory('NewsService', [
+app.factory('NewsSrvc', [
 	'$q',
 	'$http',
 	function($q, $http) {
@@ -19,6 +19,44 @@ app.factory('NewsService', [
 			 *
 			 */
 			list: [],
+
+			/**
+			 *
+			 * @param 	{int} 	limit
+			 * @return  $q
+			 */
+			getAll: function(page, limit) {
+				// Defaults
+				var defaults = angular.extend({
+					page: 5,
+					limit: 15
+				}, {
+					page: page,
+					limit: limit
+				})
+
+				// Promise
+				var q = $q.defer();
+
+				// Request
+				var url 	= 'api/rest/news?page=' + defaults.page + '&limit=' + defaults.limit;
+				var request = $http.get(url);
+
+				request
+					.success( function(_this) {
+						return function(r) {
+							_this.bundle = r.data;
+							console.log(r);
+							q.resolve();
+						}
+					}(this) )
+					.error(function() {
+						console.log('Error');
+						q.reject('An error has occured');
+					});
+
+				return q.promise;
+			},
 
 			/**
 			 *

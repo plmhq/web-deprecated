@@ -51,6 +51,13 @@ interface AlbumRepositoryInterface {
 	public function get($count = 5);
 
 	/**
+	 * Returns the paginated instance of the model
+	 *
+	 * @return 	Paginator
+	 */
+	public function paginate($count = 5);
+
+	/**
 	 * Take recent slideshows
 	 *
 	 * @param 	int 	$limit

@@ -3,6 +3,7 @@
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Validators\Exceptions\ValidationFailedException;
 use PLM\Repository\Interfaces\NewsRepositoryInterface;
+use Illuminate\Foundation\Application;
 
 class NewsController extends \BaseController {
 
@@ -12,23 +13,33 @@ class NewsController extends \BaseController {
 	protected $news;
 
 	/**
+	 * @var App instance
+	 */
+	protected $app;
+
+	/**
 	 * Class constructor
 	 *
 	 * @param 	NewsRepositoryInterface 	$news
 	 */
-	public function __construct(NewsRepositoryInterface $news)
+	public function __construct(NewsRepositoryInterface $news, Application $app)
 	{
+		$this->app = $app;
 		$this->news = $news;
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a paginated listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		return $this->news->all()->toJson();
+		$count = $this->app['request']->get('limit');
+
+		return $this->news
+			->paginate( $count )
+			->toJson();
 	}
 
 

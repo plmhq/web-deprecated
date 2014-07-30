@@ -2,16 +2,16 @@ app = require("../app");
 
 app.controller('NewsCtrl', [
 	'$scope',
-	'NewsService',
-	function($scope, NewsService) {
-		$scope.bundle = NewsService.bundle;
+	'NewsSrvc',
+	function($scope, NewsSrvc) {
+		$scope.bundle = NewsSrvc.bundle;
 
 		$scope.getImageLink = function(image) {
-			return NewsService.getImageLink(image);
+			return NewsSrvc.getImageLink(image);
 		}
 
 		$scope.formatDate = function(date) {
-			return NewsService.formatDate('MMMM dd, yyyy', date);
+			return NewsSrvc.formatDate('MMMM dd, yyyy', date);
 		}
 	}
 ]);

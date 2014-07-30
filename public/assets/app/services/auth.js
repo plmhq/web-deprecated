@@ -1,6 +1,6 @@
 var app = require('../app');
 
-app.factory('AuthService', [
+app.factory('AuthSrvc', [
 	'$q',
 	'$http',
 	function($q, $http) {
