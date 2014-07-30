@@ -37,6 +37,7 @@
 	}
 }
 
+/* Todo: enlargen; responsive */
 .slick-dots {
 	bottom: 100px;
 
@@ -53,17 +54,49 @@
 
 }
 
+.slick-prev,
+.slick-next {
+	margin: 0;
+	height: 100px;
+	width: 50px;
+	background: #000;
+	top: (768px / 2) - 50px;
 
-.slick-prev:before,
-.slick-next:before {
-    color: #000;
-    font-size: 50px;
-    border-radius: 0;
+	@media (max-width: 1920px) {
+		top: (1080px / 2) - 50px;
+	}
+
+	@media (max-width: 1600px) {
+		top: (900px / 2) - 50px;
+	}
+
+	@media (max-width: 1280px) {
+		top: (720px / 2) - 50px;
+	}
+
+	@media (max-width: 720px) {
+		top: (480px / 2) - 50px;
+	}
+
+	&:before {
+		font-size: 50px;
+		font-family: 'FontAwesome';
+	}
 }
 
 .slick-prev {
-    left: 50px;
+    left: 0;
+
+    &:before {
+    	/* Change slick's default left caret to fa's left caret */
+    	content: "\f0d9";
+    }
 }
 .slick-next {
-    right: 50px;
+    right: 0;
+
+    &:before {
+    	/* Change slick's default right caret to fa's right caret */
+    	content: "\f0da";
+    }
 }

@@ -1,11 +1,20 @@
-@import "../util/_variables";
 @import "../../../vendor/bootstrap-sass/lib/_variables";
+@import "../util/_variables";
 
 .navbar {
 	// position: relative;
 	height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
 	border: $navbar-border;
+	border-radius: $navbar-border-radius;
 	margin-bottom: 0;
+}
+
+.navbar-fixed {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	box-shadow: $navbar-fixed-box-shadow;
+	z-index: $navbar-fixed-z-index;
 }
 
 .navbar-collapse {
