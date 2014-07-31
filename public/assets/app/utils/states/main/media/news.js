@@ -14,7 +14,6 @@ app.config([
 			},
 			resolve: {
 				news: ['NewsSrvc', '$stateParams', function(NewsSrvc, $stateParams) {
-					console.log('Aye');
 					return NewsSrvc.getAll($stateParams.page, 9);
 				}]
 			}

@@ -34,7 +34,7 @@ class NewsSeeder extends Seeder {
 				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'jK62Z.jpg',
+				'image'			=> 'n.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -45,7 +45,7 @@ class NewsSeeder extends Seeder {
 				'type_id'		=> 2,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'wIqe3.png',
+				'image'			=> 'n.png',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -56,7 +56,7 @@ class NewsSeeder extends Seeder {
 				'type_id'		=> 3,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'x325JK.jpg',
+				'image'			=> 'n.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -67,7 +67,7 @@ class NewsSeeder extends Seeder {
 				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'sDgJK5.jpg',
+				'image'			=> 'n.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			],
@@ -78,7 +78,51 @@ class NewsSeeder extends Seeder {
 				'type_id'		=> 1,
 				'title'			=> $faker->sentence(),
 				'content'		=> $faker->paragraph(),
-				'image'			=> 'sDgJK5.jpg',
+				'image'			=> 'n.jpg',
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d')
+			],
+
+			[
+				'id'			=> 7,
+				'user_id'		=> 1,
+				'type_id'		=> 1,
+				'title'			=> $faker->sentence(),
+				'content'		=> $faker->paragraph(),
+				'image'			=> 'n.jpg',
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d')
+			],
+
+			[
+				'id'			=> 8,
+				'user_id'		=> 1,
+				'type_id'		=> 1,
+				'title'			=> $faker->sentence(),
+				'content'		=> $faker->paragraph(),
+				'image'			=> 'n.jpg',
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d')
+			],
+
+			[
+				'id'			=> 9,
+				'user_id'		=> 1,
+				'type_id'		=> 1,
+				'title'			=> $faker->sentence(),
+				'content'		=> $faker->paragraph(),
+				'image'			=> 'n.jpg',
+				'created_at'	=> date('Y-m-d'),
+				'updated_at'	=> date('Y-m-d')
+			],
+
+			[
+				'id'			=> 10,
+				'user_id'		=> 1,
+				'type_id'		=> 1,
+				'title'			=> $faker->sentence(),
+				'content'		=> $faker->paragraph(),
+				'image'			=> 'n.jpg',
 				'created_at'	=> date('Y-m-d'),
 				'updated_at'	=> date('Y-m-d')
 			]
