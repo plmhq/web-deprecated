@@ -50,7 +50,7 @@ app.factory('NewsSrvc', [
 				request
 					.success( function(_this) {
 						return function(r) {
-							_this._processPagination(r);
+							_this._paginate(r);
 
 							// If the server returned no item in the collection,
 							// there is probably no item in the page at all.
@@ -82,7 +82,7 @@ app.factory('NewsSrvc', [
 			 * @returns
 			 * void
 			 */
-			_processPagination: function(response) {
+			_paginate: function(response) {
 				angular.forEach(response, function(value, key) {
 					// @this
 					// References to the service as passed in the
@@ -172,7 +172,7 @@ app.factory('NewsSrvc', [
 			 *
 			 * @see
 			 * this.pagination
-			 * this._processPagination(response)
+			 * this._paginate(response)
 			 *
 			 * @returns
 			 * boolean
@@ -191,7 +191,7 @@ app.factory('NewsSrvc', [
 			 *
 			 * @see
 			 * this.pagination
-			 * this._processPagination(response)
+			 * this._paginate(response)
 			 *
 			 * @returns
 			 * boolean
