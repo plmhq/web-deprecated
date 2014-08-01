@@ -43,7 +43,7 @@ class AlbumPhoto extends Base {
 	 */
 	public function album()
 	{
-		return $this->belongsTo('Album');
+		return $this->belongsTo('PLM\Models\Eloquent\Album');
 	}
 
 }

@@ -33,7 +33,7 @@ class Album extends AbstractModel {
 	 */
 	public function user()
 	{
-		return $this->belongsTo('User');
+		return $this->belongsTo('PLM\Models\Eloquent\User');
 	}
 
 	/**
@@ -43,7 +43,7 @@ class Album extends AbstractModel {
 	 */
 	public function photos()
 	{
-		return $this->hasMany('AlbumPhoto');
+		return $this->hasMany('PLM\Models\Eloquent\AlbumPhoto');
 	}
 
 }

@@ -34,6 +34,12 @@ class RepositoryServiceProvider extends ServiceProvider {
 		// Binds the photo repository
 		$this->app->bind('PLM\Repository\Interfaces\AlbumPhotoRepositoryInterface',
 			'PLM\Repository\Eloquent\AlbumPhotoRepository');
+
+		// Binds the milestone* repositories
+		$this->app->bind('PLM\Repository\Interfaces\MilestoneRepositoryInterface',
+			'PLM\Repository\Eloquent\MilestoneRepository');
+		$this->app->bind('PLM\Repository\Interfaces\MilestoneEraRepositoryInterface',
+			'PLM\Repository\Eloquent\MilestoneEraRepository');
 	}
 	
 }

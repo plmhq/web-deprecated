@@ -30,7 +30,7 @@ class NewsTypes extends AbstractModel {
 	 */
 	public function entries()
 	{
-		return $this->hasMany('News', 'type_id');
+		return $this->hasMany('PLM\Models\Eloquent\News', 'type_id');
 	}
 
 }

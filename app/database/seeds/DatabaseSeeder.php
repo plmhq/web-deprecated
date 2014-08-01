@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('SlideshowSeeder');
 		$this->call('AlbumSeeder');
 		$this->call('AlbumPhotoSeeder');
+		$this->call('MilestoneSeeder');
+		$this->call('MilestoneEraSeeder');
 	}
 
 }

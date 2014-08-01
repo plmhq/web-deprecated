@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMilestonesTable extends Migration {
+class CreateMilestoneErasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,10 @@ class CreateMilestonesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('milestones', function(Blueprint $table)
+		Schema::create('milestone_eras', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('user_id');
-			$table->integer('era_id');
-			$table->text('description');
-			$table->timestamp('date');
+			$table->string('title');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +27,7 @@ class CreateMilestonesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('milestones');
+		Schema::dropIfExists('milestone_eras');
 	}
 
 }

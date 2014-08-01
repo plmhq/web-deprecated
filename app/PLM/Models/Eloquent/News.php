@@ -46,7 +46,7 @@ class News extends AbstractModel {
 	 */
 	public function type()
 	{
-		return $this->belongsTo('NewsType', 'type_id');
+		return $this->belongsTo('PLM\Models\Eloquent\NewsType', 'type_id');
 	}
 
 }

@@ -1,13 +1,13 @@
 <?php namespace PLM\Models\Eloquent;
 
-class Event extends AbstractModel {
+class Milestone extends AbstractModel {
 
 	/**
 	 * Table used by the model
 	 *
 	 * @var string
 	 */
-	protected $table = 'events';
+	protected $table = 'milestones';
 
 	/**
 	 * Columns fillable by the model
@@ -15,9 +15,10 @@ class Event extends AbstractModel {
 	 * @var array
 	 */
 	protected $fillable = array(
-		'title',
-		'date',
-		'venue'
+		'user_id',
+		'era_id',
+		'description',
+		'date'
 	);
 
 	/**
@@ -49,13 +50,23 @@ class Event extends AbstractModel {
 	}
 
 	/**
-	 * ORM with the User model
+	 * ORM with the User model 
 	 *
 	 * @return 	Model
 	 */
 	public function user()
 	{
-		return $this->belongsTo('PLM\Models\Eloquent\User');
+		return $this->belongsTo('User');
+	}
+
+	/**
+	 * ORM with the MilestoneEra model
+	 *
+	 * @return 	MilestoneEra
+	 */
+	public function era()
+	{
+		return $this->belongsTo('PLM\Models\Eloquent\MilestoneEra', 'id', 'era_id');
 	}
 
 }

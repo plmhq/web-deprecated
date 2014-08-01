@@ -1,13 +1,13 @@
 <?php namespace PLM\Models\Eloquent;
 
-class Slideshow extends AbstractModel {
+class MilestoneEra extends AbstractModel {
 
 	/**
 	 * Table used by the model
 	 *
 	 * @var string
 	 */
-	protected $table = 'slideshows';
+	protected $table = 'milestone_eras';
 
 	/**
 	 * Columns fillable by the model
@@ -15,9 +15,9 @@ class Slideshow extends AbstractModel {
 	 * @var array
 	 */
 	protected $fillable = array(
-		'user_id',
-		'image',
-		'caption'
+		'title',
+		'from',
+		'to'
 	);
 
 	/**
@@ -28,13 +28,13 @@ class Slideshow extends AbstractModel {
 	public $timestamps = true;
 
 	/**
-	 * ORM with the User model
+	 * ORM with the Milestone modek
 	 *
-	 * @return 	User
+	 * @return 	Milestone
 	 */
-	public function user()
+	public function milestones()
 	{
-		return $this->belongsTo('PLM\Models\Eloquent\User');
+		return $this->hasMany('PLM\Models\Eloquent\Milestone', 'era_id', 'id');
 	}
-	
+
 }

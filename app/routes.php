@@ -51,6 +51,13 @@ Route::group(['prefix' => 'api'], function()
 	 */
 	Route::resource('rest/album', 'AlbumController');
 	Route::controller('x/album', 'AlbumAPIController');
+
+	/**
+	 *
+	 */
+	Route::resource('rest/milestone', 'MilestoneController');
+	Route::resource('rest/milestone-era', 'MilestoneEraController');
+	Route::controller('x/milestone', 'MilestoneAPIController');
 });
 
 /**

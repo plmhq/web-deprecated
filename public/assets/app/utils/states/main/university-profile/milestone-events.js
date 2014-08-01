@@ -10,6 +10,11 @@ app.config([
 			data: {
 				title: 'University Profile: Milestone Events',
 				rawTitle: 'Milestone Events'
+			},
+			resolve: {
+				milestones: ['MilestoneSrvc', function(MilestoneSrvc) {
+					return MilestoneSrvc.getEraCollection();
+				}]
 			}
 		};
 

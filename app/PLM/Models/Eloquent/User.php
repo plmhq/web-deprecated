@@ -48,7 +48,7 @@ class User extends AbstractModel implements UserInterface, RemindableInterface {
 	 */
 	public function entries()
 	{
-		return $this->hasMany('News', 'news_id');
+		return $this->hasMany('PLM\Models\Eloquent\News', 'news_id');
 	}
 
 	/**
@@ -58,7 +58,7 @@ class User extends AbstractModel implements UserInterface, RemindableInterface {
 	 */
 	public function slides()
 	{
-		return $this->hasMany('Slideshow', 'slideshow_id');
+		return $this->hasMany('PLM\Models\Eloquent\Slideshow', 'slideshow_id');
 	}
 
 	/**
@@ -68,7 +68,7 @@ class User extends AbstractModel implements UserInterface, RemindableInterface {
 	 */
 	public function events()
 	{
-		return $this->hasMany('Event');
+		return $this->hasMany('PLM\Models\Eloquent\Event');
 	}
 
 	/**
@@ -78,7 +78,7 @@ class User extends AbstractModel implements UserInterface, RemindableInterface {
 	 */
 	public function albums()
 	{
-		return $this->hasMany('Album');
+		return $this->hasMany('PLM\Models\Eloquent\Album');
 	}
 
 	/**
@@ -88,7 +88,17 @@ class User extends AbstractModel implements UserInterface, RemindableInterface {
 	 */
 	public function albumPhotos()
 	{
-		return $this->hasMany('AlbumPhoto');
+		return $this->hasMany('PLM\Models\Eloquent\AlbumPhoto');
+	}
+
+	/**
+	 * ORM with the Milestone modek
+	 *
+	 * @return 	Milestone
+	 */
+	public function milestones()
+	{
+		return $this->hasMany('PLM\Models\Eloquent\Milestone');
 	}
 
 }
