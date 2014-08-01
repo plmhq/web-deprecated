@@ -1,0 +1,7 @@
+@import "../util/_animation";
+
+@mixin element_spin_easing($duration, $iteration-count) {
+	animation-name: element_spin_easing;
+	animation-duration: $duration; 
+	animation-iteration-count: $iteration-count;
+}

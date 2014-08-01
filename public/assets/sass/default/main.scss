@@ -1,11 +1,13 @@
 // Utility
 @import "util/_base";
 @import "util/_separator";
+@import "util/_animation";
 
 // Mixins
 @import "../../vendor/bootstrap-sass/lib/_mixins";
 @import "mixins/_btn";
 @import "mixins/_typography";
+@import "mixins/_animation";
 
 // Basic partials
 @import "partials/_btn";

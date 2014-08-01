@@ -39,16 +39,27 @@
 
 /* Todo: enlargen; responsive */
 .slick-dots {
-	bottom: 100px;
-
-	@media (max-width: 720px) {
-		bottom: 25px;
-	}
+	bottom: 25px;
 
 	li button {
 		&:before {
-			color: #000;
-			opacity: 0.75;
+			color: #fff;
+			content: "";
+			font-size: 10px;
+			opacity: 0.25;
+			background-color: #fff;
+			width: 10px;
+			height: 10px;
+			box-shadow: 1px 1px 5px $dt-dark;
+		}
+	}
+
+	li.slick-active button {
+		&:before {
+			opacity: 1;
+
+			/* include an animation */
+			@include element_spin_easing(2s, 1);
 		}
 	}
 
