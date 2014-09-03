@@ -13,6 +13,9 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.5.0",
     "gulp-uglify": "^0.3.1",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
     "ng-annotate": "^0.9.11"
   },
   "scripts": {
