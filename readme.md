@@ -15,35 +15,38 @@ Requires:
 - npm
 - Ruby
 
-```
-	$ git clone https://github.com/srph/plm-web.git
-	$ npm install -g bower gulp karma-cli
-	# At the root of our application
-	$ composer update
-	$ php artisan migrate
-	$ php artisan seed
-	# Installs all vendor scripts/stylesheets
-	$ bower install
+```bash
+$ git clone https://github.com/srph/plm-web.git
 
-	# Important to run while modifying scripts, images, or sass
-	$ gulp
+# At the root of our application
 
-	# If you want to to do specific tasks
+$ composer update
+$ php artisan migrate
+$ php artisan seed
 
-	# compiles sass
-	$ gulp compile-sass
+# Installs all vendor scripts/stylesheets
+$ npm install -g bower gulp karma-cli
+$ bower install
 
-	# minifies sass
-	$ gulp minify-sass
+# Important to run while modifying scripts, images, or sass
+$ gulp
 
-	# bundle scripts
-	$ gulp bundle-app
+# If you want to to do specific tasks
 
-	# uglify scripts
-	$ gulp uglify-app
+# compiles sass
+$ gulp compile-sass
 
-	# minify imgs
-	$ gulp minify-img
+# minifies sass
+$ gulp minify-sass
+
+# bundle scripts
+$ gulp bundle-app
+
+# uglify scripts
+$ gulp uglify-app
+
+# minify imgs
+$ gulp minify-img
 ```
 	
 ## Project Management ##
