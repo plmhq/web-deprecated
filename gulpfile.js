@@ -1,87 +1,87 @@
 // Directory
 var
-	_assets 		= './public/assets/',
-	_build			= './public/build/',
-	_sass			= _assets + 'sass/',
-	_css			= _build + 'css/',
-	_app 			= _assets + 'app/',
-	_js				= _build + 'js/',
+	_public 		= './public/',
+
+	_assets 		= _public + 'assets/',
+	_css			= _assets + 'css/',
+	_js				= _assets + 'js/',
 	_vendor			= _assets + 'vendor/',
 	_img 			= _assets + 'img/',
-	_bimg			= _build + 'img/',
 
-	_views			= _app + 'views/';
+	_src			= _public + 'src/',
+	_client			= _src + 'client/',
+	_sass			= _src + 'sass/',
+	_bimg			= _src + 'img/';
 
 
 // Node modules
 var 
 	gulp 			= require('gulp'),
 	sass 			= require('gulp-ruby-sass'),
-	browserify 		= require('gulp-browserify'),
 	autoprefixer 	= require('gulp-autoprefixer'),
 	minifycss 		= require('gulp-minify-css'),
 	uglify 			= require('gulp-uglify'),
 	imagemin 		= require('gulp-imagemin'),
 	rename 			= require('gulp-rename'),
-	concat 			= require('gulp-concat'),
-	notify 			= require('gulp-notify'),
-	livereload 		= require('gulp-livereload'),
-	install 		= require('gulp-install');
+	concat 			= require('gulp-concat');
 
-// Install modules
-gulp.task('install', function() {
-	return gulp.src(['./bower.json', './package.json'])
-		.pipe(install())
-		.pipe(notify({ message: 'Vendor files installed!' }));
-});
-
-// Stylesheet task
-gulp.task('styles', function() {
+// Compile sass
+gulp.task('compile-sass', function() {
 	return gulp.src(_sass + 'default/main.scss')
 		.pipe(sass())
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 11', 'ios 6', 'android 4'))
-		// .pipe(minifycss())
-		.pipe(rename('main.min.css'))
-		.pipe(gulp.dest(_css))
-		.pipe(livereload())
-		.pipe(notify({ message: 'Styles tasks complete! ' }));
+		.pipe(rename('main.css'))
+		.pipe(gulp.dest(_css));
 });
 
-// Script task
-gulp.task('scripts', function() {
-	return gulp.src(_app + 'bootstrap.js', { read: false })
-		.pipe(browserify({
-			extensions: ['.js'],
-			insertGlobals : true,
-		}))
-		//.pipe(uglify({ mangle: false }))
-		.pipe(rename('main.min.js'))
-		.pipe(gulp.dest(_js))
-		.pipe(livereload())
-		.pipe(notify({ message: 'Script tasks complete! '}));
+// Minify sass
+gulp.task('minify-sass', function() {
+	return gulp.src(_css + 'main.css')
+		.pipe(minifycss())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest(_css));
+});
+
+// Bundle scripts
+gulp.task('bundle-app', function() {
+	return gulp.src([
+			_client + 'app.js',
+			_client + 'bootstrap.js',
+			_client + 'components/**/*.js',
+			_client + 'services/**/*.js',
+			_client + 'directives/**/*.js',
+			_client + 'utils/**/*.js'
+		])
+		.pipe(concat('build.js'))
+		.pipe(gulp.dest(_js));
+});
+
+// Uglify scripts
+gulp.task('uglify-app', function () {
+	return gulp.src(_js + 'build.js')
+		.pipe(uglify())
+		.pipe(rename({ suffix: 'min' }))
+		.pipe(gulp.dest(_js));
 });
 
 // Minify images
-gulp.task('images', function() {
+gulp.task('minify-img', function() {
 	return gulp.src(_img + '*.{png, gif, jpg, jpeg}')
 		.pipe(imagemin())
-		.pipe(gulp.dest(_bimg))
-		.pipe(notify({ message: 'Images task complete. '}));
+		.pipe(gulp.dest(_bimg));
 });
 
-// Default task
+// Tasks
 gulp.task('default', function() {
-	var server = livereload();
+	gulp.run('compile-sass');
+	gulp.run('bundle-app');
+	gulp.run('minify-img');
 
-	gulp.run('styles');
-	gulp.run('scripts');
-	gulp.run('images');
+	gulp.watch(_client + '**/*.js', ['bundle-app']);
+	gulp.watch(_js + 'build.js', ['uglify-app']);
 
-	gulp.watch(_sass + 'default/**/*.scss', ['styles']);
-	gulp.watch(_app + '**/*.js', ['scripts']);
-	gulp.watch(_img + 'images/**', ['images']);
-	gulp.watch(['./app/views/**/*.php', _views + '**/*.html'])
-		.on('change', function(file) {
-			server.changed(file.path);
-		});
+	gulp.watch(_sass + 'default/**/*.scss', ['compile-sass']);
+	gulp.watch(_css + 'main.css', ['minify-sass']);
+
+	gulp.watch(_img + 'images/**', ['minify-img']);
 });

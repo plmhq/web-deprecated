@@ -1,0 +1,10 @@
+<ul class="pager">
+	<li class="previous">
+		<a href="" ng-show="isFirstPage()">Previous</a>
+		<a ui-sref="main.media.news({ page: {{ getPreviousPage(getCurrentPage()) }} })" ng-show="!isFirstPage()">Previous</a>
+	</li>
+	<li class="next">
+	  	<a href="" ng-show="isLastPage()">Next</a>
+		<a ui-sref="main.media.news({ page: {{ getNextPage(getCurrentPage()) }} })" ng-show="!isLastPage()">Next</a>
+	</li>
+</ul>

@@ -1,0 +1,29 @@
+<div class="content-heading">
+	<h4> Recents Events </h4>
+</div>
+
+<div class="row" ng-controller="EventCtrl">
+
+	<div class="col-md-6" ng-repeat="event in bundle">
+		<div class="recent-x">
+			<div class="x-date">
+				<span class="date-day" ng-bind="event.date | date: 'd'"> 00 </span>
+				<span class="date" ng-bind="event.date | date: 'MMM, yyyy'"> MMM, YYYY </span>
+			</div>
+
+			<div class="x-cover">
+				<img src="assets/img/n.jpg">
+			</div>
+
+			<div class="x-title">
+				<span ng-bind="event.title"> Title </span>
+			</div>
+		</div>
+	</div>
+
+</div> <!-- /.row -->
+
+<div class="text-center"> <a ui-sref="main.media.event" class="btn btn-danger"> View more albums... </a> </div>
+
+<!-- separator -->
+<div class="space space-half-50"><hr></div>
