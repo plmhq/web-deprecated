@@ -20,6 +20,7 @@
 	<div ui-view> </div>
 	
 	<!-- Scripts -->
-	<script type="text/javascript" src="/assets/js/main.js"></script>
+	<script type="text/javascript" src="/assets/js/libs.js"></script>
+	<script type="text/javascript" src="/assets/js/build.js"></script>
 </body>
 </html>
