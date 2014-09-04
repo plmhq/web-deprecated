@@ -4,7 +4,7 @@
 @import "util/_animation";
 
 // Mixins
-@import "../../vendor/bootstrap-sass/lib/_mixins";
+@import "../../../assets/vendor/bootstrap-sass/lib/_mixins";
 @import "mixins/_btn";
 @import "mixins/_typography";
 @import "mixins/_animation";
@@ -33,5 +33,5 @@
 // Vendor files
 // --
 @import "vendor/_progress";
-@import "../../vendor/slick-carousel/slick/slick";
+@import "../../../assets/vendor/slick-carousel/slick/slick";
 @import "vendor/_slick";
