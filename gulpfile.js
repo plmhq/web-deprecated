@@ -24,7 +24,8 @@ var
 	uglify 			= require('gulp-uglify'),
 	imagemin 		= require('gulp-imagemin'),
 	rename 			= require('gulp-rename'),
-	concat 			= require('gulp-concat');
+	concat 			= require('gulp-concat'),
+	annotate		= require('gulp-ng-annotate');
 
 // Compile sass
 gulp.task('compile-sass', function() {
@@ -54,6 +55,7 @@ gulp.task('bundle-app', function() {
 			_client + 'utils/**/*.js'
 		])
 		.pipe(concat('build.js'))
+		.pipe(annotate())
 		.pipe(gulp.dest(_js));
 });
 
@@ -63,6 +65,30 @@ gulp.task('uglify-app', function () {
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest(_js));
+});
+
+// Bundle libraries
+gulp.task('bundle-libs', function () {
+	return gulp.src([
+		_vendor + 'jquery/dist/jquery.js',
+		_vendor + 'bootstrap/dist/js/bootstrap.js',
+		_vendor + 'slick-carousel/slick/slick.js',
+		_vendor + 'angular/angular.js',
+		_vendor + 'angular-ui-router/release/angular-ui-router.js',
+		_vendor + 'angular-timer/dist/angular-timer.js',
+		_vendor + 'angular-slick/dist/slick.js',
+		_vendor + 'ngprogress-lite/ngprogress-lite.js',
+	])
+	.pipe(concat('libs.js'))
+	.pipe(gulp.dest(_js))
+});
+
+// Uglify libraries
+gulp.task('uglify-libs', function () {
+	return gulp.src(_js + 'libs.js')
+	.pipe(uglify())
+	.pipe(rename({ suffix: '.min'}))
+	.pipe(gulp.dest(_js));
 });
 
 // Minify images
@@ -77,6 +103,8 @@ gulp.task('default', function() {
 	gulp.run('compile-sass');
 	gulp.run('bundle-app');
 	gulp.run('minify-img');
+	gulp.run('bundle-libs');
+	gulp.run('uglify-libs');
 
 	gulp.watch(_client + '**/*.js', ['bundle-app']);
 	gulp.watch(_js + 'build.js', ['uglify-app']);
