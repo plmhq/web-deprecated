@@ -6,12 +6,13 @@ var
 	_css			= _assets + 'css/',
 	_js				= _assets + 'js/',
 	_vendor			= _assets + 'vendor/',
-	_img 			= _assets + 'img/',
+	_bimg			= _assets + 'img/',
 
 	_src			= _public + 'src/',
 	_client			= _src + 'client/',
 	_sass			= _src + 'sass/',
-	_bimg			= _src + 'img/';
+	_img 			= _src + 'img/';
+	
 
 
 // Node modules
@@ -60,7 +61,7 @@ gulp.task('bundle-app', function() {
 gulp.task('uglify-app', function () {
 	return gulp.src(_js + 'build.js')
 		.pipe(uglify())
-		.pipe(rename({ suffix: 'min' }))
+		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest(_js));
 });
 
