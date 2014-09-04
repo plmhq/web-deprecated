@@ -1,21 +1,13 @@
-var app = require("../../../app");
-
-app.config([
-	'$stateProvider',
-	'$urlRouterProvider',
-	function($stateProvider, $urlRouterProvider) {
-
-		var media = {
-			name: 'main.media',
-			abstract: true,
-			url: '/media',
-			templateUrl: '/assets/app/views/_main/children/media/_template.html',
-			data: {
-				title: 'Media'
-			}
-		};
-
-		$stateProvider
-			.state(media);
-	}
-]);
+app.config(function ($stateProvider, $urlRouterProvider) {
+	var media = {
+		name: 'main.media',
+		abstract: true,
+		url: '/media',
+		templateUrl: '/src/client/main/media/tpl.html',
+		data: {
+			title: 'Media'
+		}
+	};
+	
+	$stateProvider.state(media);
+});

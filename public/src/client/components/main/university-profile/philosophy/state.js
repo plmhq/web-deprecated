@@ -1,19 +1,13 @@
-var app = require("../../../../app");
+app.config(function ($stateProvider) {
+	var state = {
+		name: 'main.university-profile.philosophy',
+		url: '/philosophy',
+		templateUrl: '/src/client/components/main/university-profile/philosophy/tpl.html',
+		data: {
+			title: 'University Profile: Philosophy',
+			rawTitle: 'Philosophy'
+		}
+	};
 
-app.config([
-	'$stateProvider',
-	function($stateProvider) {
-		var state = {
-			name: 'main.university-profile.philosophy',
-			url: '/philosophy',
-			templateUrl: '/assets/app/views/_main/children/university-profile/children/philosophy/_template.html',
-			data: {
-				title: 'University Profile: Philosophy',
-				rawTitle: 'Philosophy'
-			}
-		};
-
-		$stateProvider
-			.state(state);
-	}
-]);
+	$stateProvider.state(state);
+});

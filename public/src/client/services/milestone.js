@@ -1,70 +1,66 @@
-var app = require('../app');
+function MilestoneSrvc ($http, $q) {
+	var service = {
+		/** 
+		 *
+		 */
+		eraCollection: [],
 
-app.factory('MilestoneSrvc', [
-	'$http',
-	'$q',
-	function($http, $q) {
-		var service = {
-			/** 
-			 *
-			 */
-			eraCollection: [],
+		/**
+		 *
+		 */
+		eraInstance: {},
 
-			/**
-			 *
-			 */
-			eraInstance: {},
+		/**
+		 *
+		 */
+		instance: {},
 
-			/**
-			 *
-			 */
-			instance: {},
+		/**
+		 *
+		 */
+		getEraCollection: function() {
+			//
+			var q = $q.defer();
 
-			/**
-			 *
-			 */
-			getEraCollection: function() {
-				//
-				var q = $q.defer();
+			//
+			var url 	= '/api/x/milestone/collection';
+			var request = $http.get(url);
 
-				//
-				var url 	= '/api/x/milestone/collection';
-				var request = $http.get(url);
+			request
+				.success( (function(_this) {
+					return function(response) {
+						_this.eraCollection = response;
+						q.resolve();
+					}
+				})(this) )
+				.error(function() {
+					q.reject();
+				});
 
-				request
-					.success( (function(_this) {
-						return function(response) {
-							_this.eraCollection = response;
-							q.resolve();
-						}
-					})(this) )
-					.error(function() {
-						q.reject();
-					});
+			return q.promise;
+		},
 
-				return q.promise;
-			},
+		/**
+		 * @function
+		 * Checks if the given index is the last position in
+		 * the eraCollection
+		 *
+		 * @see
+		 * this.eraCollection
+		 *
+		 * @param
+		 * {int}		index
+		 *
+		 * @return
+		 * boolean
+		 */
+		isLastInTheCollection: function(index) {
+			var lastPosition = this.eraCollection.length - 1
+			return ( angular.equals(lastPosition, index) ) ? true : false;
+		}
+	};
 
-			/**
-			 * @function
-			 * Checks if the given index is the last position in
-			 * the eraCollection
-			 *
-			 * @see
-			 * this.eraCollection
-			 *
-			 * @param
-			 * {int}		index
-			 *
-			 * @return
-			 * boolean
-			 */
-			isLastInTheCollection: function(index) {
-				var lastPosition = this.eraCollection.length - 1
-				return ( angular.equals(lastPosition, index) ) ? true : false;
-			}
-		};
+	return service;
+}
 
-		return service;
-	}
-]);
+app.factory('MilestoneSrvc', MilestoneSrvc);

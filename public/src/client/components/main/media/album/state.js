@@ -7,7 +7,7 @@ app.config([
 		var album = {
 			name: 'main.media.album',
 			url: '/album',
-			templateUrl: '/assets/app/views/_main/children/media/children/album/_template.html',
+			templateUrl: '/src/client/main/media/album/tpl.html',
 			data: {
 				title: 'Media: Albums',
 				rawTitle: 'Albums'

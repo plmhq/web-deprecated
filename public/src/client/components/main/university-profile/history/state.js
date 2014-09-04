@@ -1,19 +1,13 @@
-var app = require("../../../../app");
+app.config(function ($stateProvider) {
+	var state = {
+		name: 'main.university-profile.history',
+		url: '/history',
+		templateUrl: '/src/client/components/main/university-profile/history/tpl.html',
+		data: {
+			title: 'University Profile: History',
+			rawTitle: 'History'
+		}
+	};
 
-app.config([
-	'$stateProvider',
-	function($stateProvider) {
-		var state = {
-			name: 'main.university-profile.history',
-			url: '/history',
-			templateUrl: '/assets/app/views/_main/children/university-profile/children/history/_template.html',
-			data: {
-				title: 'University Profile: History',
-				rawTitle: 'History'
-			}
-		};
-
-		$stateProvider
-			.state(state);
-	}
-]);
+	$stateProvider.state(state);
+});

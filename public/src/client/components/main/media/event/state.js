@@ -7,7 +7,7 @@ app.config([
 		var e = {
 			name: 'main.media.event',
 			url: '/event',
-			templateUrl: '/assets/app/views/_main/children/media/children/event/_template.html',
+			templateUrl: '/src/client/main/media/event/tpl.html',
 			data: {
 				title: 'Media: Events',
 				rawTitle: 'Events'

@@ -7,7 +7,7 @@ app.config([
 		var news = {
 			name: 'main.media.news',
 			url: '?page',
-			templateUrl: '/assets/app/views/_main/children/media/children/news/_template.html',
+			templateUrl: '/src/client/main/media/news/tpl.html',
 			data: {
 				title: 'Media: News',
 				rawTitle: 'News'

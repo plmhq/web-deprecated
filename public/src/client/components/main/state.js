@@ -3,7 +3,7 @@ app.config(function ($stateProvider) {
 	var main = {
 		name: 'main',
 		abstract: true,
-		templateUrl: '/assets/app/views/_main/_template.html'
+		templateUrl: '/src/client/components/main/tpl.html'
 	};
 	
 	// Default

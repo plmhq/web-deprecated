@@ -1,9 +1,7 @@
-var app = require('../app');
-
-app.factory('UserSrvc', [
-	function() {
-		var service = {};
+function UserSrvc ($q, $http) {
+	var service = {};
 			
-		return service;
-	}
-]);
+	return service;
+}
+
+app.factory('UserSrvc', UserSrvc);

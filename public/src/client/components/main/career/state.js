@@ -1,18 +1,12 @@
-var app = require("../../../app");
+app.config(function ($stateProvider) {
+	var career = {
+		name: 'main.career',
+		url: '/career',
+		templateUrl: '/src/client/main/career/tpl.html',
+		data: {
+			title: 'Careers'
+		}
+	};
 
-app.config([
-	'$stateProvider',
-	function($stateProvider) {
-		var career = {
-			name: 'main.career',
-			url: '/career',
-			templateUrl: '/assets/app/views/_main/children/career/_template.html',
-			data: {
-				title: 'Careers'
-			}
-		};
-
-		$stateProvider
-			.state(career);
-	}
-]);
+	$stateProvider.state(career);
+});

@@ -1,19 +1,13 @@
-var app = require("../../../app");
+app.config(function ($stateProvider) {
+	var state = {
+		name: 'main.university-profile.university-charter',
+		url: '/university-charter',
+		templateUrl: '/src/client/components/main/university-profile/university-charter/tpl.html',
+		data: {
+			title: 'University Profile: University Charter',
+			rawTitle: 'University Charter'
+		}
+	};
 
-app.config([
-	'$stateProvider',
-	function($stateProvider) {
-		var profile = {
-			name: 'main.university-profile',
-			abstract: true,
-			url: '/university-profile',
-			templateUrl: '/assets/app/views/_main/children/university-profile/_template.html',
-			data: {
-				title: 'University Profile'
-			}
-		};
-
-		$stateProvider
-			.state(profile);
-	}
-]);
+	$stateProvider.state(state);
+});

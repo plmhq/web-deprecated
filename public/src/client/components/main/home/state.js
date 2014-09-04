@@ -4,7 +4,7 @@ app.config(function ($stateProvider) {
 	var home = {
 		name: 'main.home',
 		url: '/',
-		templateUrl: '/assets/app/views/_main/children/home/_template.html',
+		templateUrl: '/src/client/main/home/tpl.html',
 		data: {
 			title: 'Home'
 		},
