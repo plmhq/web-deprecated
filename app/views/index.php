@@ -9,7 +9,7 @@
 	<link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<link href="/assets/vendor/slick-carousel/slick/slick.css" type="text/css" rel="stylesheet">
 	<link href="/assets/vendor/ngprogress-lite/ngprogress-lite.css" type="text/css" rel="stylesheet">
-	<link href="/build/css/main.min.css" type="text/css" rel="stylesheet">
+	<link href="/assets/css/main.min.css" type="text/css" rel="stylesheet">
 	<!-- Favicon -->
 	<link type="image/png" rel="shortcut icon" href="/assets/img/favicon.png">
 
@@ -20,6 +20,6 @@
 	<div ui-view> </div>
 	
 	<!-- Scripts -->
-	<script type="text/javascript" src="/build/js/main.min.js"></script>
+	<script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
 </html>
