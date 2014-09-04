@@ -1,14 +1,9 @@
-var app = require('../app');
+function EventCtrl($scope, $filter, EventSrvc) {
+	//
+	$scope.instance = EventSrvc.instance;
+	
+	//
+	$scope.bundle = EventSrvc.bundle;
+}
 
-app.controller('EventCtrl', [
-	'$scope',
-	'$filter',
-	'EventSrvc',
-	function($scope, $filter, EventSrvc) {
-		//
-		$scope.instance = EventSrvc.instance;
-
-		//
-		$scope.bundle = EventSrvc.bundle;
-	}
-]);
+app.controller('EventCtrl', EventCtrl);
