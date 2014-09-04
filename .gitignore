@@ -6,8 +6,7 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
-/public/build/
-/public/assets/vendor/
+/public/assets/
 /.sass-cache/
 /node_modules/
 npm-debug.log
