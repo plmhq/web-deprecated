@@ -12,8 +12,6 @@ var
 	_main			= _src + 'main/',
 	_img 			= _src + 'img/',
 	_vendor			= _src + 'vendor/';
-
-var mime = '{png, gif, jpg, jpeg}';
 	
 
 
@@ -90,7 +88,7 @@ gulp.task('minify-main-sass', function () {
 
 /** Minify images */
 gulp.task('minify-img', function () {
-	return gulp.src(_img + '**/*.')
+	return gulp.src(_img + '**/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest(_bimg));
 });
@@ -109,5 +107,5 @@ gulp.task('default', function () {
 
 	gulp.watch(_main + 'sass/**/*.scss', ['compile-main-sass']);
 	gulp.watch(_css + 'main.css', ['minify-main-sass']);
-	gulp.watch(_img + '**/*.' + mime, ['minify-img']);
+	gulp.watch(_img + '**/*', ['minify-img']);
 });

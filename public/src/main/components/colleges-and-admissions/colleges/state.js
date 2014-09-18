@@ -1,8 +1,8 @@
 app.config(function ($stateProvider) {
 	var state = {
 		name: 'colleges-and-admissions.colleges',
-		url: '/colleges',
-		templateUrl: '/src/main/components/colleges-and-admission/colleges/tpl.html',
+		url: '/colleges/{id}',
+		templateUrl: '/src/main/components/colleges-and-admissions/colleges/tpl.html',
 		data: {
 			title: 'Colleges',
 			title: 'Colleges',

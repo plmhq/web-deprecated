@@ -2,6 +2,8 @@
 @import "util/_base";
 @import "util/_separator";
 @import "util/_animation";
+@import "general/_images";
+@import "general/_typography";
 
 // Mixins
 @import "../../vendor/bootstrap-sass/lib/_mixins";
@@ -28,6 +30,7 @@
 @import "partials/_content";
 @import "partials/_recent-news";
 @import "partials/_recent-x";
+@import "components/_college-and-admissions";
 
 // --
 // Vendor files

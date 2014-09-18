@@ -1,0 +1,10 @@
+.text-vertical-bg {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.text-vertical-center {
+	display: table-cell;
+	vertical-align: middle;
+}

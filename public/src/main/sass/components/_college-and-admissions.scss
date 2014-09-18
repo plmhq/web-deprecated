@@ -1,0 +1,14 @@
+@import "../util/_variables";
+
+.college-block {
+	height: 350px;
+	border: 1px solid $lt-light;
+	overflow: hidden;
+	color: white;
+	padding: 25px;
+
+	a,
+	a:hover {
+		color: $lt;
+	}
+}
