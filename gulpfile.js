@@ -10,7 +10,6 @@ var
 	_src			= _public + 'src/',
 	_client			= _src + 'client/',
 	_main			= _src + 'main/',
-	_sass			= _src + 'sass/',
 	_img 			= _src + 'img/',
 	_vendor			= _src + 'vendor/';
 
@@ -75,14 +74,14 @@ gulp.task('uglify-main-libs', function () {
 });
 
 /** Sass tasks */
-gulp.task('compile-sass', function () {
-	return gulp.src(_sass + 'default/main.scss')
+gulp.task('compile-main-sass', function () {
+	return gulp.src(_main + 'sass/main.scss')
 		.pipe(sass())
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 11', 'ios 6', 'android 4'))
 		.pipe(rename('main.css'))
 		.pipe(gulp.dest(_css));
 });
-gulp.task('minify-sass', function () {
+gulp.task('minify-main-sass', function () {
 	return gulp.src(_css + 'main.css')
 		.pipe(minifycss())
 		.pipe(rename({ suffix: '.min' }))
@@ -98,17 +97,17 @@ gulp.task('minify-img', function () {
 
 // Tasks
 gulp.task('default', function () {
-	gulp.run('compile-sass');
+	gulp.run('compile-main-sass');
 	gulp.run('bundle-main');
 	gulp.run('bundle-main-libs');
-	gulp.run('compile-sass');
+	gulp.run('compile-main-sass');
 	gulp.run('minify-img');
 
 	gulp.watch(_main + '**/*.js', ['bundle-main']);
 	gulp.watch(_js + 'main-build.js', ['uglify-main']);
 	gulp.watch(_js + 'main-libs.js', ['uglify-main-libs']);
 
-	gulp.watch(_sass + 'default/**/*.scss', ['compile-sass']);
-	gulp.watch(_css + 'main.css', ['minify-sass']);
+	gulp.watch(_main + 'sass/**/*.scss', ['compile-main-sass']);
+	gulp.watch(_css + 'main.css', ['minify-main-sass']);
 	gulp.watch(_img + '**/*.' + mime, ['minify-img']);
 });
