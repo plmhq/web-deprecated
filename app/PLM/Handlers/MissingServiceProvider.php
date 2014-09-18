@@ -1,4 +1,4 @@
-<?php namespace PLM\Handler;
+<?php namespace PLM\Handlers;
 
 use Illuminate\Support\ServiceProvider;
 
