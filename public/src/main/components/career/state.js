@@ -1,12 +1,12 @@
 app.config(function ($stateProvider) {
-	var career = {
-		name: 'career',
-		url: '/career',
-		templateUrl: '/src/main/components/career/tpl.html',
+	var state = {
+		name: 'careers',
+		url: '/careers',
+		templateUrl: '/src/main/components/careers/tpl.html',
 		data: {
 			title: 'Careers'
 		}
 	};
 
-	$stateProvider.state(career);
+	$stateProvider.state(state);
 });
