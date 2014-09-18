@@ -53,4 +53,4 @@ function SlideshowSrvc ($http, $q) {
 	return slideshow;
 }
 
-app.factory('SlideshowSrvc', SlideshowSrvc);
+angular.module('app').factory('SlideshowSrvc', SlideshowSrvc);

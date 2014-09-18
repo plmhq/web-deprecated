@@ -4,4 +4,4 @@ function UserSrvc ($q, $http) {
 	return service;
 }
 
-app.factory('UserSrvc', UserSrvc);
+angular.module('app').factory('UserSrvc', UserSrvc);

@@ -43,4 +43,4 @@ function AlbumSrvc ($http, $q) {
 	return service;
 }
 
-app.factory('AlbumSrvc', AlbumSrvc);
+angular.module('app').factory('AlbumSrvc', AlbumSrvc);

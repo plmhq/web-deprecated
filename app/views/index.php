@@ -6,9 +6,9 @@
 
 	<!-- Stylesheets -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-	<link href="/assets/vendor/slick-carousel/slick/slick.css" type="text/css" rel="stylesheet">
-	<link href="/assets/vendor/ngprogress-lite/ngprogress-lite.css" type="text/css" rel="stylesheet">
+	<link href="/src/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="/src/vendor/slick-carousel/slick/slick.css" type="text/css" rel="stylesheet">
+	<link href="/src/vendor/ngprogress-lite/ngprogress-lite.css" type="text/css" rel="stylesheet">
 	<link href="/assets/css/main.min.css" type="text/css" rel="stylesheet">
 	<!-- Favicon -->
 	<link type="image/png" rel="shortcut icon" href="/assets/img/favicon.png">
@@ -17,10 +17,10 @@
 </head>
 
 <body>
-	<div ui-view> </div>
+	<ui-view />
 	
 	<!-- Scripts -->
-	<script type="text/javascript" src="/assets/js/libs.js"></script>
-	<script type="text/javascript" src="/assets/js/build.js"></script>
+	<script type="text/javascript" src="/assets/js/main-libs.js"></script>
+	<script type="text/javascript" src="/assets/js/main-build.js"></script>
 </body>
 </html>

@@ -56,4 +56,4 @@ function AuthSrvc ($q, $http) {
 	return service;
 }
 
-app.factory('AuthSrvc',	AuthSrvc);
+angular.module('app').factory('AuthSrvc',	AuthSrvc);

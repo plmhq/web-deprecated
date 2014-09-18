@@ -1,9 +1,4 @@
-app = require("../app");
-
-app.controller('NewsCtrl', [
-	'$scope',
-	'NewsSrvc',
-	function($scope, NewsSrvc) {
+function NewsCtrl ($scope, NewsSrvc) {
 		$scope.bundle = NewsSrvc.bundle;
 
 		$scope.getImageLink = function(image) {
@@ -33,5 +28,7 @@ app.controller('NewsCtrl', [
 		$scope.isLastPage = function() {
 			return NewsSrvc.isLastPage();
 		}
-	}
-]);
+}
+
+
+app.controller('NewsCtrl', NewsCtrl);

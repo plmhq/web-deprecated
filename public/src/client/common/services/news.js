@@ -235,4 +235,4 @@ function NewsSrvc ($q, $http) {
 	return service;
 }
 
-app.factory('NewsSrvc', NewsSrvc);
+angular.module('app').factory('NewsSrvc', NewsSrvc);

@@ -1,7 +1,6 @@
-var dependencies = [
+var app = angular.module('main', [
+	'app',
 	'ui.router',
 	'timer',
-	'slick',
-];
-
-angular.module('main', dependencies);
+	'slick'
+]);

@@ -3,7 +3,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		name: 'media',
 		abstract: true,
 		url: '/media',
-		templateUrl: '/src/client/main/media/tpl.html',
+		templateUrl: '/src/main/components/media/tpl.html',
 		data: {
 			title: 'Media'
 		}

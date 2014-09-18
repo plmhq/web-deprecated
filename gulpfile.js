@@ -33,8 +33,7 @@ var
 /** Scripts */
 gulp.task('bundle-main', function () {
 	return gulp.src([
-			_client + 'bootstrap.js',
-			_client + 'common/**/*.js',
+			_client + '**/*.js',
 			_main + 'app.js',
 			_main + 'common/**/*.js',
 			_main + 'components/**/*.js',
@@ -55,6 +54,7 @@ gulp.task('uglify-main', function () {
 gulp.task('bundle-main-libs', function () {
 	return gulp.src([
 			_vendor + 'jquery/dist/jquery.js',
+			_vendor + 'lodash/dist/lodash.js',
 			_vendor + 'bootstrap/dist/js/bootstrap.js',
 			_vendor + 'slick-carousel/slick/slick.js',
 			_vendor + 'angular/angular.js',

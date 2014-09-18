@@ -63,4 +63,4 @@ function MilestoneSrvc ($http, $q) {
 	return service;
 }
 
-app.factory('MilestoneSrvc', MilestoneSrvc);
+angular.module('app').factory('MilestoneSrvc', MilestoneSrvc);

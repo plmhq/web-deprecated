@@ -44,4 +44,4 @@ function EventSrvc($http, $q) {
 	return service;
 }
 
-app.factory('EventSrvc', EventSrvc);
+angular.module('app').factory('EventSrvc', EventSrvc);

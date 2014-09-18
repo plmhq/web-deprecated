@@ -8,7 +8,7 @@
  */
 function bootstrap (app) {
 	try {
-		angular.bootstrap(document, modules, config);
+		angular.bootstrap(document, [app], { strictDi: true });
 	} catch(e) {
 		console.error(e.stack || e.message || e);
 	}
