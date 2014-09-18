@@ -59,7 +59,8 @@ gulp.task('bundle-main-libs', function () {
 			_vendor + 'angular-timer/dist/angular-timer.js',
 			_vendor + 'angular-slick/dist/slick.js',
 			_vendor + 'ngprogress-lite/ngprogress-lite.js',
-			_vendor + 'restangular/dist/restangular.js'
+			_vendor + 'restangular/dist/restangular.js',
+			_vendor + 'flippant.js/libs/flippant.js'
 		])
 		.pipe(concat('main-libs.js'))
 		.pipe(gulp.dest(_js))

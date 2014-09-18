@@ -15,7 +15,8 @@
     "angular-timer": "~1.1.5",
     "angular-slick": "~0.1.9",
     "ngprogress-lite": "~1.0.6",
-    "restangular": "~1.4.0"
+    "restangular": "~1.4.0",
+    "flippant.js": "*"
   },
   "devDependencies": {
     "bootstrap-sass": "~3.0.2"
