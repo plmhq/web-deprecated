@@ -2,6 +2,7 @@ app.config(function ($stateProvider) {
 	// Homepage
 
 	var home = {
+		parent: 'main',
 		name: 'home',
 		url: '/',
 		templateUrl: '/src/main/components/home/tpl.html',

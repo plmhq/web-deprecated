@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<ui-view />
+	<div ui-view></div>
 	
 	<!-- Scripts -->
 	<script type="text/javascript" src="/assets/js/main-libs.js"></script>
