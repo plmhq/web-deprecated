@@ -1,4 +1,19 @@
-@import url("http://fonts.googleapis.com/css?family=Merriweather:400,700italic,400italic,300,900,700,900italic,300italic");
+/**
+ * Fonts provided by Google Fonts.
+ * Source Sans Pro
+ * Montserrat,
+ * Merriweather
+ */
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic");
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,700italic,400italic,300,900,700,900italic,300italic");
+
+@import "../util/_variables";
+
+html,
+body {
+	font-family: $source-sans-font-family;
+}
 
 p {
 	font-family: "Merriweather";
@@ -11,9 +26,9 @@ p {
 	display: table;
 	height: 100%;
 	width: 100%;
-}
 
-.text-vertical-center {
-	display: table-cell;
-	vertical-align: middle;
+	.text-vertical-center {
+		display: table-cell;
+		vertical-align: middle;
+	}
 }

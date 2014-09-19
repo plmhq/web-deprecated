@@ -1,9 +1,7 @@
 // Utility
-@import "util/_base";
-@import "util/_separator";
 @import "util/_animation";
-@import "general/_images";
 @import "general/_typography";
+@import "general/_images";
 
 // Mixins
 @import "../../vendor/bootstrap-sass/lib/_mixins";
@@ -18,6 +16,7 @@
 // --
 // Global modules
 // --
+@import "general/_span";
 @import "partials/_nav-canopy";
 @import "partials/_navbar";
 @import "partials/_footer";

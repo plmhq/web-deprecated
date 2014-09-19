@@ -1,0 +1,59 @@
+@import "../util/_span";
+@import "../mixins/_span";
+
+.span {
+	/**
+	 * Since we are working on a padding,
+	 * `background` to avoid the helper from using the element's
+	 * bg.
+	 */
+	background: transparent;
+
+	/**
+	 * Removes HRs' default margin
+	 */
+	hr {
+		margin: 0;
+	}
+
+	&.span-hr {
+
+		/**
+		 * Provides equal spacing to both hr sides
+		 */
+		&.span-1-eq {
+			@include span-hr( floor($span-1 / 2), floor($span-1 / 2) );
+		}
+		&.span-2-eq {
+			@include span-hr( floor($span-2 / 2), floor($span-2 / 2) );
+		}
+		&.span-3-eq {
+			@include span-hr( floor($span-3 / 2), floor($span-3 / 2) );
+		}
+		&.span-4-eq {
+			@include span-hr( floor($span-4 / 2), floor($span-4 / 2) );
+		}
+		&.span-5-eq {
+			@include span-hr( floor($span-5 / 2), floor($span-5 / 2) );
+		}
+	
+		/**
+		 * Provides spacing to an element's `BOTTOM` side
+		 */
+		&.span-1 {
+			@include span-hr( $span-1 );
+		}
+		&.span-2 {
+			@include span-hr( $span-2 );
+		}
+		&.span-3 {
+			@include span-hr( $span-3 );
+		}
+		&.span-4 {
+			@include span-hr( $span-4 );
+		}
+		&.span-5 {
+			@include span-hr( $span-5 );
+		}
+	}
+}
