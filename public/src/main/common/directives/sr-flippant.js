@@ -16,11 +16,11 @@ function srFlippant () {
 	}
 
 	return {
-		restrict: 'EA'
+		restrict: 'EA',
 		transclude: true,
-		template: '<div ng-transclude></div>'
+		template: '<div ng-transclude></div>',
 		link: link
-	}
+	};
 }
 
 app.directive('srFlippant', srFlippant);
