@@ -2,7 +2,7 @@
 
 .navbar {
 	// position: relative;
-	height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+	// height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
 	border: $navbar-border;
 	border-radius: $navbar-border-radius;
 	margin-bottom: 0;
@@ -56,8 +56,8 @@
 			& {
 				color: $navbar-plm-link-color;
 				font-family: $montserrat-font-family;
-				padding-top: $navbar-plm-link-padding-top;
-				padding-bottom: $navbar-plm-link-padding-bottom;
+				// padding-top: $navbar-plm-link-padding-top;
+				// padding-bottom: $navbar-plm-link-padding-bottom;
 			}
 
 			&:hover,
@@ -132,37 +132,6 @@
 		> .dropdown > a .caret {
 			border-top-color: $navbar-plm-link-color;
 			border-bottom-color: $navbar-plm-link-color;
-		}
-
-
-		@media (max-width: $screen-xs-max) {
-			// Dropdowns get custom display when collapsed
-			.open .dropdown-menu {
-				> li > a {
-					color: $navbar-plm-link-color;
-					&:hover,
-					&:focus {
-						color: $navbar-plm-link-hover-color;
-						background-color: $navbar-plm-link-hover-bg;
-					}
-				}
-				> .active > a {
-					&,
-					&:hover,
-					&:focus {
-						color: $navbar-plm-link-active-color;
-						background-color: $navbar-plm-link-active-bg;
-					}
-				}
-				> .disabled > a {
-					&,
-					&:hover,
-					&:focus {
-						color: $navbar-plm-link-disabled-color;
-						background-color: $navbar-plm-link-disabled-bg;
-					}
-				}
-			}
 		}
 	}
 

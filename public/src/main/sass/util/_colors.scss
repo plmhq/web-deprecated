@@ -1,0 +1,40 @@
+// Essential colors
+// -----------------------------
+// success
+// warning
+// danger
+// dark tints
+// light tints
+// gray tints
+$blue: #2AADC7;
+$blue--light: #2AE7EA;
+$blue--dark: #2A92EA;
+	
+$green: #4EEA8F;
+$green--light: #4EFF9C;
+$green--dark: #4EC98F;
+
+$yellow: #FAEA47;
+$yellow--light: #FAEA77;
+$yellow--dark: #E5D64B;
+
+$red: #E33147;
+$red--light: #600000;
+$red--dark: #F7504D;
+
+$dt: #1F1C1B;
+$dt--light: #36312F;
+$dt--dark: #121010;
+
+$lt: #FFFFFF;
+$lt--light: #F2F2F2;
+$lt--dark: #E0E0E0;
+
+$gr: #E6E6E6;
+$gr--light: #FCFCFC;
+$gr--dark: #C8C8C8;
+
+// defaults
+$default: $red;
+$default--light: $red--light;
+$default--dark: $red--dark;

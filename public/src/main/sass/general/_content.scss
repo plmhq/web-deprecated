@@ -1,4 +1,5 @@
-@import "../util/_variables";
+@import "../util/variables";
+@import "../util/element";
 
 .content {
 	background: $content-lt-bg;
@@ -15,9 +16,7 @@
 
 	.content-heading {
 
-		& {
-			margin-bottom: $content-heading-margin-bottom;
-		}
+		margin-bottom: $content-heading-margin-bottom;
 
 		h1, h2, h3, h4, h5 {
 			text-transform: uppercase;
@@ -28,8 +27,14 @@
 		}
 
 		&::after {
+			@include u-elementCenter();
+			padding-top: 5px;
+
 			content: "";
-			border-bottom: 5px solid $default;
+			display: block;
+
+			width: 35px;
+			border-bottom: 2px solid $default;
 		}
 	}
 }

@@ -1,4 +1,4 @@
-<div class="content content-gray" id="news" ng-controller="NewsCtrl">
+<section class="content" id="news" ng-controller="NewsCtrl">
 	<div class="container">
 
 		<!-- heading -->
@@ -9,28 +9,17 @@
 		<div class="row">
 		
 			<!-- item -->
-			<div class="col-md-4 news-first-row" ng-repeat="article in bundle">
-				<div class="recent-news">
-					<div class="news-cover">
-						<img src="assets/img/n.jpg">
-					</div>
+			<div class="col-md-6 u-spanHr u-spanHr--1" ng-repeat="article in bundle">
+				<a href="" class="u-imageBlock u-textVerticalAlign recentNews" style="background-image: url('assets/img/n.jpg')">
 
-					<div class="news-title">
-						<div class="row">
-							<div class="col-md-3 col-xs-3 text-center news-icon-container">
-								<span class="fa fa-pencil news-icon"></span>
-							</div>
-
-							<div class="col-md-9 col-xs-9 news-head">
-								{{ article.title }}
-							</div>
-						</div>
-					</div>
-				</div>
+					<h4 class="u-textVerticalAlign-text u-textVerticalAlign-text--center text-center">
+						<span class="recentNews-title">{{ article.title }}</span>
+					</h4>
+				</a>
 			</div>
 				
 		</div> <!-- /.row -->
 
 		<div class="text-center"> <a ui-sref="media.news" class="btn btn-danger"> Read more news... </a> </div>
 	</div> <!-- /.container -->
-</div> <!-- /.content content-gray | #news -->
+</section> <!-- /.content content-gray | #news -->

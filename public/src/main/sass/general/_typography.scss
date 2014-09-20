@@ -1,24 +1,35 @@
-@import "../util/_variables";
+@import "../util/_typography";
 
-html,
-body {
-	font-family: $source-sans-font-family;
-}
+/**
+ * Usage:
+ <div class="u-textVerticalAlign">
+ 	<h1 class="u-textVerticalAlign-text u-textVerticalAlign-text--center">
+ </div>
+ */
+.u-textVerticalAlign {
+	@include u-textVerticalAlign();
 
-p {
-	font-family: "Merriweather";
-	color: #3F3F3F;
-	line-height: 26px;
-	margin-top: 26px;
-}
+	.u-textVerticalAlign-text {
+		@include u-textVerticalAlign-text();
 
-.text-vertical-bg {
-	display: table;
-	height: 100%;
-	width: 100%;
+		&.u-textVerticalAlign-text--top {
+			vertical-align: top;
+		}
 
-	.text-vertical-center {
-		display: table-cell;
-		vertical-align: middle;
+		&.u-textVerticalAlign-text--center {
+			vertical-align: middle;
+		}
+
+		&.u-textVerticalAlign-text--bottom {
+			vertical-align: bottom;
+		}
 	}
+}
+
+.u-textHorizontalCenter {
+	text-align: center;
+}
+
+.u-uppercase {
+	text-transform: uppercase;
 }

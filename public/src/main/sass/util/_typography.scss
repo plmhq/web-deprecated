@@ -1,9 +1,38 @@
 // Font weight helper variables
 // -----------------------------
-$typeWeight-smallest: 	100;
-$typeWeight-smaller: 	200;
-$typeWeight-small: 		300;
-$typeWeight-base: 		400;
-$typeWeight-large: 		500;
-$typeWeight-larger: 	600;
-$typeWeight-largest: 	700;
+
+$fontWeight-light: 		300;
+$fontWeight-base: 		400;
+$fontWeight-semi: 		500;
+$fontWeight-bold: 	600;
+$fontWeight-ex: 	700;
+$fontWeight-jumbo:	 	800;
+
+// Typography mixins
+// -----------------------------
+/** Allows `overflow`ing text to an element
+ * to appear in the form of ellipsis
+ * 
+ * Note: strictly for single lines.
+ */
+@mixin ellipsis-overflow() {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/** Vertically centers a text
+ * to its parent element.
+ * `
+ * u-textVerticalCenter-bg is paried
+ * with u-textVerticalCenter
+ */
+@mixin u-textVerticalAlign() {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin u-textVerticalAlign-text() {
+	display: table-cell;
+}

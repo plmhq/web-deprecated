@@ -77,19 +77,10 @@
 
 .recent-x-sm-first-two {
 	margin-bottom: $recent-x-sm-margin;
-
-	@media(max-width: 720px) {
-		margin-top: $recent-x-sm-margin;
-		margin-bottom: 0;
-	}
 }
 
 .recent-x-sm-last-two {
 	margin-top: $recent-x-sm-margin;
-
-	@media (max-width: 720px) {
-		display: none;
-	}
 }
 
 // Smaller

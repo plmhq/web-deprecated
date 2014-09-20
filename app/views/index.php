@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<title ng-bind="'Pamantasan ng Lungsod ng Maynila - ' + $state.current.data.title"> Pamantasan ng Lungsod ng Maynila </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta charset="utf-8">
 
 	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,600,800,400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700italic,400italic,300,900,700,900italic,300italic">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700">

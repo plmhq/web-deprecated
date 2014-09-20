@@ -1,39 +1,37 @@
+@import "components/body";
+
 // Utility
-@import "util/_animation";
-@import "general/_typography";
-@import "general/_images";
+@import "util/animation";
+@import "general/typography";
+@import "general/images";
+@import "general/span";
+@import "general/btn";
+@import "general/content";
 
 // Mixins
-@import "../../vendor/bootstrap-sass/lib/_mixins";
-@import "mixins/_btn";
-@import "mixins/_typography";
-@import "mixins/_animation";
-
-// Basic partials
-@import "partials/_btn";
-@import "partials/_alert";
+@import "../../vendor/bootstrap-sass/lib/mixins";
+@import "mixins/btn";
+@import "mixins/typography";
 
 // --
 // Global modules
 // --
-@import "general/_span";
-@import "partials/_nav-canopy";
-@import "partials/_navbar";
-@import "partials/_footer";
-@import "partials/_breadcrumb";
+@import "components/nav-canopy";
+@import "components/navbar";
+@import "components/footer";
+@import "components/breadcrumb";
 
 // --
 // Homepage modules
 // --
-@import "partials/_countdown";
-@import "partials/_content";
-@import "partials/_recent-news";
-@import "partials/_recent-x";
-@import "components/_college-and-admissions";
+@import "components/countdown";
+@import "components/recent-news";
+@import "components/recent-x";
+@import "components/college-and-admissions";
 
 // --
 // Vendor files
 // --
-@import "vendor/_progress";
+@import "vendor/progress";
 @import "../../vendor/slick-carousel/slick/slick";
-@import "vendor/_slick";
+@import "vendor/slick";
