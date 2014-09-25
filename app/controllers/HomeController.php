@@ -15,9 +15,20 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	/**
+	 * Main app
+	 */
 	public function index()
 	{
-		return $this->view->make('index');
+		return View::make('index');
+	}
+
+	/**
+	 * Dashboard app
+	 */
+	public function dashboard()
+	{
+		return View::make('dashboard');
 	}
 
 }

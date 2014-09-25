@@ -16,7 +16,7 @@
  * @link api/*
  * @example api/user/
  */
-Route::group(['prefix' => 'api'], function()
+Route::group(['prefix' => 'api/v1'], function()
 {
 	/**
 	 * @link /api/auth/*
@@ -31,37 +31,44 @@ Route::group(['prefix' => 'api'], function()
 	/**
 	 * @link /api/slideshow/*
 	 */
-	Route::resource('rest/slideshow', 'SlideshowController');
-	Route::controller('x/slideshow', 'SlideshowAPIController');
+	Route::resource('slideshow', 'SlideshowController');
+	Route::controller('slideshow', 'SlideshowExtController');
 
 	/**
 	 * @link /api/news/*
 	 */
-	Route::resource('rest/news', 'NewsController');
-	Route::controller('x/news', 'NewsAPIController');
+	Route::controller('news', 'NewsExtController');
+	Route::resource('news', 'NewsController');
 
 	/**
 	 * @link /api/event/*
-	 */
-	Route::resource('rest/event', 'EventController');
-	Route::controller('x/event', 'EventAPIController');
+	 */Route::controller('event', 'EventExtController');
+	Route::resource('event', 'EventController');
 
 	/**
 	 * @link /api/album/*
 	 */
-	Route::resource('rest/album', 'AlbumController');
-	Route::controller('x/album', 'AlbumAPIController');
+	Route::controller('album', 'AlbumExtController');
+	Route::resource('album', 'AlbumController');
 
 	/**
 	 *
 	 */
-	Route::resource('rest/milestone', 'MilestoneController');
-	Route::resource('rest/milestone-era', 'MilestoneEraController');
-	Route::controller('x/milestone', 'MilestoneAPIController');
+	Route::controller('milestone', 'MilestoneExtController');
+	Route::resource('milestone', 'MilestoneController');
+	Route::resource('milestone-era', 'MilestoneEraController');
 });
 
 /**
- * Index page
+ * Dashboard view
+ *
+ * @link /dashboard
+ */
+Route::get('/dashboard', 'HomeController@dashboard');
+
+/**
+ * Default view
+ *
  * @link /
  */
 Route::get('/', 'HomeController@index');

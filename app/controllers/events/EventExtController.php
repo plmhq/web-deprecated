@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Validators\Exceptions\ValidationFailedException;
 use PLM\Repository\Interfaces\EventRepositoryInterface;
 
-class EventAPIController extends \BaseController {
+class EventExtController extends \BaseController {
 
 	/**
 	 * @var EventRepositoryInterface

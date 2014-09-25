@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Validators\Exceptions\ValidationFailedException;
 use PLM\Repository\Interfaces\AlbumRepositoryInterface;
 
-class AlbumAPIController extends \BaseController {
+class AlbumExtController extends \BaseController {
 
 	/**
 	 * @var AlbumRepositoryInterface

@@ -3,7 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Handle missing application
+ * Handles 404
  */
 class MissingServiceProvider extends ServiceProvider {
 
@@ -14,20 +14,29 @@ class MissingServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->missing(function($exception)
+		// Shorthand to the app instance
+		$app = $this->app;
+
+		$app->missing(function($exception) use ($app)
 		{
-			// Todo:
-			// Remove the hard-coded dependency, the Request facade.
-			//
-			// Jeff says,
-			// "The IO container doesn't have the variables injected
-			// compared on using the Facade. The only possible way
-			// to replicate is to create a new request instance provided
-			// with parameters to make it work."
-			if ( ! \Request::is('/api/*') )
+			// Shorthands
+			$view  = $app['view'];
+			$request = $app['request'];
+
+			// If the request was mapped to the dashboard,
+			// let the dashboard's front-end handle the route
+			if( $request->is('dashboard/*') )
 			{
-				return $this->app['view']->make('index');
+				return $view->make('dashboard');
 			}
+
+			// If the request as mapped to the default line,
+			// let the default's front-end handle the route
+			if ( ! $request->is('api/*') )
+			{
+				return $view->make('index');
+			}
+
 		});
 	}
 

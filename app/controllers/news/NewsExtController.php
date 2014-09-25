@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Validators\Exceptions\ValidationFailedException;
 use PLM\Repository\Interfaces\NewsRepositoryInterface;
 
-class NewsAPIController extends \BaseController {
+class NewsExtController extends \BaseController {
 
 	/**
 	 * @var NewsRepositoryInterface

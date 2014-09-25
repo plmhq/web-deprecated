@@ -4,7 +4,7 @@ use PLM\Validator\Exceptions\ValidationFailedException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PLM\Repository\Interfaces\SlideshowRepositoryInterface;
 
-class SlideshowAPIController extends \BaseController {
+class SlideshowExtController extends \BaseController {
 
 	/**
 	 * @var SlideshowRepositoryInterface

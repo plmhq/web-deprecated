@@ -1,6 +1,8 @@
 <?php namespace PLM\Models\Eloquent;
 
-class Slideshow extends AbstractModel {
+use PLM\Common\AbstractModel as Model;
+
+class Slideshow extends Model {
 
 	/**
 	 * Table used by the model

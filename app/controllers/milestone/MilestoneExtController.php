@@ -6,7 +6,7 @@ use PLM\Repository\Interfaces\MilestoneRepositoryInterface;
 use PLM\Repository\Interfaces\MilestoneEraRepositoryInterface;
 use Illuminate\Foundation\Application;
 
-class MilestoneAPIController extends \BaseController {
+class MilestoneExtController extends \BaseController {
 
 	/**
 	 * @var MilestoneRepositoryInterface

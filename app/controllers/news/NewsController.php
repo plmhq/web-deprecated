@@ -5,7 +5,7 @@ use PLM\Validators\Exceptions\ValidationFailedException;
 use PLM\Repository\Interfaces\NewsRepositoryInterface;
 use Illuminate\Foundation\Application;
 
-class NewsController extends \BaseController {
+class NewsController extends \APIController {
 
 	/**
 	 * @var NewsRepositoryInterface
@@ -37,9 +37,9 @@ class NewsController extends \BaseController {
 	{
 		$count = $this->app['request']->get('limit');
 
-		return $this->news
-			->paginate( $count )
-			->toJson();
+		return $this->respondOK(
+			$this->news->paginate( $count )
+		);
 	}
 
 
